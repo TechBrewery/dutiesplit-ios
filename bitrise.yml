@@ -1,7 +1,7 @@
 # Environment variables to be set up as secret in bitrise workflow settings:
 #
 # - `HOCKEYAPP_APP_ID_STAGING`, `HOCKEYAPP_API_TOKEN_STAGING`
-# - `HOCKEYAPP_APP_ID_BETA, `HOCKEYAPP_APP_ID_BETA`
+# - `HOCKEYAPP_APP_ID_BETA, `HOCKEYAPP_APP_TOKEN_BETA`
 # - `SLACK_WEBHOOK_URL`, `SLACK_CHANNEL`
 # -  Take a look into .env.sample file for other secrets to set
 #
@@ -20,11 +20,17 @@ default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 
 trigger_map:
 
+  - push_branch: develop
+    workflow: build-pull-request
+
+  - push_branch: master
+    workflow: build-pull-request
+
   - pull_request_target_branch: develop
-    workflow: build-pull-request-staging
+    workflow: build-pull-request
 
   - pull_request_target_branch: master
-    workflow: build-pull-request-beta
+    workflow: build-pull-request
 
 
 # Environment configuration
@@ -39,7 +45,7 @@ app:
 
 workflows:
 
-  build-pull-request-staging:
+  build-pull-request:
     envs:
       - XCODEBUILD_SCHEME: Staging
     before_run:
@@ -52,18 +58,11 @@ workflows:
       - deploy-bitriseio
       - notify-slack
 
-    build-pull-request-beta:
-      envs:
-        - XCODEBUILD_SCHEME: Beta
-      before_run:
-        - cache-pull
-        - bootstrap-carthage
-        - bootstrap-cocoapods
-        - test-xcode
-      after_run:
-        - cache-push
-        - deploy-bitriseio
-        - notify-slack
+  do-nothing:
+    before_run:
+      - cache-pull
+    after_run:
+      - deploy-bitriseio
 
 
   # Specific workflows declarations

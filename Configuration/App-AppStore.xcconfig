@@ -1,0 +1,11 @@
+#include "../Carthage/Checkouts/xcconfigs/Configurations/Release.xcconfig"
+#include "App-Common.xcconfig"
+
+__PRODUCT_BUNDLE_IDENTIFIER_SUFFIX =
+
+_ENVIRONMENTS = ENV_PRODUCTION
+
+_CODESIGN_DEVELOPMENT_TEAM =
+_CODESIGN_IDENTITY = iPhone Distribution
+_CODESIGN_PROFILE_SPECIFIER = DutieSplit App Store
+ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon
