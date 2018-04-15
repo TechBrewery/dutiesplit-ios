@@ -27,10 +27,10 @@ trigger_map:
     workflow: do-nothing
 
   - pull_request_target_branch: develop
-    workflow: build-pull-request-staging
+    workflow: build-pull-request
 
   - pull_request_target_branch: master
-    workflow: build-pull-request-beta
+    workflow: build-pull-request
 
 
 # Environment configuration
@@ -45,7 +45,7 @@ app:
 
 workflows:
 
-  build-pull-request-staging:
+  build-pull-request:
     envs:
       - XCODEBUILD_SCHEME: Staging
     before_run:
@@ -57,19 +57,6 @@ workflows:
       - cache-push
       - deploy-bitriseio
       - notify-slack
-
-    build-pull-request-beta:
-      envs:
-        - XCODEBUILD_SCHEME: Beta
-      before_run:
-        - cache-pull
-        - bootstrap-carthage
-        - bootstrap-cocoapods
-        - test-xcode
-      after_run:
-        - cache-push
-        - deploy-bitriseio
-        - notify-slack
 
   do-nothing:
     before_run:
