@@ -1,0 +1,11 @@
+// Common
+"lorem.ipsum" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore";
+"ok" = "OK";
+"cancel" = "Cancel";
+"confirm" = "Confirm";
+"next" = "Next";
+"back" = "Back";
+"done" = "Done";
+"close" = "Close";
+"yes" = "Yes";
+"no" = "No";

@@ -1,5 +1,5 @@
 ### Ticket
-[Trelo](https://trello.com/c/)
+[Trello](https://trello.com/c/)
 
 
 ### Task Description
