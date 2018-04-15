@@ -20,11 +20,17 @@ default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 
 trigger_map:
 
+  - push_branch: develop
+    workflow: do-nothing
+
+  - push_branch: master
+    workflow: do-nothing
+
   - pull_request_target_branch: develop
-    workflow: build-pull-request
+    workflow: build-pull-request-staging
 
   - pull_request_target_branch: master
-    workflow: build-pull-request
+    workflow: build-pull-request-beta
 
 
 # Environment configuration
@@ -39,7 +45,7 @@ app:
 
 workflows:
 
-  build-pull-request:
+  build-pull-request-staging:
     envs:
       - XCODEBUILD_SCHEME: Staging
     before_run:
@@ -51,6 +57,25 @@ workflows:
       - cache-push
       - deploy-bitriseio
       - notify-slack
+
+    build-pull-request-beta:
+      envs:
+        - XCODEBUILD_SCHEME: Beta
+      before_run:
+        - cache-pull
+        - bootstrap-carthage
+        - bootstrap-cocoapods
+        - test-xcode
+      after_run:
+        - cache-push
+        - deploy-bitriseio
+        - notify-slack
+
+  do-nothing:
+    before_run:
+      - cache-pull
+    after_run:
+      - deploy-bitriseio
 
 
   # Specific workflows declarations
