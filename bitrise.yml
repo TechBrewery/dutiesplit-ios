@@ -1,7 +1,7 @@
 # Environment variables to be set up as secret in bitrise workflow settings:
 #
 # - `HOCKEYAPP_APP_ID_STAGING`, `HOCKEYAPP_API_TOKEN_STAGING`
-# - `HOCKEYAPP_APP_ID_BETA, `HOCKEYAPP_APP_ID_BETA`
+# - `HOCKEYAPP_APP_ID_BETA, `HOCKEYAPP_APP_TOKEN_BETA`
 # - `SLACK_WEBHOOK_URL`, `SLACK_CHANNEL`
 # -  Take a look into .env.sample file for other secrets to set
 #
