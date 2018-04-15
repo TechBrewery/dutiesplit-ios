@@ -24,7 +24,7 @@ trigger_map:
     workflow: build-pull-request
 
   - push_branch: master
-    workflow: dbuild-pull-request
+    workflow: build-pull-request
 
   - pull_request_target_branch: develop
     workflow: build-pull-request
