@@ -21,10 +21,10 @@ default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 trigger_map:
 
   - push_branch: develop
-    workflow: do-nothing
+    workflow: build-pull-request
 
   - push_branch: master
-    workflow: do-nothing
+    workflow: dbuild-pull-request
 
   - pull_request_target_branch: develop
     workflow: build-pull-request
