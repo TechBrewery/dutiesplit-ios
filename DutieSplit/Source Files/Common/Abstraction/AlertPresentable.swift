@@ -4,8 +4,9 @@
 //
 
 
-import UIKit
+import UIKit.UIAlertController
 
+/// Protocol adding convenience methods for showing alerts inside view controller
 internal protocol AlertPresentable { }
 
 internal extension AlertPresentable where Self: UIViewController {

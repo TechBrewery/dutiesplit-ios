@@ -9,3 +9,7 @@
 "close" = "Close";
 "yes" = "Yes";
 "no" = "No";
+
+// Error
+"error.title" = "Error";
+"error.unknown.error.occurred" = "Unknown error occurred";

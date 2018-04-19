@@ -1,2 +1,6 @@
+github "ReactiveX/RxSwift" "4.1.2"
+github "RxSwiftCommunity/RxOptional" "3.4.1"
 github "bitstadium/HockeySDK-iOS" "5.1.2"
+github "kishikawakatsumi/KeychainAccess" "v3.1.1"
+github "netguru/ResponseDetective" "1.2.3"
 github "netguru/xcconfigs" "0.5"

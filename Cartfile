@@ -1,2 +1,6 @@
 github "netguru/xcconfigs" == 0.5
 github "bitstadium/HockeySDK-iOS" ~> 5.0.0
+github "netguru/ResponseDetective" == 1.2.3
+github "kishikawakatsumi/KeychainAccess" ~> 3.1.0
+github "ReactiveX/RxSwift" ~> 4.1
+github "RxSwiftCommunity/RxOptional" ~> 3.3

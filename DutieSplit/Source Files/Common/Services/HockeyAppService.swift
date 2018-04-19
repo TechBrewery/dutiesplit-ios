@@ -30,6 +30,5 @@ internal class HockeyAppService: CrashLogger {
     /// - SeeAlso: CrashLogger.start()
     func start() {
         hockeyManager?.start()
-        hockeyManager?.authenticator.authenticateInstallation()
     }
 }

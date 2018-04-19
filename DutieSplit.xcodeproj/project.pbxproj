@@ -27,6 +27,23 @@
 		7C9BF5B52088FC03002BF7B2 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 7C9BF5B42088FC03002BF7B2 /* Cartfile */; };
 		7C9BF5B72088FC08002BF7B2 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 7C9BF5B62088FC08002BF7B2 /* Gemfile */; };
 		7C9BF5BB2088FC31002BF7B2 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7C9BF5BA2088FC31002BF7B2 /* Podfile */; };
+		7C9BF5C32088FCA0002BF7B2 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5BC2088FCA0002BF7B2 /* UICollectionViewExtension.swift */; };
+		7C9BF5C42088FCA0002BF7B2 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5BD2088FCA0002BF7B2 /* NSObjectExtension.swift */; };
+		7C9BF5C52088FCA0002BF7B2 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5BE2088FCA0002BF7B2 /* UIColorExtension.swift */; };
+		7C9BF5C62088FCA0002BF7B2 /* BoolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5BF2088FCA0002BF7B2 /* BoolExtension.swift */; };
+		7C9BF5C72088FCA0002BF7B2 /* UIViewExtension+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5C02088FCA0002BF7B2 /* UIViewExtension+Constraint.swift */; };
+		7C9BF5C82088FCA0002BF7B2 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5C12088FCA0002BF7B2 /* UIDeviceExtension.swift */; };
+		7C9BF5C92088FCA0002BF7B2 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5C22088FCA0002BF7B2 /* UITableViewExtension.swift */; };
+		7C9BF5CB2088FCCB002BF7B2 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5CA2088FCCB002BF7B2 /* UIViewExtension.swift */; };
+		7C9BF5CD2088FD53002BF7B2 /* FlowAwareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5CC2088FD53002BF7B2 /* FlowAwareViewController.swift */; };
+		7C9BF5CF2088FD95002BF7B2 /* NavigationBarSetupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5CE2088FD95002BF7B2 /* NavigationBarSetupable.swift */; };
+		7C9BF5D12088FFC2002BF7B2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5D02088FFC2002BF7B2 /* ViewModel.swift */; };
+		7C9BF5D320890069002BF7B2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7C9BF5D220890069002BF7B2 /* README.md */; };
+		7C9BF5D6208902BE002BF7B2 /* BindingsSetupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5D5208902BE002BF7B2 /* BindingsSetupable.swift */; };
+		7C9BF5DB2089059D002BF7B2 /* ViewSetupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5DA2089059D002BF7B2 /* ViewSetupable.swift */; };
+		7C9BF5DD20890654002BF7B2 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5DC20890654002BF7B2 /* View.swift */; };
+		7C9BF5E1208908D1002BF7B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5E0208908D1002BF7B2 /* ViewController.swift */; };
+		7C9BF5E320890E14002BF7B2 /* KeyboardAwareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5E220890E14002BF7B2 /* KeyboardAwareViewController.swift */; };
 		7C9FA39C208399000095E647 /* App-AppStore.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7C9FA396208399000095E647 /* App-AppStore.xcconfig */; };
 		7C9FA39D208399000095E647 /* App-Beta.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7C9FA397208399000095E647 /* App-Beta.xcconfig */; };
 		7C9FA39E208399000095E647 /* App-Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7C9FA398208399000095E647 /* App-Development.xcconfig */; };
@@ -73,6 +90,23 @@
 		7C9BF5B42088FC03002BF7B2 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		7C9BF5B62088FC08002BF7B2 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = SOURCE_ROOT; };
 		7C9BF5BA2088FC31002BF7B2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		7C9BF5BC2088FCA0002BF7B2 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
+		7C9BF5BD2088FCA0002BF7B2 /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		7C9BF5BE2088FCA0002BF7B2 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		7C9BF5BF2088FCA0002BF7B2 /* BoolExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoolExtension.swift; sourceTree = "<group>"; };
+		7C9BF5C02088FCA0002BF7B2 /* UIViewExtension+Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewExtension+Constraint.swift"; sourceTree = "<group>"; };
+		7C9BF5C12088FCA0002BF7B2 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
+		7C9BF5C22088FCA0002BF7B2 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		7C9BF5CA2088FCCB002BF7B2 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		7C9BF5CC2088FD53002BF7B2 /* FlowAwareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowAwareViewController.swift; sourceTree = "<group>"; };
+		7C9BF5CE2088FD95002BF7B2 /* NavigationBarSetupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarSetupable.swift; sourceTree = "<group>"; };
+		7C9BF5D02088FFC2002BF7B2 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		7C9BF5D220890069002BF7B2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		7C9BF5D5208902BE002BF7B2 /* BindingsSetupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingsSetupable.swift; sourceTree = "<group>"; };
+		7C9BF5DA2089059D002BF7B2 /* ViewSetupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSetupable.swift; sourceTree = "<group>"; };
+		7C9BF5DC20890654002BF7B2 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		7C9BF5E0208908D1002BF7B2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7C9BF5E220890E14002BF7B2 /* KeyboardAwareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAwareViewController.swift; sourceTree = "<group>"; };
 		7C9FA396208399000095E647 /* App-AppStore.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "App-AppStore.xcconfig"; sourceTree = "<group>"; };
 		7C9FA397208399000095E647 /* App-Beta.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "App-Beta.xcconfig"; sourceTree = "<group>"; };
 		7C9FA398208399000095E647 /* App-Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "App-Development.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				7C9BF5AC2088FB63002BF7B2 /* CocoaPodsKeys */,
+				7C9BF5D220890069002BF7B2 /* README.md */,
 				7C9BF5B22088FBEF002BF7B2 /* bitrise.yml */,
 				7C9BF5B42088FC03002BF7B2 /* Cartfile */,
 				7C9BF5B62088FC08002BF7B2 /* Gemfile */,
@@ -163,6 +198,13 @@
 			name = CocoaPodsKeys;
 			path = Pods/CocoaPodsKeys;
 			sourceTree = SOURCE_ROOT;
+		};
+		7C9BF5D720890368002BF7B2 /* Login screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Login screen";
+			sourceTree = "<group>";
 		};
 		7C9FA395208399000095E647 /* Configuration */ = {
 			isa = PBXGroup;
@@ -267,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				7C9BF5A72088F7B2002BF7B2 /* LoginFlowController.swift */,
+				7C9BF5D720890368002BF7B2 /* Login screen */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -274,7 +317,12 @@
 		7C9FA3B620839E1D0095E647 /* Base classes */ = {
 			isa = PBXGroup;
 			children = (
+				7C9BF5E0208908D1002BF7B2 /* ViewController.swift */,
+				7C9BF5D02088FFC2002BF7B2 /* ViewModel.swift */,
 				7C9BF5A92088F844002BF7B2 /* TypedViewController.swift */,
+				7C9BF5CC2088FD53002BF7B2 /* FlowAwareViewController.swift */,
+				7C9BF5E220890E14002BF7B2 /* KeyboardAwareViewController.swift */,
+				7C9BF5DC20890654002BF7B2 /* View.swift */,
 			);
 			path = "Base classes";
 			sourceTree = "<group>";
@@ -286,6 +334,9 @@
 				7C9BF5A12088F719002BF7B2 /* FlowController.swift */,
 				7C9BF5A22088F719002BF7B2 /* AlertPresentable.swift */,
 				7C9BF5A32088F719002BF7B2 /* CrashLogger.swift */,
+				7C9BF5CE2088FD95002BF7B2 /* NavigationBarSetupable.swift */,
+				7C9BF5D5208902BE002BF7B2 /* BindingsSetupable.swift */,
+				7C9BF5DA2089059D002BF7B2 /* ViewSetupable.swift */,
 			);
 			path = Abstraction;
 			sourceTree = "<group>";
@@ -293,6 +344,14 @@
 		7C9FA3B820839E2F0095E647 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7C9BF5BF2088FCA0002BF7B2 /* BoolExtension.swift */,
+				7C9BF5BD2088FCA0002BF7B2 /* NSObjectExtension.swift */,
+				7C9BF5BC2088FCA0002BF7B2 /* UICollectionViewExtension.swift */,
+				7C9BF5BE2088FCA0002BF7B2 /* UIColorExtension.swift */,
+				7C9BF5C12088FCA0002BF7B2 /* UIDeviceExtension.swift */,
+				7C9BF5C22088FCA0002BF7B2 /* UITableViewExtension.swift */,
+				7C9BF5C02088FCA0002BF7B2 /* UIViewExtension+Constraint.swift */,
+				7C9BF5CA2088FCCB002BF7B2 /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -329,6 +388,7 @@
 				7C9B8F6B2083946200661EFE /* Sources */,
 				7C9B8F6C2083946200661EFE /* Frameworks */,
 				7C9B8F6D2083946200661EFE /* Resources */,
+				7C9BF5D4208901D3002BF7B2 /* Carthage script */,
 			);
 			buildRules = (
 			);
@@ -412,6 +472,7 @@
 				7C9FA39C208399000095E647 /* App-AppStore.xcconfig in Resources */,
 				7C9FA39D208399000095E647 /* App-Beta.xcconfig in Resources */,
 				7C9FA39E208399000095E647 /* App-Development.xcconfig in Resources */,
+				7C9BF5D320890069002BF7B2 /* README.md in Resources */,
 				7C9BF5BB2088FC31002BF7B2 /* Podfile in Resources */,
 				7C9B8F7A2083946400661EFE /* Assets.xcassets in Resources */,
 			);
@@ -426,22 +487,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7C9BF5D4208901D3002BF7B2 /* Carthage script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(_CARTHAGE_BUILD_PATH)/HockeySDK.framework",
+				"$(_CARTHAGE_BUILD_PATH)/KeychainAccess.framework",
+				"$(_CARTHAGE_BUILD_PATH)/RxSwift.framework",
+				"$(_CARTHAGE_BUILD_PATH)/RxCocoa.framework",
+				"$(_CARTHAGE_BUILD_PATH)/RxOptional.framework",
+				"$(_CARTHAGE_BUILD_PATH)/ResponseDetective.framework",
+			);
+			name = "Carthage script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7C9B8F6B2083946200661EFE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7C9BF5A82088F7B2002BF7B2 /* LoginFlowController.swift in Sources */,
+				7C9BF5C42088FCA0002BF7B2 /* NSObjectExtension.swift in Sources */,
 				7C9BF5AA2088F844002BF7B2 /* TypedViewController.swift in Sources */,
+				7C9BF5C32088FCA0002BF7B2 /* UICollectionViewExtension.swift in Sources */,
 				7C9BF5A02088F712002BF7B2 /* HasDependency.swift in Sources */,
+				7C9BF5E1208908D1002BF7B2 /* ViewController.swift in Sources */,
+				7C9BF5D12088FFC2002BF7B2 /* ViewModel.swift in Sources */,
 				7C9BF5A62088F719002BF7B2 /* CrashLogger.swift in Sources */,
+				7C9BF5C72088FCA0002BF7B2 /* UIViewExtension+Constraint.swift in Sources */,
 				7C9BF5A52088F719002BF7B2 /* AlertPresentable.swift in Sources */,
 				7C9FA3BF20839E500095E647 /* Localizable.swift in Sources */,
+				7C9BF5C62088FCA0002BF7B2 /* BoolExtension.swift in Sources */,
+				7C9BF5DD20890654002BF7B2 /* View.swift in Sources */,
 				7C9BF59B2088F6DC002BF7B2 /* ApplicationDependency.swift in Sources */,
+				7C9BF5C92088FCA0002BF7B2 /* UITableViewExtension.swift in Sources */,
+				7C9BF5CF2088FD95002BF7B2 /* NavigationBarSetupable.swift in Sources */,
+				7C9BF5E320890E14002BF7B2 /* KeyboardAwareViewController.swift in Sources */,
+				7C9BF5C82088FCA0002BF7B2 /* UIDeviceExtension.swift in Sources */,
 				7C9BF5A42088F719002BF7B2 /* FlowController.swift in Sources */,
 				7C9BF59C2088F6DC002BF7B2 /* ApplicationFlowController.swift in Sources */,
+				7C9BF5C52088FCA0002BF7B2 /* UIColorExtension.swift in Sources */,
+				7C9BF5DB2089059D002BF7B2 /* ViewSetupable.swift in Sources */,
 				7C9BF59A2088F6DC002BF7B2 /* ApplicationKeys.swift in Sources */,
+				7C9BF5CD2088FD53002BF7B2 /* FlowAwareViewController.swift in Sources */,
 				7C9BF59E2088F6F7002BF7B2 /* HockeyAppService.swift in Sources */,
+				7C9BF5CB2088FCCB002BF7B2 /* UIViewExtension.swift in Sources */,
+				7C9BF5D6208902BE002BF7B2 /* BindingsSetupable.swift in Sources */,
 				7C9B8F732083946200661EFE /* ApplicationDelegate.swift in Sources */,
 				7C9BF5B02088FB64002BF7B2 /* DutieSplitKeys.m in Sources */,
 			);

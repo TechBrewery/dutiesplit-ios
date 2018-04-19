@@ -4,7 +4,7 @@
 //
 
 
-import UIKit
+import UIKit.UIViewController
 
 /// Interface for the flow controller
 internal protocol FlowController {

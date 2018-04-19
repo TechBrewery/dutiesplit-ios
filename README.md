@@ -9,7 +9,7 @@
 * Services:
 * [Trelo](https://trello.com/b/TWsynwg3/dutiesplit-ios)
 * [Bitrise](https://www.bitrise.io/app/f4df44375524278a)
-* [HockeyApp - staging](https://rink.hockeyapp.net/manage/apps/748112)
+* [HockeyApp - Staging](https://rink.hockeyapp.net/manage/apps/748112)
 * [HockeyApp - Beta](https://rink.hockeyapp.net/manage/apps/748113)
 
 ## Configuration
