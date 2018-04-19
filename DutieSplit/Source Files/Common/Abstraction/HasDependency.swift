@@ -11,3 +11,7 @@ internal protocol HasCrashLogger {
 internal protocol HasApplicationKeys {
     var applicationKeys: ApplicationKeys { get }
 }
+
+internal protocol HasViewControllerFactory {
+    var viewControllerFactory: ViewControllerFactory { get }
+}

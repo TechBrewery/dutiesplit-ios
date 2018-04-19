@@ -52,6 +52,11 @@
 		7C9FA3A1208399000095E647 /* App-Common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7C9FA39B208399000095E647 /* App-Common.xcconfig */; };
 		7C9FA3BE20839E500095E647 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C9FA3BC20839E500095E647 /* Localizable.strings */; };
 		7C9FA3BF20839E500095E647 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9FA3BD20839E500095E647 /* Localizable.swift */; };
+		7CCB039620891033009E2680 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039520891033009E2680 /* LoginView.swift */; };
+		7CCB03982089103B009E2680 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB03972089103B009E2680 /* LoginViewModel.swift */; };
+		7CCB039A20891045009E2680 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039920891045009E2680 /* LoginViewController.swift */; };
+		7CCB039C2089112E009E2680 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039B2089112E009E2680 /* SeparatorView.swift */; };
+		7CCB039F2089144C009E2680 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039E2089144C009E2680 /* ViewControllerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +121,11 @@
 		7C9FA3AF20839AE00095E647 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		7C9FA3BC20839E500095E647 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7C9FA3BD20839E500095E647 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		7CCB039520891033009E2680 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7CCB03972089103B009E2680 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		7CCB039920891045009E2680 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7CCB039B2089112E009E2680 /* SeparatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
+		7CCB039E2089144C009E2680 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +212,9 @@
 		7C9BF5D720890368002BF7B2 /* Login screen */ = {
 			isa = PBXGroup;
 			children = (
+				7CCB039920891045009E2680 /* LoginViewController.swift */,
+				7CCB03972089103B009E2680 /* LoginViewModel.swift */,
+				7CCB039520891033009E2680 /* LoginView.swift */,
 			);
 			path = "Login screen";
 			sourceTree = "<group>";
@@ -282,6 +295,7 @@
 				7C9FA3B920839E350095E647 /* Models */,
 				7C9FA3B820839E2F0095E647 /* Extensions */,
 				7C9FA3B720839E290095E647 /* Abstraction */,
+				7CCB039D2089142A009E2680 /* Factories */,
 				7C9FA3B620839E1D0095E647 /* Base classes */,
 			);
 			path = Common;
@@ -319,10 +333,10 @@
 			children = (
 				7C9BF5E0208908D1002BF7B2 /* ViewController.swift */,
 				7C9BF5D02088FFC2002BF7B2 /* ViewModel.swift */,
+				7C9BF5DC20890654002BF7B2 /* View.swift */,
 				7C9BF5A92088F844002BF7B2 /* TypedViewController.swift */,
 				7C9BF5CC2088FD53002BF7B2 /* FlowAwareViewController.swift */,
 				7C9BF5E220890E14002BF7B2 /* KeyboardAwareViewController.swift */,
-				7C9BF5DC20890654002BF7B2 /* View.swift */,
 			);
 			path = "Base classes";
 			sourceTree = "<group>";
@@ -366,6 +380,7 @@
 		7C9FA3BA20839E3A0095E647 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7CCB039B2089112E009E2680 /* SeparatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -376,6 +391,14 @@
 				7C9BF59D2088F6F7002BF7B2 /* HockeyAppService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		7CCB039D2089142A009E2680 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				7CCB039E2089144C009E2680 /* ViewControllerFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -515,24 +538,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CCB039C2089112E009E2680 /* SeparatorView.swift in Sources */,
 				7C9BF5A82088F7B2002BF7B2 /* LoginFlowController.swift in Sources */,
 				7C9BF5C42088FCA0002BF7B2 /* NSObjectExtension.swift in Sources */,
 				7C9BF5AA2088F844002BF7B2 /* TypedViewController.swift in Sources */,
 				7C9BF5C32088FCA0002BF7B2 /* UICollectionViewExtension.swift in Sources */,
 				7C9BF5A02088F712002BF7B2 /* HasDependency.swift in Sources */,
 				7C9BF5E1208908D1002BF7B2 /* ViewController.swift in Sources */,
+				7CCB039F2089144C009E2680 /* ViewControllerFactory.swift in Sources */,
 				7C9BF5D12088FFC2002BF7B2 /* ViewModel.swift in Sources */,
 				7C9BF5A62088F719002BF7B2 /* CrashLogger.swift in Sources */,
 				7C9BF5C72088FCA0002BF7B2 /* UIViewExtension+Constraint.swift in Sources */,
 				7C9BF5A52088F719002BF7B2 /* AlertPresentable.swift in Sources */,
 				7C9FA3BF20839E500095E647 /* Localizable.swift in Sources */,
 				7C9BF5C62088FCA0002BF7B2 /* BoolExtension.swift in Sources */,
+				7CCB039A20891045009E2680 /* LoginViewController.swift in Sources */,
 				7C9BF5DD20890654002BF7B2 /* View.swift in Sources */,
 				7C9BF59B2088F6DC002BF7B2 /* ApplicationDependency.swift in Sources */,
 				7C9BF5C92088FCA0002BF7B2 /* UITableViewExtension.swift in Sources */,
 				7C9BF5CF2088FD95002BF7B2 /* NavigationBarSetupable.swift in Sources */,
 				7C9BF5E320890E14002BF7B2 /* KeyboardAwareViewController.swift in Sources */,
+				7CCB03982089103B009E2680 /* LoginViewModel.swift in Sources */,
 				7C9BF5C82088FCA0002BF7B2 /* UIDeviceExtension.swift in Sources */,
+				7CCB039620891033009E2680 /* LoginView.swift in Sources */,
 				7C9BF5A42088F719002BF7B2 /* FlowController.swift in Sources */,
 				7C9BF59C2088F6DC002BF7B2 /* ApplicationFlowController.swift in Sources */,
 				7C9BF5C52088FCA0002BF7B2 /* UIColorExtension.swift in Sources */,
