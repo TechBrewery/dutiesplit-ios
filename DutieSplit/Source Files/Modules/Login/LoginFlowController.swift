@@ -38,7 +38,7 @@ internal final class HomeFlowController: FlowController {
     var rootViewController: UIViewController?
     
     private func makeLoginViewController() -> LoginViewController {
-        let viewController = dependencies.viewControllerFactory.makeLoginViewController()
+        let viewController = dependencies.viewControllerFactory.loginViewController()
         viewController.viewModel.eventTriggered = { event in
             switch event {
             case .userLoggedIn:
