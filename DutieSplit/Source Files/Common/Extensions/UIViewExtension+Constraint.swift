@@ -99,4 +99,32 @@ internal extension UIView {
             return []
         }
     }
+    
+    /// Constraint center the view to the superview
+    ///
+    /// - Parameters:
+    ///   - axis: Axis that should be constraint
+    ///   - constant: Constant value to use for constraining
+    /// - Returns: Created constraints
+    @discardableResult func constraintCenterToSuperview(axis: [UILayoutConstraintAxis] = [.horizontal, .vertical], withConstant constant: CGPoint = .zero) -> [NSLayoutConstraint] {
+        guard let superview = superview else {
+            fatalError("Cannot constrain to nil superview")
+        }
+        return constraintCenter(to: superview, axis: axis, withConstant: constant)
+    }
+    
+    /// Constraint center the view to the given view
+    ///
+    /// - Parameters:
+    ///   - view: View to constraint center to
+    ///   - axis: Axis that should be constraint
+    ///   - constant: Constant value to use for constraining
+    /// - Returns: Created constraints
+    @discardableResult func constraintCenter(to view: UIView, axis: [UILayoutConstraintAxis] = [.horizontal, .vertical], withConstant constant: CGPoint = .zero) -> [NSLayoutConstraint] {
+        var constraints = [NSLayoutConstraint]()
+        if axis.contains(.horizontal) { constraints.append(centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: constant.x)) }
+        if axis.contains(.vertical) { constraints.append(centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: constant.y)) }
+        NSLayoutConstraint.activate(constraints)
+        return constraints
+    }
 }

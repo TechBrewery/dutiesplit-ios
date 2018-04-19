@@ -57,7 +57,7 @@ internal final class LoginView: View, ViewSetupable {
     
     /// - SeeAlso: ViewSetupable
     func setupConstraints() {
-        stackView.constraintToSuperviewEdges(withInsets: .init(top: 0, left: 60, bottom: 0, right: 60))
+        stackView.constraintCenterToSuperview()
         NSLayoutConstraint.activate([
             loginButton.heightAnchor.constraint(equalToConstant: 50),
         ])
