@@ -39,7 +39,7 @@ internal extension UIView {
     ///     - axis: The axis of the separator view.
     ///     - thickness: The thickness of the separator view.
     ///     - color: The background color of the separator view. Transparent by default
-    func separatorView(axis: UILayoutConstraintAxis, thickness: CGFloat, color: UIColor = .clear) -> UIView {
+    static func separator(axis: UILayoutConstraintAxis, thickness: CGFloat, color: UIColor = .clear) -> UIView {
         return SeparatorView(axis: axis, thickness: thickness, color: color)
     }
 }

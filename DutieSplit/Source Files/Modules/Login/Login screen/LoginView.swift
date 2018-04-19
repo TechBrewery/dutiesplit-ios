@@ -36,18 +36,17 @@ internal final class LoginView: View, ViewSetupable {
         return button
     }()
     
-    private lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [
+    private lazy var stackView = UIStackView.make(
+        axis: .vertical,
+        with: [
             emailTextField,
-            SeparatorView(axis: .vertical, thickness: 8),
+            .separator(axis: .vertical, thickness: 8),
             passwordTextField,
-            SeparatorView(axis: .vertical, thickness: 8),
+            .separator(axis: .vertical, thickness: 8),
             loginButton,
             signUpButton
-        ])
-        stackView.axis = .vertical
-        return stackView
-    }()
+        ]
+    )
     
     /// - SeeAlso: ViewSetupable
     func setupViewHierarchy() {

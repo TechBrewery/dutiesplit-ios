@@ -57,6 +57,7 @@
 		7CCB039A20891045009E2680 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039920891045009E2680 /* LoginViewController.swift */; };
 		7CCB039C2089112E009E2680 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039B2089112E009E2680 /* SeparatorView.swift */; };
 		7CCB039F2089144C009E2680 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039E2089144C009E2680 /* ViewControllerFactory.swift */; };
+		7CCB03A120891A3B009E2680 /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB03A020891A3B009E2680 /* UIStackViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		7CCB039920891045009E2680 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7CCB039B2089112E009E2680 /* SeparatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		7CCB039E2089144C009E2680 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		7CCB03A020891A3B009E2680 /* UIStackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,6 +368,7 @@
 				7C9BF5C22088FCA0002BF7B2 /* UITableViewExtension.swift */,
 				7C9BF5C02088FCA0002BF7B2 /* UIViewExtension+Constraint.swift */,
 				7C9BF5CA2088FCCB002BF7B2 /* UIViewExtension.swift */,
+				7CCB03A020891A3B009E2680 /* UIStackViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				7C9BF5D12088FFC2002BF7B2 /* ViewModel.swift in Sources */,
 				7C9BF5A62088F719002BF7B2 /* CrashLogger.swift in Sources */,
 				7C9BF5C72088FCA0002BF7B2 /* UIViewExtension+Constraint.swift in Sources */,
+				7CCB03A120891A3B009E2680 /* UIStackViewExtension.swift in Sources */,
 				7C9BF5A52088F719002BF7B2 /* AlertPresentable.swift in Sources */,
 				7C9FA3BF20839E500095E647 /* Localizable.swift in Sources */,
 				7C9BF5C62088FCA0002BF7B2 /* BoolExtension.swift in Sources */,
