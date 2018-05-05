@@ -10,15 +10,23 @@ internal final class LoginView: View, ViewSetupable {
     
     /// Text Field with the email
     lazy var emailTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "email"
+        let textField = UITextFieldFactory.loginStyled()
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "Email",
+            attributes: [.foregroundColor: UIColor.white.withAlphaComponent(0.6)]
+        )
+        textField.keyboardType = .emailAddress
         return textField.layoutable()
     }()
     
     /// Text Field with the password
     lazy var passwordTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "password"
+        let textField = UITextFieldFactory.loginStyled()
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "Password",
+            attributes: [.foregroundColor: UIColor.white.withAlphaComponent(0.6)]
+        )
+        textField.isSecureTextEntry = true
         return textField.layoutable()
     }()
     
@@ -70,9 +78,10 @@ internal final class LoginView: View, ViewSetupable {
         backgroundImageView.constraintToSuperviewEdges()
         stackView.constraintCenterToSuperview()
         logoImageView.constraintToSuperviewEdges(excludingAnchors: [.bottom], withInsets: .init(top: 20, left: 40, bottom: 0, right: 40))
-        logoImageView.heightAnchor.constraint(equalToConstant: 170)
         NSLayoutConstraint.activate([
             loginButton.heightAnchor.constraint(equalToConstant: 50),
+            stackView.widthAnchor.constraint(equalToConstant: 260),
+            logoImageView.heightAnchor.constraint(equalToConstant: 170)
         ])
     }
     
