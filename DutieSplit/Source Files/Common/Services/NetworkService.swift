@@ -25,7 +25,7 @@ internal protocol NetworkService {
     ///
     /// - Parameter request: Request to be performed
     /// - Returns: Observable of type Request.Response
-    func perform<Request>(request: Request) -> Observable<Request.Response> where Request: NetworkRequest
+    func perform<Request>(request: Request) -> Single<Request.Response> where Request: NetworkRequest
 }
 
 /// Default network application for performing API requests
@@ -60,26 +60,26 @@ internal final class DefaultNetworkService: NetworkService {
     ///
     /// - Parameter request: Request to be performed
     /// - Returns: Observable of type Request.Response
-    func perform<Request>(request: Request) -> Observable<Request.Response> where Request: NetworkRequest {
-        return Observable.create { [unowned self] observer in
+    func perform<Request>(request: Request) -> Single<Request.Response> where Request: NetworkRequest {
+        return Single<Request.Response>.create { [unowned self] single in
             let urlRequest = URLRequest(request: request, authenticationService: self.authenticationService)
             let task = self.session.dataTask(with: urlRequest) { [weak self] data, response, error in
                 guard let `self` = self else { return }
                 
                 // If error occurred, resolve failure immediately
                 if let error = error {
-                    observer.onError(NetworkError.connectionError(error))
+                    single(.error(NetworkError.connectionError(error)))
                 }
                 
                 // If the response is invalid, resolve failure immediately
                 guard let response = response as? HTTPURLResponse else {
-                    observer.onError(NetworkError.missingResponse)
+                    single(.error(NetworkError.missingResponse))
                     return
                 }
                 
                 // If data is missing, resolve failure immediately
                 guard let data = data else {
-                    observer.onError(NetworkError.missingData)
+                    single(.error(NetworkError.missingData))
                     return
                 }
                 
@@ -91,11 +91,11 @@ internal final class DefaultNetworkService: NetworkService {
                     // Call unauthorized callback in case of unauthorized status code
                     guard response.statusCode != self.authorizationErrorStatusCode else {
                         self.authenticationService.removeToken()
-                        observer.onError(NetworkError.unauthorized)
+                        single(.error(NetworkError.unauthorized))
                         self.onUnauthorizedError()
                         return
                     }
-                    observer.onError(NetworkError.unacceptableStatusCode(response.statusCode))
+                    single(.error(NetworkError.unacceptableStatusCode(response.statusCode)))
                     return
                 }
                 
@@ -104,18 +104,19 @@ internal final class DefaultNetworkService: NetworkService {
                     let parsedResponse = try decoder.decode(Request.Response.self, from: data)
                     
                     // Resolve success with a parsed response
-                    observer.onNext(parsedResponse)
-                    observer.onCompleted()
+                    single(.success(parsedResponse))
                 } catch let error {
                     #if ENV_DEVELOPMENT
                         // Prints which value failed decoding - only for development
                         print("Decodable error: \(error)")
                     #endif
-                    observer.onError(NetworkError.responseParseError(error))
+                    single(.error(NetworkError.responseParseError(error)))
                 }
             }
             task.resume()
-            return Disposables.create()
+            return Disposables.create() {
+                task.cancel()
+            }
         }
     }
 }
