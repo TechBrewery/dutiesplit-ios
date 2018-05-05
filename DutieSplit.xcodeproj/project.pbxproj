@@ -67,6 +67,7 @@
 		7CF7D567209DC3A6003A3FC1 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7D565209DC3A6003A3FC1 /* AuthenticationService.swift */; };
 		7CF7D56D209DF68D003A3FC1 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7D56C209DF68D003A3FC1 /* LoginRequest.swift */; };
 		7CF7D56F209DF697003A3FC1 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7D56E209DF697003A3FC1 /* LoginResponse.swift */; };
+		7CF7D571209E03B7003A3FC1 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7D570209E03B7003A3FC1 /* NetworkStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,7 @@
 		7CF7D565209DC3A6003A3FC1 /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		7CF7D56C209DF68D003A3FC1 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		7CF7D56E209DF697003A3FC1 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		7CF7D570209E03B7003A3FC1 /* NetworkStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -433,6 +435,7 @@
 				7CF7D556209DC2C1003A3FC1 /* NetworkResponse.swift */,
 				7CF7D557209DC2C1003A3FC1 /* NetworkApplication.swift */,
 				7CF7D55C209DC2C2003A3FC1 /* NetworkError.swift */,
+				7CF7D570209E03B7003A3FC1 /* NetworkStatus.swift */,
 				7CF7D55B209DC2C1003A3FC1 /* URLRequestExtension+Networking.swift */,
 			);
 			path = "Networking Helpers";
@@ -625,6 +628,7 @@
 				7C9BF5A52088F719002BF7B2 /* AlertPresentable.swift in Sources */,
 				7C9FA3BF20839E500095E647 /* Localizable.swift in Sources */,
 				7C9BF5C62088FCA0002BF7B2 /* BoolExtension.swift in Sources */,
+				7CF7D571209E03B7003A3FC1 /* NetworkStatus.swift in Sources */,
 				7CCB039A20891045009E2680 /* LoginViewController.swift in Sources */,
 				7C9BF5DD20890654002BF7B2 /* View.swift in Sources */,
 				7CF7D55D209DC2C2003A3FC1 /* NetworkResponse.swift in Sources */,

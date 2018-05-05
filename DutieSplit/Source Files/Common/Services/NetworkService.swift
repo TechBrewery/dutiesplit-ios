@@ -92,14 +92,21 @@ internal final class DefaultNetworkService: NetworkService {
                 // Validate against acceptable status codes
                 guard self.acceptableStatusCodes ~= response.statusCode else {
                     // Call unauthorized callback in case of unauthorized status code
-                    guard response.statusCode != self.authorizationErrorStatusCode else {
+                    guard response.statusCode != self.authorizationErrorStatusCode || request is LoginRequest else {
                         self.authenticationService.removeToken()
                         observer.onNext(.failure(.unauthorized))
                         observer.onCompleted()
                         self.onUnauthorizedError()
                         return
                     }
-                    observer.onNext(.failure(.unacceptableStatusCode(response.statusCode)))
+                    
+                    // Try to parse status from response, otherwise resolve failure only with status code
+                    guard let parsedErrorStatusResponse = try? decoder.decode(NetworkStatusResponse.self, from: data) else {
+                        observer.onNext(.failure(.unacceptableStatusCode(response.statusCode)))
+                        observer.onCompleted()
+                        return
+                    }
+                    observer.onNext(.failure(.errorStatus(parsedErrorStatusResponse.status)))
                     observer.onCompleted()
                     return
                 }

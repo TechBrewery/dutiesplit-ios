@@ -12,6 +12,7 @@ internal enum NetworkError: Error {
     case missingResponse
     case missingData
     case unauthorized
+    case errorStatus(NetworkStatus)
     
     /// - SeeAlso: Error.description
     internal var description: String {
@@ -27,9 +28,13 @@ internal enum NetworkError: Error {
                 return "Missing data"
             case .unauthorized:
                 return Localizable.Error.sessionExpired
+            case .errorStatus(let status):
+                return status.message
             }
         #else
             switch self {
+            case .errorStatus(let status):
+                return status.message
             case .unauthorized:
                 return Localizable.error.sessionExpired
             default:

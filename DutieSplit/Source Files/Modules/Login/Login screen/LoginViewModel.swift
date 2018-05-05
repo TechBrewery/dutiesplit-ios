@@ -52,12 +52,12 @@ internal final class LoginViewModel: ViewModel, BindingsSetupable {
             .map { LoginRequest(email: $0, password: $1) }
             .flatMapLatest { [unowned self] in self.dependencies.networkService.perform(request: $0) }
             .do(onNext: { [unowned self] _ in self.isLoading.value = false } )
-            .subscribe( onNext: { response in
+            .subscribe( onNext: { [unowned self] response in
                 switch response {
                 case .success(let response):
                     print("logged in: \(response.token)")
                 case .failure(let error):
-                    print("error: \(error)")
+                    self.errorOccurred.onNext(error.description)
                 }
             })
             .disposed(by: disposeBag)
