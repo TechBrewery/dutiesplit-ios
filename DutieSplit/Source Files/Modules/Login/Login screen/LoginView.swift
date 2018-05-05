@@ -89,10 +89,4 @@ internal final class LoginView: View, ViewSetupable {
     func setupProperties() {
         backgroundColor = .white
     }
-    
-    /// - SeeAlso: UIView.touchesBegan()
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        endEditing(true)
-    }
 }
