@@ -52,4 +52,4 @@ carthage bootstrap --platform iOS --cache-builds
 bundle exec pod install
 ```
 
-6. Open `DutieSplit.xcworkspace` file and build the project.
+6. Open `DutieSplit.xcodeproj` file and build the project.
