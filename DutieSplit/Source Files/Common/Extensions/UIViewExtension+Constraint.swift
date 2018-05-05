@@ -127,4 +127,17 @@ internal extension UIView {
         NSLayoutConstraint.activate(constraints)
         return constraints
     }
+    
+    /// Constraints width and height anchors to the given constant size
+    ///
+    /// - Parameter size: Size to get values from
+    /// - Returns: Created constraints
+    @discardableResult func constraintToConstant(_ size: CGSize) -> [NSLayoutConstraint] {
+        let constraints = [
+            widthAnchor.constraint(equalToConstant: size.width),
+            heightAnchor.constraint(equalToConstant: size.height)
+        ]
+        NSLayoutConstraint.activate(constraints)
+        return constraints
+    }
 }

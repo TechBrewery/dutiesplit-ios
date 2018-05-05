@@ -42,6 +42,12 @@ internal final class LoginView: View, ViewSetupable {
         return view
     }()
     
+    private lazy var logoImageView: UIImageView = {
+        let view = UIImageView(image: #imageLiteral(resourceName: "logo"))
+        view.contentMode = .scaleAspectFit
+        return view
+    }()
+    
     private lazy var stackView = UIStackView.make(
         axis: .vertical,
         with: [
@@ -56,14 +62,16 @@ internal final class LoginView: View, ViewSetupable {
     
     /// - SeeAlso: ViewSetupable
     func setupViewHierarchy() {
-        [backgroundImageView, stackView].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
-        [backgroundImageView, stackView].forEach { addSubview($0) }
+        [backgroundImageView, logoImageView, stackView].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
+        [backgroundImageView, logoImageView, stackView].forEach { addSubview($0) }
     }
     
     /// - SeeAlso: ViewSetupable
     func setupConstraints() {
         backgroundImageView.constraintToSuperviewEdges()
         stackView.constraintCenterToSuperview()
+        logoImageView.constraintToSuperviewEdges(excludingAnchors: [.bottom], withInsets: .init(top: 20, left: 40, bottom: 0, right: 40))
+        logoImageView.constraintToConstant(CGSize(width: 280, height: 170))
         NSLayoutConstraint.activate([
             loginButton.heightAnchor.constraint(equalToConstant: 50),
         ])
