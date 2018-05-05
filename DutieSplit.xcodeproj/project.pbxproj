@@ -51,6 +51,7 @@
 		7C9FA3A1208399000095E647 /* App-Common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7C9FA39B208399000095E647 /* App-Common.xcconfig */; };
 		7C9FA3BE20839E500095E647 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C9FA3BC20839E500095E647 /* Localizable.strings */; };
 		7C9FA3BF20839E500095E647 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9FA3BD20839E500095E647 /* Localizable.swift */; };
+		7CB54D9E209E219C007EC75D /* UITextFieldFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54D9D209E219C007EC75D /* UITextFieldFactory.swift */; };
 		7CCB039620891033009E2680 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039520891033009E2680 /* LoginView.swift */; };
 		7CCB03982089103B009E2680 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB03972089103B009E2680 /* LoginViewModel.swift */; };
 		7CCB039A20891045009E2680 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039920891045009E2680 /* LoginViewController.swift */; };
@@ -132,6 +133,7 @@
 		7C9FA3AF20839AE00095E647 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		7C9FA3BC20839E500095E647 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7C9FA3BD20839E500095E647 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		7CB54D9D209E219C007EC75D /* UITextFieldFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldFactory.swift; sourceTree = "<group>"; };
 		7CCB039520891033009E2680 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7CCB03972089103B009E2680 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7CCB039920891045009E2680 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				7CCB039E2089144C009E2680 /* ViewControllerFactory.swift */,
+				7CB54D9D209E219C007EC75D /* UITextFieldFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -635,6 +638,7 @@
 				7CF7D571209E03B7003A3FC1 /* NetworkStatus.swift in Sources */,
 				7CCB039A20891045009E2680 /* LoginViewController.swift in Sources */,
 				7C9BF5DD20890654002BF7B2 /* View.swift in Sources */,
+				7CB54D9E209E219C007EC75D /* UITextFieldFactory.swift in Sources */,
 				7CF7D55D209DC2C2003A3FC1 /* NetworkResponse.swift in Sources */,
 				7C9BF59B2088F6DC002BF7B2 /* ApplicationDependency.swift in Sources */,
 				7C9BF5C92088FCA0002BF7B2 /* UITableViewExtension.swift in Sources */,

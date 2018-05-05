@@ -140,4 +140,12 @@ internal extension UIView {
         NSLayoutConstraint.activate(constraints)
         return constraints
     }
+    
+    /// Returns view with the same type that can be used with AutoLayout
+    ///
+    /// - Returns: Adjusted view
+    func layoutable() -> Self {
+        translatesAutoresizingMaskIntoConstraints = false
+        return self
+    }
 }

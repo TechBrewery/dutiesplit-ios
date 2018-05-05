@@ -12,40 +12,40 @@ internal final class LoginView: View, ViewSetupable {
     lazy var emailTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "email"
-        return textField
+        return textField.layoutable()
     }()
     
     /// Text Field with the password
     lazy var passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "password"
-        return textField
+        return textField.layoutable()
     }()
     
     /// Button for logging in using email and password
     lazy var loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Login", for: .normal)
-        return button
+        return button.layoutable()
     }()
     
     /// Button for signing up
     lazy var registerButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Register", for: .normal)
-        return button
+        return button.layoutable()
     }()
     
     private lazy var backgroundImageView: UIImageView = {
         let view = UIImageView(image: #imageLiteral(resourceName: "splash-screen"))
         view.contentMode = .scaleAspectFit
-        return view
+        return view.layoutable()
     }()
     
     private lazy var logoImageView: UIImageView = {
         let view = UIImageView(image: #imageLiteral(resourceName: "logo"))
         view.contentMode = .scaleAspectFit
-        return view
+        return view.layoutable()
     }()
     
     private lazy var stackView = UIStackView.make(
@@ -58,11 +58,10 @@ internal final class LoginView: View, ViewSetupable {
             loginButton,
             registerButton
         ]
-    )
+    ).layoutable()
     
     /// - SeeAlso: ViewSetupable
     func setupViewHierarchy() {
-        [backgroundImageView, logoImageView, stackView].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
         [backgroundImageView, logoImageView, stackView].forEach { addSubview($0) }
     }
     
@@ -71,7 +70,7 @@ internal final class LoginView: View, ViewSetupable {
         backgroundImageView.constraintToSuperviewEdges()
         stackView.constraintCenterToSuperview()
         logoImageView.constraintToSuperviewEdges(excludingAnchors: [.bottom], withInsets: .init(top: 20, left: 40, bottom: 0, right: 40))
-        logoImageView.constraintToConstant(CGSize(width: 280, height: 170))
+        logoImageView.heightAnchor.constraint(equalToConstant: 170)
         NSLayoutConstraint.activate([
             loginButton.heightAnchor.constraint(equalToConstant: 50),
         ])
