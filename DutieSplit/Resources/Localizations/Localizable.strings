@@ -13,3 +13,4 @@
 // Error
 "error.title" = "Error";
 "error.unknown.error.occurred" = "Unknown error occurred";
+"error.session.expired" = "Session has expired";

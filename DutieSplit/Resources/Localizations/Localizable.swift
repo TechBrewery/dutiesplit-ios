@@ -23,6 +23,7 @@ internal struct Localizable {
     struct Error {
         static let title = localized("error.title")
         static let unknownErrorOccurred = localized("error.unknown.error.occurred")
+        static let sessionExpired = localized("error.session.expired")
     }
 }
 
