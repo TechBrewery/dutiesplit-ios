@@ -47,18 +47,25 @@ internal final class LoginViewModel: ViewModel, BindingsSetupable {
     /// - SeeAlso: BindingsSetupable
     func setupBindings() {
         loginButtonTap
-            .do(onNext: { [unowned self] in self.isLoading.value = true } )
+            .do(onNext: { [unowned self] in self.isLoading.value = true })
             .withLatestFrom(Observable.combineLatest(emailText.asObservable(), passwordText.asObservable()))
             .map { LoginRequest(email: $0, password: $1) }
             .flatMapLatest { [unowned self] in self.dependencies.networkService.perform(request: $0) }
-            .do(onNext: { [unowned self] _ in self.isLoading.value = false } )
+            .do(onNext: { [unowned self] _ in self.isLoading.value = false })
             .subscribe( onNext: { [unowned self] response in
                 switch response {
                 case .success(let response):
-                    print("logged in: \(response.token)")
+                    self.dependencies.authenticationService.save(token: response.token)
+                    self.eventTriggered?(.userLoggedIn)
                 case .failure(let error):
                     self.errorOccurred.onNext(error.description)
                 }
+            })
+            .disposed(by: disposeBag)
+        
+        registerButtonTap
+            .subscribe(onNext: { [unowned self] _ in
+                self.eventTriggered?(.didTapRegister)
             })
             .disposed(by: disposeBag)
     }
