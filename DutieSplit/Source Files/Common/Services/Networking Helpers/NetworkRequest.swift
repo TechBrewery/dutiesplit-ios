@@ -61,5 +61,5 @@ internal extension NetworkRequest {
     /// - SeeAlso: Swift.Encodable
     /// Has default implementation because not every request has http body
     /// Override if want to use http body with request
-    func encode(to encoder: Encoder) throws {}
+    func encode(to encoder: Encoder) throws { }
 }

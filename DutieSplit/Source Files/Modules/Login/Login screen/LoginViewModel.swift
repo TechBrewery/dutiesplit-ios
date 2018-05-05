@@ -4,6 +4,8 @@
 //
 
 
+import RxSwift
+
 internal final class LoginViewModel: ViewModel, BindingsSetupable {
     internal typealias Dependencies = HasNetworkService & HasAuthenticationService
     internal typealias EventCallback = (Event) -> ()
@@ -30,8 +32,34 @@ internal final class LoginViewModel: ViewModel, BindingsSetupable {
         self.dependencies = dependencies
     }
     
+    /// Indicates when login button was tapped
+    let loginButtonTap = PublishSubject<Void>()
+    
+    /// Indicates when register button was tapped
+    let registerButtonTap = PublishSubject<Void>()
+    
+    /// Variable for binding email text
+    let emailText = Variable<String>("")
+    
+    /// Variable for binding password text
+    let passwordText = Variable<String>("")
+    
     /// - SeeAlso: BindingsSetupable
     func setupBindings() {
-        print("LoginViewModel setup called")
+        loginButtonTap
+            .do(onNext: { [unowned self] in self.isLoading.value = true } )
+            .withLatestFrom(Observable.combineLatest(emailText.asObservable(), passwordText.asObservable()))
+            .map { LoginRequest(email: $0, password: $1) }
+            .flatMapLatest { [unowned self] in self.dependencies.networkService.perform(request: $0) }
+            .do(onNext: { [unowned self] _ in self.isLoading.value = false } )
+            .subscribe( onNext: { response in
+                switch response {
+                case .success(let response):
+                    print("logged in: \(response.token)")
+                case .failure(let error):
+                    print("error: \(error)")
+                }
+            })
+            .disposed(by: disposeBag)
     }
 }

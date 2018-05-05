@@ -25,7 +25,7 @@ internal protocol NetworkService {
     ///
     /// - Parameter request: Request to be performed
     /// - Returns: Observable of type Request.Response
-    func perform<Request>(request: Request) -> Single<Request.Response> where Request: NetworkRequest
+    func perform<Request>(request: Request) -> Observable<NetworkResponseResult<Request.Response>> where Request: NetworkRequest
 }
 
 /// Default network application for performing API requests
@@ -60,26 +60,29 @@ internal final class DefaultNetworkService: NetworkService {
     ///
     /// - Parameter request: Request to be performed
     /// - Returns: Observable of type Request.Response
-    func perform<Request>(request: Request) -> Single<Request.Response> where Request: NetworkRequest {
-        return Single<Request.Response>.create { [unowned self] single in
+    func perform<Request>(request: Request) -> Observable<NetworkResponseResult<Request.Response>> where Request: NetworkRequest {
+        return Observable<NetworkResponseResult<Request.Response>>.create { [unowned self] observer in
             let urlRequest = URLRequest(request: request, authenticationService: self.authenticationService)
             let task = self.session.dataTask(with: urlRequest) { [weak self] data, response, error in
                 guard let `self` = self else { return }
                 
                 // If error occurred, resolve failure immediately
                 if let error = error {
-                    single(.error(NetworkError.connectionError(error)))
+                    observer.onNext(.failure(.connectionError(error)))
+                    observer.onCompleted()
                 }
                 
                 // If the response is invalid, resolve failure immediately
                 guard let response = response as? HTTPURLResponse else {
-                    single(.error(NetworkError.missingResponse))
+                    observer.onNext(.failure(.missingResponse))
+                    observer.onCompleted()
                     return
                 }
                 
                 // If data is missing, resolve failure immediately
                 guard let data = data else {
-                    single(.error(NetworkError.missingData))
+                    observer.onNext(.failure(.missingData))
+                    observer.onCompleted()
                     return
                 }
                 
@@ -91,11 +94,13 @@ internal final class DefaultNetworkService: NetworkService {
                     // Call unauthorized callback in case of unauthorized status code
                     guard response.statusCode != self.authorizationErrorStatusCode else {
                         self.authenticationService.removeToken()
-                        single(.error(NetworkError.unauthorized))
+                        observer.onNext(.failure(.unauthorized))
+                        observer.onCompleted()
                         self.onUnauthorizedError()
                         return
                     }
-                    single(.error(NetworkError.unacceptableStatusCode(response.statusCode)))
+                    observer.onNext(.failure(.unacceptableStatusCode(response.statusCode)))
+                    observer.onCompleted()
                     return
                 }
                 
@@ -104,13 +109,15 @@ internal final class DefaultNetworkService: NetworkService {
                     let parsedResponse = try decoder.decode(Request.Response.self, from: data)
                     
                     // Resolve success with a parsed response
-                    single(.success(parsedResponse))
+                    observer.onNext(.success(parsedResponse))
+                    observer.onCompleted()
                 } catch let error {
                     #if ENV_DEVELOPMENT
                         // Prints which value failed decoding - only for development
                         print("Decodable error: \(error)")
                     #endif
-                    single(.error(NetworkError.responseParseError(error)))
+                    observer.onNext(.failure(.responseParseError(error)))
+                    observer.onCompleted()
                 }
             }
             task.resume()

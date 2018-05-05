@@ -6,6 +6,11 @@
 
 import Foundation
 
+internal enum NetworkResponseResult<NetworkResponse> {
+    case success(NetworkResponse)
+    case failure(NetworkError)
+}
+
 /// An network response representation that has to be just decodable
 internal protocol NetworkResponse: Decodable { }
 

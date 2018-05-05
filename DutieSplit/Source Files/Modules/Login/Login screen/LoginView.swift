@@ -18,7 +18,7 @@ internal final class LoginView: View, ViewSetupable {
     /// Text Field with the password
     lazy var passwordTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "email"
+        textField.placeholder = "password"
         return textField
     }()
     
@@ -30,7 +30,7 @@ internal final class LoginView: View, ViewSetupable {
     }()
     
     /// Button for signing up
-    lazy var signUpButton: UIButton = {
+    lazy var registerButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Register", for: .normal)
         return button
@@ -44,7 +44,7 @@ internal final class LoginView: View, ViewSetupable {
             passwordTextField,
             .separator(axis: .vertical, thickness: 8),
             loginButton,
-            signUpButton
+            registerButton
         ]
     )
     

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7C9B8F732083946200661EFE /* ApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9B8F722083946200661EFE /* ApplicationDelegate.swift */; };
 		7C9B8F7A2083946400661EFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C9B8F792083946400661EFE /* Assets.xcassets */; };
-		7C9B8F7D2083946400661EFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9B8F7B2083946400661EFE /* LaunchScreen.storyboard */; };
 		7C9B8F882083946400661EFE /* DutieSplitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9B8F872083946400661EFE /* DutieSplitTests.swift */; };
 		7C9BF59A2088F6DC002BF7B2 /* ApplicationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5972088F6DB002BF7B2 /* ApplicationKeys.swift */; };
 		7C9BF59B2088F6DC002BF7B2 /* ApplicationDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5982088F6DB002BF7B2 /* ApplicationDependency.swift */; };
@@ -66,6 +65,8 @@
 		7CF7D563209DC2C2003A3FC1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7D55C209DC2C2003A3FC1 /* NetworkError.swift */; };
 		7CF7D566209DC3A6003A3FC1 /* SecureStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7D564209DC3A6003A3FC1 /* SecureStorageService.swift */; };
 		7CF7D567209DC3A6003A3FC1 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7D565209DC3A6003A3FC1 /* AuthenticationService.swift */; };
+		7CF7D56D209DF68D003A3FC1 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7D56C209DF68D003A3FC1 /* LoginRequest.swift */; };
+		7CF7D56F209DF697003A3FC1 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7D56E209DF697003A3FC1 /* LoginResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +83,6 @@
 		7C9B8F6F2083946200661EFE /* DutieSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DutieSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9B8F722083946200661EFE /* ApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDelegate.swift; sourceTree = "<group>"; };
 		7C9B8F792083946400661EFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7C9B8F7C2083946400661EFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C9B8F7E2083946400661EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C9B8F832083946400661EFE /* DutieSplitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DutieSplitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9B8F872083946400661EFE /* DutieSplitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DutieSplitTests.swift; sourceTree = "<group>"; };
@@ -144,6 +144,8 @@
 		7CF7D55C209DC2C2003A3FC1 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		7CF7D564209DC3A6003A3FC1 /* SecureStorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStorageService.swift; sourceTree = "<group>"; };
 		7CF7D565209DC3A6003A3FC1 /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		7CF7D56C209DF68D003A3FC1 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		7CF7D56E209DF697003A3FC1 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,7 +274,6 @@
 			children = (
 				7C9FA3B020839CD80095E647 /* Localizations */,
 				7C9B8F792083946400661EFE /* Assets.xcassets */,
-				7C9B8F7B2083946400661EFE /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -440,8 +441,34 @@
 		7CF7D568209DC993003A3FC1 /* Network requests */ = {
 			isa = PBXGroup;
 			children = (
+				7CF7D56B209DF661003A3FC1 /* Groups */,
+				7CF7D56A209DF65A003A3FC1 /* Users */,
+				7CF7D569209DF644003A3FC1 /* Auth */,
 			);
 			path = "Network requests";
+			sourceTree = "<group>";
+		};
+		7CF7D569209DF644003A3FC1 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				7CF7D56C209DF68D003A3FC1 /* LoginRequest.swift */,
+				7CF7D56E209DF697003A3FC1 /* LoginResponse.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		7CF7D56A209DF65A003A3FC1 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		7CF7D56B209DF661003A3FC1 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Groups;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,7 +555,6 @@
 			files = (
 				7C9FA3A0208399000095E647 /* App-Staging.xcconfig in Resources */,
 				7C9FA3A1208399000095E647 /* App-Common.xcconfig in Resources */,
-				7C9B8F7D2083946400661EFE /* LaunchScreen.storyboard in Resources */,
 				7C9BF5B12088FB64002BF7B2 /* Keys.podspec.json in Resources */,
 				7C9FA39F208399000095E647 /* Test-Common.xcconfig in Resources */,
 				7C9BF5B72088FC08002BF7B2 /* Gemfile in Resources */,
@@ -610,6 +636,7 @@
 				7C9BF5C82088FCA0002BF7B2 /* UIDeviceExtension.swift in Sources */,
 				7CCB039620891033009E2680 /* LoginView.swift in Sources */,
 				7CF7D566209DC3A6003A3FC1 /* SecureStorageService.swift in Sources */,
+				7CF7D56F209DF697003A3FC1 /* LoginResponse.swift in Sources */,
 				7C9BF5A42088F719002BF7B2 /* FlowController.swift in Sources */,
 				7C9BF59C2088F6DC002BF7B2 /* ApplicationFlowController.swift in Sources */,
 				7C9BF5C52088FCA0002BF7B2 /* UIColorExtension.swift in Sources */,
@@ -624,6 +651,7 @@
 				7CF7D562209DC2C2003A3FC1 /* URLRequestExtension+Networking.swift in Sources */,
 				7C9BF5B02088FB64002BF7B2 /* DutieSplitKeys.m in Sources */,
 				7CF7D563209DC2C2003A3FC1 /* NetworkError.swift in Sources */,
+				7CF7D56D209DF68D003A3FC1 /* LoginRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,17 +672,6 @@
 			targetProxy = 7C9B8F842083946400661EFE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		7C9B8F7B2083946400661EFE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7C9B8F7C2083946400661EFE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7C9B8F8A2083946400661EFE /* Development */ = {
