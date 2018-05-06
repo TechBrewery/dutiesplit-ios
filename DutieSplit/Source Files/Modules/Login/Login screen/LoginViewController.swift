@@ -7,8 +7,14 @@
 import UIKit
 
 
-internal final class LoginViewController: ViewController<LoginView, LoginViewModel>, BindingsSetupable {
-
+internal final class LoginViewController: ViewController<LoginView, LoginViewModel>, BindingsSetupable, NavigationBarSetupable {
+    
+    /// - SeeAlso: NavigationBarSetupable
+    func setup(navigationBar: UINavigationBar) {
+        navigationBar.setTransparent()
+        navigationBar.tintColor = .white
+    }
+    
     /// - SeeAlso: BindingsSetupable
     func setupBindings() {
         customView.emailTextField.rx.text

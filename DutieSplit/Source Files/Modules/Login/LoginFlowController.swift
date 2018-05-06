@@ -31,20 +31,25 @@ internal final class HomeFlowController: FlowController {
     init(dependencies: Dependencies, onEventTriggered: EventCallback?) {
         self.dependencies = dependencies
         self.eventTriggered = onEventTriggered
-        rootViewController = makeLoginViewController()
+        rootViewController = UINavigationController(rootViewController: makeLoginViewController())
     }
     
     /// Root view controler of the flow
     var rootViewController: UIViewController?
     
+    /// Root view controller casted as navigation controller
+    var navigationController: UINavigationController? {
+        return rootViewController as? UINavigationController
+    }
+    
     private func makeLoginViewController() -> LoginViewController {
         let viewController = dependencies.viewControllerFactory.loginViewController()
-        viewController.viewModel.eventTriggered = { event in
+        viewController.viewModel.eventTriggered = { [unowned self] event in
             switch event {
             case .userLoggedIn:
                 print("LoginViewController triggered: .userLoggedIn")
             case .didTapRegister:
-                print("LoginViewController triggered: .didTapRegister")
+                self.navigationController?.pushViewController(self.makeLoginViewController(), animated: true)
             }
         }
         return viewController

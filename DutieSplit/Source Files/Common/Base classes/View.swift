@@ -20,16 +20,10 @@ internal class View: UIView {
     /// Initialize an instance and calls required methods
     init() {
         super.init(frame: .zero)
-        translatesAutoresizingMaskIntoConstraints = false
         guard let setupableView = self as? ViewSetupable else { return }
         setupableView.setupViewHierarchy()
         setupableView.setupConstraints()
         setupableView.setupProperties()
-    }
-    
-    /// - SeeAlso: UIView.requiresConstraintBasedLayout
-    override static var requiresConstraintBasedLayout : Bool {
-        return true
     }
     
     /// - SeeAlso: UIView.touchesBegan()

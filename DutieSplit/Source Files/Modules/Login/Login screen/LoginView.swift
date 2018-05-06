@@ -80,7 +80,6 @@ internal final class LoginView: View, ViewSetupable {
         logoImageView.constraintToSuperviewEdges(excludingAnchors: [.bottom], withInsets: .init(top: 20, left: 40, bottom: 0, right: 40))
         NSLayoutConstraint.activate([
             logoImageView.heightAnchor.constraint(equalToConstant: 170),
-            loginButton.heightAnchor.constraint(equalToConstant: 50),
             stackView.widthAnchor.constraint(equalToConstant: 260),
             registerButton.widthAnchor.constraint(equalTo: stackView.widthAnchor),
             registerButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
