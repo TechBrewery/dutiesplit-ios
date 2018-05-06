@@ -52,6 +52,8 @@
 		7C9FA3BE20839E500095E647 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C9FA3BC20839E500095E647 /* Localizable.strings */; };
 		7C9FA3BF20839E500095E647 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9FA3BD20839E500095E647 /* Localizable.swift */; };
 		7CB54D9E209E219C007EC75D /* UITextFieldFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54D9D209E219C007EC75D /* UITextFieldFactory.swift */; };
+		7CB54DA0209EDC1D007EC75D /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54D9F209EDC1D007EC75D /* Loader.swift */; };
+		7CB54DA2209EDD04007EC75D /* DefaultLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54DA1209EDD04007EC75D /* DefaultLoader.swift */; };
 		7CCB039620891033009E2680 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039520891033009E2680 /* LoginView.swift */; };
 		7CCB03982089103B009E2680 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB03972089103B009E2680 /* LoginViewModel.swift */; };
 		7CCB039A20891045009E2680 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039920891045009E2680 /* LoginViewController.swift */; };
@@ -134,6 +136,8 @@
 		7C9FA3BC20839E500095E647 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7C9FA3BD20839E500095E647 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		7CB54D9D209E219C007EC75D /* UITextFieldFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldFactory.swift; sourceTree = "<group>"; };
+		7CB54D9F209EDC1D007EC75D /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		7CB54DA1209EDD04007EC75D /* DefaultLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoader.swift; sourceTree = "<group>"; };
 		7CCB039520891033009E2680 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7CCB03972089103B009E2680 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7CCB039920891045009E2680 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -378,6 +382,7 @@
 				7C9BF5CE2088FD95002BF7B2 /* NavigationBarSetupable.swift */,
 				7C9BF5D5208902BE002BF7B2 /* BindingsSetupable.swift */,
 				7C9BF5DA2089059D002BF7B2 /* ViewSetupable.swift */,
+				7CB54D9F209EDC1D007EC75D /* Loader.swift */,
 			);
 			path = Abstraction;
 			sourceTree = "<group>";
@@ -409,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				7CCB039B2089112E009E2680 /* SeparatorView.swift */,
+				7CB54DA1209EDD04007EC75D /* DefaultLoader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -631,6 +637,7 @@
 				7C9BF5C72088FCA0002BF7B2 /* UIViewExtension+Constraint.swift in Sources */,
 				7CF7D55E209DC2C2003A3FC1 /* NetworkApplication.swift in Sources */,
 				7CF7D567209DC3A6003A3FC1 /* AuthenticationService.swift in Sources */,
+				7CB54DA0209EDC1D007EC75D /* Loader.swift in Sources */,
 				7CCB03A120891A3B009E2680 /* UIStackViewExtension.swift in Sources */,
 				7C9BF5A52088F719002BF7B2 /* AlertPresentable.swift in Sources */,
 				7C9FA3BF20839E500095E647 /* Localizable.swift in Sources */,
@@ -653,6 +660,7 @@
 				7C9BF59C2088F6DC002BF7B2 /* ApplicationFlowController.swift in Sources */,
 				7C9BF5C52088FCA0002BF7B2 /* UIColorExtension.swift in Sources */,
 				7C9BF5DB2089059D002BF7B2 /* ViewSetupable.swift in Sources */,
+				7CB54DA2209EDD04007EC75D /* DefaultLoader.swift in Sources */,
 				7C9BF59A2088F6DC002BF7B2 /* ApplicationKeys.swift in Sources */,
 				7C9BF5CD2088FD53002BF7B2 /* FlowAwareViewController.swift in Sources */,
 				7C9BF59E2088F6F7002BF7B2 /* HockeyAppService.swift in Sources */,

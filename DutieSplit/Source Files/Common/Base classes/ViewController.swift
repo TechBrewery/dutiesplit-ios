@@ -16,6 +16,12 @@ internal class ViewController<View: UIView, ControllerViewModel: ViewModel>: Typ
     /// View Model of the controller
     let viewModel: ControllerViewModel
     
+    /// Indicating if default loader should be displayed on changing isLoading state
+    var isShowingDefaultLoader = true
+    
+    /// Default loader, change parameter `isShowingDefaultLoader` to turn it off
+    lazy var defaultLoader: Loader = { return DefaultLoader(inside: customView) }()
+    
     /// Initializes view controller with given View Model
     ///
     /// - Parameter viewModel: View Model to use with controller
@@ -57,8 +63,11 @@ internal class ViewController<View: UIView, ControllerViewModel: ViewModel>: Typ
             .isLoading
             .asDriver()
             .skip(1)
-            .drive(onNext: { isLoading in
+            .drive(onNext: { [unowned self] isLoading in
                 UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading
+                if self.isShowingDefaultLoader {
+                    self.defaultLoader.toggle(isLoading)
+                }
             })
             .disposed(by: disposeBag)
         
