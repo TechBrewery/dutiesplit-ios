@@ -10,8 +10,9 @@ internal final class RegisterViewController: ViewController<RegisterView, Regist
     
     /// - SeeAlso: NavigationBarSetupable
     func setup(navigationBar: UINavigationBar) {
-        navigationBar.setTransparent()
+        navigationBar.barStyle = .blackTranslucent
         navigationBar.tintColor = .white
+        navigationBar.setTransparent()
     }
     
     /// - SeeAlso: BindingsSetupable

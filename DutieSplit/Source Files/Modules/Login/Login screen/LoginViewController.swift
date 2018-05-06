@@ -10,6 +10,7 @@ internal final class LoginViewController: ViewController<LoginView, LoginViewMod
     
     /// - SeeAlso: NavigationBarSetupable
     func setup(navigationBar: UINavigationBar) {
+        navigationBar.barStyle = .blackTranslucent
         navigationBar.setTransparent()
     }
     
