@@ -54,6 +54,7 @@
 		7CB54D9E209E219C007EC75D /* UITextFieldFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54D9D209E219C007EC75D /* UITextFieldFactory.swift */; };
 		7CB54DA0209EDC1D007EC75D /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54D9F209EDC1D007EC75D /* Loader.swift */; };
 		7CB54DA2209EDD04007EC75D /* DefaultLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54DA1209EDD04007EC75D /* DefaultLoader.swift */; };
+		7CB54DA4209EE89B007EC75D /* UIButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54DA3209EE89B007EC75D /* UIButtonFactory.swift */; };
 		7CCB039620891033009E2680 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039520891033009E2680 /* LoginView.swift */; };
 		7CCB03982089103B009E2680 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB03972089103B009E2680 /* LoginViewModel.swift */; };
 		7CCB039A20891045009E2680 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039920891045009E2680 /* LoginViewController.swift */; };
@@ -138,6 +139,7 @@
 		7CB54D9D209E219C007EC75D /* UITextFieldFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldFactory.swift; sourceTree = "<group>"; };
 		7CB54D9F209EDC1D007EC75D /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		7CB54DA1209EDD04007EC75D /* DefaultLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoader.swift; sourceTree = "<group>"; };
+		7CB54DA3209EE89B007EC75D /* UIButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonFactory.swift; sourceTree = "<group>"; };
 		7CCB039520891033009E2680 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7CCB03972089103B009E2680 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7CCB039920891045009E2680 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -436,6 +438,7 @@
 			children = (
 				7CCB039E2089144C009E2680 /* ViewControllerFactory.swift */,
 				7CB54D9D209E219C007EC75D /* UITextFieldFactory.swift */,
+				7CB54DA3209EE89B007EC75D /* UIButtonFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CB54DA4209EE89B007EC75D /* UIButtonFactory.swift in Sources */,
 				7CCB039C2089112E009E2680 /* SeparatorView.swift in Sources */,
 				7C9BF5A82088F7B2002BF7B2 /* LoginFlowController.swift in Sources */,
 				7C9BF5C42088FCA0002BF7B2 /* NSObjectExtension.swift in Sources */,

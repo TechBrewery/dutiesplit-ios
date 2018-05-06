@@ -32,14 +32,16 @@ internal final class LoginView: View, ViewSetupable {
     
     /// Button for logging in using email and password
     lazy var loginButton: UIButton = {
-        let button = UIButton(type: .system)
+        let button = UIButtonFactory.loginStyled()
+        button.tintColor = .red
         button.setTitle("Login", for: .normal)
         return button.layoutable()
     }()
     
     /// Button for signing up
     lazy var registerButton: UIButton = {
-        let button = UIButton(type: .system)
+        let button = UIButtonFactory.loginStyled()
+        button.tintColor = .green
         button.setTitle("Register", for: .normal)
         return button.layoutable()
     }()
@@ -60,17 +62,15 @@ internal final class LoginView: View, ViewSetupable {
         axis: .vertical,
         with: [
             emailTextField,
-            .separator(axis: .vertical, thickness: 8),
             passwordTextField,
-            .separator(axis: .vertical, thickness: 8),
-            loginButton,
-            registerButton
-        ]
+            loginButton
+        ],
+        spacing: 12
     ).layoutable()
     
     /// - SeeAlso: ViewSetupable
     func setupViewHierarchy() {
-        [backgroundImageView, logoImageView, stackView].forEach { addSubview($0) }
+        [backgroundImageView, logoImageView, stackView, registerButton].forEach { addSubview($0) }
     }
     
     /// - SeeAlso: ViewSetupable
@@ -79,9 +79,12 @@ internal final class LoginView: View, ViewSetupable {
         stackView.constraintCenterToSuperview()
         logoImageView.constraintToSuperviewEdges(excludingAnchors: [.bottom], withInsets: .init(top: 20, left: 40, bottom: 0, right: 40))
         NSLayoutConstraint.activate([
+            logoImageView.heightAnchor.constraint(equalToConstant: 170),
             loginButton.heightAnchor.constraint(equalToConstant: 50),
             stackView.widthAnchor.constraint(equalToConstant: 260),
-            logoImageView.heightAnchor.constraint(equalToConstant: 170)
+            registerButton.widthAnchor.constraint(equalTo: stackView.widthAnchor),
+            registerButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
+            registerButton.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }
     
