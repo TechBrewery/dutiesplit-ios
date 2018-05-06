@@ -6,7 +6,7 @@
 
 import UIKit
 
-internal final class HomeFlowController: FlowController {
+internal final class LoginFlowController: FlowController {
     typealias Dependencies = HasViewControllerFactory
     
     /// Enum describing events that can be triggered
@@ -49,7 +49,18 @@ internal final class HomeFlowController: FlowController {
             case .userLoggedIn:
                 print("LoginViewController triggered: .userLoggedIn")
             case .didTapRegister:
-                self.navigationController?.pushViewController(self.makeLoginViewController(), animated: true)
+                self.navigationController?.pushViewController(self.makeRegisterViewController(), animated: true)
+            }
+        }
+        return viewController
+    }
+    
+    private func makeRegisterViewController() -> RegisterViewController {
+        let viewController = dependencies.viewControllerFactory.registerViewController()
+        viewController.viewModel.eventTriggered = { event in
+            switch event {
+            case .userLoggedIn:
+                print("LoginViewController triggered: .userLoggedIn")
             }
         }
         return viewController

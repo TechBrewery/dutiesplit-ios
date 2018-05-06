@@ -56,6 +56,9 @@
 		7CB54DA2209EDD04007EC75D /* DefaultLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54DA1209EDD04007EC75D /* DefaultLoader.swift */; };
 		7CB54DA4209EE89B007EC75D /* UIButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54DA3209EE89B007EC75D /* UIButtonFactory.swift */; };
 		7CB54DA6209EF30B007EC75D /* UINavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54DA5209EF30B007EC75D /* UINavigationBarExtension.swift */; };
+		7CB54DA9209F59BA007EC75D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54DA8209F59BA007EC75D /* RegisterViewController.swift */; };
+		7CB54DAB209F59C2007EC75D /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54DAA209F59C2007EC75D /* RegisterViewModel.swift */; };
+		7CB54DAD209F59CB007EC75D /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54DAC209F59CB007EC75D /* RegisterView.swift */; };
 		7CCB039620891033009E2680 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039520891033009E2680 /* LoginView.swift */; };
 		7CCB03982089103B009E2680 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB03972089103B009E2680 /* LoginViewModel.swift */; };
 		7CCB039A20891045009E2680 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039920891045009E2680 /* LoginViewController.swift */; };
@@ -142,6 +145,9 @@
 		7CB54DA1209EDD04007EC75D /* DefaultLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoader.swift; sourceTree = "<group>"; };
 		7CB54DA3209EE89B007EC75D /* UIButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonFactory.swift; sourceTree = "<group>"; };
 		7CB54DA5209EF30B007EC75D /* UINavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBarExtension.swift; sourceTree = "<group>"; };
+		7CB54DA8209F59BA007EC75D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		7CB54DAA209F59C2007EC75D /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		7CB54DAC209F59CB007EC75D /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		7CCB039520891033009E2680 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7CCB03972089103B009E2680 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7CCB039920891045009E2680 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -359,6 +365,7 @@
 			children = (
 				7C9BF5A72088F7B2002BF7B2 /* LoginFlowController.swift */,
 				7C9BF5D720890368002BF7B2 /* Login screen */,
+				7CB54DA7209F599C007EC75D /* Register screen */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -434,6 +441,16 @@
 				7CF7D564209DC3A6003A3FC1 /* SecureStorageService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		7CB54DA7209F599C007EC75D /* Register screen */ = {
+			isa = PBXGroup;
+			children = (
+				7CB54DA8209F59BA007EC75D /* RegisterViewController.swift */,
+				7CB54DAA209F59C2007EC75D /* RegisterViewModel.swift */,
+				7CB54DAC209F59CB007EC75D /* RegisterView.swift */,
+			);
+			path = "Register screen";
 			sourceTree = "<group>";
 		};
 		7CCB039D2089142A009E2680 /* Factories */ = {
@@ -638,6 +655,8 @@
 				7C9BF5A02088F712002BF7B2 /* HasDependency.swift in Sources */,
 				7CF7D55F209DC2C2003A3FC1 /* NetworkRequest.swift in Sources */,
 				7C9BF5E1208908D1002BF7B2 /* ViewController.swift in Sources */,
+				7CB54DAD209F59CB007EC75D /* RegisterView.swift in Sources */,
+				7CB54DAB209F59C2007EC75D /* RegisterViewModel.swift in Sources */,
 				7CCB039F2089144C009E2680 /* ViewControllerFactory.swift in Sources */,
 				7C9BF5D12088FFC2002BF7B2 /* ViewModel.swift in Sources */,
 				7C9BF5A62088F719002BF7B2 /* CrashLogger.swift in Sources */,
@@ -652,6 +671,7 @@
 				7CF7D571209E03B7003A3FC1 /* NetworkStatus.swift in Sources */,
 				7CCB039A20891045009E2680 /* LoginViewController.swift in Sources */,
 				7C9BF5DD20890654002BF7B2 /* View.swift in Sources */,
+				7CB54DA9209F59BA007EC75D /* RegisterViewController.swift in Sources */,
 				7CB54D9E209E219C007EC75D /* UITextFieldFactory.swift in Sources */,
 				7CF7D55D209DC2C2003A3FC1 /* NetworkResponse.swift in Sources */,
 				7C9BF59B2088F6DC002BF7B2 /* ApplicationDependency.swift in Sources */,

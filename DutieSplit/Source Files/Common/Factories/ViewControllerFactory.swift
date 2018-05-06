@@ -17,4 +17,9 @@ internal struct ViewControllerFactory {
         let viewModel = LoginViewModel(dependencies: applicationDependencies)
         return LoginViewController(viewModel: viewModel, viewMaker: LoginView())
     }
+    
+    func registerViewController() -> RegisterViewController {
+        let viewModel = RegisterViewModel(dependencies: applicationDependencies)
+        return RegisterViewController(viewModel: viewModel, viewMaker: RegisterView())
+    }
 }

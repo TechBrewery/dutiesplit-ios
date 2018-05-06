@@ -36,7 +36,7 @@ internal final class ApplicationFlowController {
     }
     
     private func makeLoginFlowController() -> FlowController {
-        return HomeFlowController(dependencies: dependencies, onEventTriggered: nil)
+        return LoginFlowController(dependencies: dependencies, onEventTriggered: nil)
     }
     
     private func changeRootFlowController(to flowController: FlowController) {
