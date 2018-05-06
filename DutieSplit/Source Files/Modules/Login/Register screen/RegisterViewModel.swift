@@ -12,9 +12,9 @@ internal final class RegisterViewModel: ViewModel, BindingsSetupable {
     
     /// Enum describing events that can be triggered
     ///
-    /// - userLoggedIn: send when user sucessfully logged in
+    /// - userSignedIn: send when user sucessfully created new account
     internal enum Event {
-        case userLoggedIn
+        case userSignedIn
     }
     
     /// Callback with triggered event
@@ -41,6 +41,10 @@ internal final class RegisterViewModel: ViewModel, BindingsSetupable {
     
     /// - SeeAlso: BindingsSetupable
     func setupBindings() {
-
+        registerButtonTap
+            .subscribe(onNext: { [unowned self] _ in
+                self.eventTriggered?(.userSignedIn)
+            })
+            .disposed(by: disposeBag)
     }
 }

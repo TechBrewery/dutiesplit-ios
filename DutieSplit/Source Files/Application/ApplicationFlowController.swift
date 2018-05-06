@@ -32,11 +32,39 @@ internal final class ApplicationFlowController {
     internal func startApp() {
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
-        changeRootFlowController(to: makeLoginFlowController())
+        if dependencies.authenticationService.token == nil {
+            changeRootFlowController(to: makeLoginFlowController())
+        } else {
+            // TODO: Replace below line with commented one.
+            // It's changed for now because there's no logout method
+            // changeRootFlowController(to: makeLoginFlowController())
+            changeRootFlowController(to: makeLoginFlowController())
+        }
+        
     }
     
     private func makeLoginFlowController() -> FlowController {
-        return LoginFlowController(dependencies: dependencies, onEventTriggered: nil)
+        return LoginFlowController(
+            dependencies: dependencies,
+            onEventTriggered: { [unowned self] event in
+                switch event {
+                case .userLoggedIn:
+                    self.changeRootFlowController(to: self.makeHomeFlowController())
+                }
+            }
+        )
+    }
+    
+    private func makeHomeFlowController() -> FlowController {
+        return HomeFlowController(
+            dependencies: dependencies,
+            onEventTriggered: { [unowned self] event in
+                switch event {
+                case .userLoggedOut:
+                    self.changeRootFlowController(to: self.makeLoginFlowController())
+                }
+            }
+        )
     }
     
     private func changeRootFlowController(to flowController: FlowController) {

@@ -59,6 +59,7 @@
 		7CB54DA9209F59BA007EC75D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54DA8209F59BA007EC75D /* RegisterViewController.swift */; };
 		7CB54DAB209F59C2007EC75D /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54DAA209F59C2007EC75D /* RegisterViewModel.swift */; };
 		7CB54DAD209F59CB007EC75D /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54DAC209F59CB007EC75D /* RegisterView.swift */; };
+		7CB54DAF209F613D007EC75D /* HomeFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54DAE209F613D007EC75D /* HomeFlowController.swift */; };
 		7CCB039620891033009E2680 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039520891033009E2680 /* LoginView.swift */; };
 		7CCB03982089103B009E2680 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB03972089103B009E2680 /* LoginViewModel.swift */; };
 		7CCB039A20891045009E2680 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039920891045009E2680 /* LoginViewController.swift */; };
@@ -148,6 +149,7 @@
 		7CB54DA8209F59BA007EC75D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		7CB54DAA209F59C2007EC75D /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		7CB54DAC209F59CB007EC75D /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		7CB54DAE209F613D007EC75D /* HomeFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowController.swift; sourceTree = "<group>"; };
 		7CCB039520891033009E2680 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7CCB03972089103B009E2680 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7CCB039920891045009E2680 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 		7C9FA3B420839E110095E647 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7CB54DAE209F613D007EC75D /* HomeFlowController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -690,6 +693,7 @@
 				7C9BF5DB2089059D002BF7B2 /* ViewSetupable.swift in Sources */,
 				7CB54DA2209EDD04007EC75D /* DefaultLoader.swift in Sources */,
 				7C9BF59A2088F6DC002BF7B2 /* ApplicationKeys.swift in Sources */,
+				7CB54DAF209F613D007EC75D /* HomeFlowController.swift in Sources */,
 				7C9BF5CD2088FD53002BF7B2 /* FlowAwareViewController.swift in Sources */,
 				7C9BF59E2088F6F7002BF7B2 /* HockeyAppService.swift in Sources */,
 				7C9BF5CB2088FCCB002BF7B2 /* UIViewExtension.swift in Sources */,

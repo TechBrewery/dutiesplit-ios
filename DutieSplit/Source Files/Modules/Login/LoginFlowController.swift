@@ -11,9 +11,9 @@ internal final class LoginFlowController: FlowController {
     
     /// Enum describing events that can be triggered
     ///
-    /// - testEvent: Event added just to test the architecture
+    /// - userLoggedIn: Send when user sucessfully logged in
     internal enum Event {
-        case testEvent
+        case userLoggedIn
     }
     
     /// Convenience typealias for event callback
@@ -47,7 +47,7 @@ internal final class LoginFlowController: FlowController {
         viewController.viewModel.eventTriggered = { [unowned self] event in
             switch event {
             case .userLoggedIn:
-                print("LoginViewController triggered: .userLoggedIn")
+                self.eventTriggered?(.userLoggedIn)
             case .didTapRegister:
                 self.navigationController?.pushViewController(self.makeRegisterViewController(), animated: true)
             }
@@ -57,10 +57,10 @@ internal final class LoginFlowController: FlowController {
     
     private func makeRegisterViewController() -> RegisterViewController {
         let viewController = dependencies.viewControllerFactory.registerViewController()
-        viewController.viewModel.eventTriggered = { event in
+        viewController.viewModel.eventTriggered = { [unowned self] event in
             switch event {
-            case .userLoggedIn:
-                print("LoginViewController triggered: .userLoggedIn")
+            case .userSignedIn:
+                self.eventTriggered?(.userLoggedIn)
             }
         }
         return viewController
