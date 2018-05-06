@@ -27,15 +27,23 @@ internal class DefaultLoader: Loader {
     /// - SeeAlso: Loader.toggle()
     func toggle(_ show: Bool) {
         guard show else {
-            contentView?.removeFromSuperview()
-            baseView.isUserInteractionEnabled = true
+            UIView.animate(withDuration: 0.2, animations: {
+                self.contentView?.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
+            }, completion: { _ in
+                self.contentView?.removeFromSuperview()
+                self.baseView.isUserInteractionEnabled = true
+            })
             return
         }
         contentView = makeLoaderView()
         guard let contentView = contentView else { return }
+        contentView.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
         baseView.addSubview(contentView)
         baseView.bringSubview(toFront: contentView)
         baseView.isUserInteractionEnabled = false
+        UIView.animate(withDuration: 0.2, animations: {
+            self.contentView?.transform = .identity
+        })
     }
     
     private func makeLoaderView(dimmedBackground: Bool = true, withMessage message: String? = nil) -> UIView {
