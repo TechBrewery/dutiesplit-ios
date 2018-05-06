@@ -12,7 +12,7 @@ internal final class LoginView: View, ViewSetupable {
     lazy var emailTextField: UITextField = {
         let textField = UITextFieldFactory.loginStyled()
         textField.attributedPlaceholder = NSAttributedString(
-            string: "Email",
+            string: Localizable.LoginScreen.placeholderEmail,
             attributes: [.foregroundColor: UIColor.white.withAlphaComponent(0.6)]
         )
         textField.keyboardType = .emailAddress
@@ -23,7 +23,7 @@ internal final class LoginView: View, ViewSetupable {
     lazy var passwordTextField: UITextField = {
         let textField = UITextFieldFactory.loginStyled()
         textField.attributedPlaceholder = NSAttributedString(
-            string: "Password",
+            string: Localizable.LoginScreen.placeholderPassword,
             attributes: [.foregroundColor: UIColor.white.withAlphaComponent(0.6)]
         )
         textField.isSecureTextEntry = true
@@ -33,16 +33,16 @@ internal final class LoginView: View, ViewSetupable {
     /// Button for logging in using email and password
     lazy var loginButton: UIButton = {
         let button = UIButtonFactory.loginStyled()
-        button.tintColor = .red
-        button.setTitle("Login", for: .normal)
+        button.tintColor = .DSRed
+        button.setTitle(Localizable.LoginScreen.logIn, for: .normal)
         return button.layoutable()
     }()
     
     /// Button for signing up
     lazy var registerButton: UIButton = {
         let button = UIButtonFactory.loginStyled()
-        button.tintColor = .green
-        button.setTitle("Register", for: .normal)
+        button.tintColor = .DSGreen
+        button.setTitle(Localizable.LoginScreen.signIn, for: .normal)
         return button.layoutable()
     }()
     

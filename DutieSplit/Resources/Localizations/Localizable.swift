@@ -20,6 +20,13 @@ internal struct Localizable {
         static let no = localized("no")
     }
     
+    struct LoginScreen {
+        static let placeholderEmail = localized("login.placeholder.email")
+        static let placeholderPassword = localized("login.placeholder.password")
+        static let logIn = localized("login.log.in")
+        static let signIn = localized("login.sign.in")
+    }
+    
     struct Error {
         static let title = localized("error.title")
         static let unknownErrorOccurred = localized("error.unknown.error.occurred")

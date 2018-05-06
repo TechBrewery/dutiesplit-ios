@@ -10,6 +10,12 @@
 "yes" = "Yes";
 "no" = "No";
 
+// Login Screen
+"login.placeholder.email" = "Email";
+"login.placeholder.password" = "Password";
+"login.log.in" = "Log in";
+"login.sign.in" = "Sign in";
+
 // Error
 "error.title" = "Error";
 "error.unknown.error.occurred" = "Unknown error occurred";
