@@ -43,7 +43,13 @@ internal final class HomeFlowController: FlowController {
     }
     
     private func makeTabBarController() -> UITabBarController {
-        let tabBarController = UITabBarController()
+        let tabBarController = HomeTabBarController()
+        tabBarController.eventTriggered = { event in
+            switch event {
+            case .didTapAddActivity:
+                print("didTapAddActivity called")
+            }
+        }
         tabBarController.viewControllers = [UIViewController(), UIViewController(), UIViewController()]
         return tabBarController
     }
