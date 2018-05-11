@@ -28,5 +28,6 @@ internal class TypedViewController<View: UIView>: FlowAwareViewController {
     /// - SeeAlso: UIViewController.loadView()
     override func loadView() {
         view = customView
+        view.clipsToBounds = true
     }
 }

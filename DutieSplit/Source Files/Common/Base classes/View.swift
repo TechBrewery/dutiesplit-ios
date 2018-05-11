@@ -9,6 +9,9 @@ import UIKit
 /// Base class for UIView sublclasses to remove boilerplate from custom views
 internal class View: UIView {
     
+    /// Indicating if keyboard should be closed on touch
+    var closeKeyboardOnTouch = true
+    
     /// - SeeAlso: NSCoding.init?(coder:)
     @available(*, unavailable) required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -17,15 +20,17 @@ internal class View: UIView {
     /// Initialize an instance and calls required methods
     init() {
         super.init(frame: .zero)
-        translatesAutoresizingMaskIntoConstraints = false
         guard let setupableView = self as? ViewSetupable else { return }
         setupableView.setupViewHierarchy()
         setupableView.setupConstraints()
         setupableView.setupProperties()
     }
     
-    /// - SeeAlso: UIView.requiresConstraintBasedLayout
-    override static var requiresConstraintBasedLayout : Bool {
-        return true
+    /// - SeeAlso: UIView.touchesBegan()
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        if closeKeyboardOnTouch {
+            endEditing(true)
+        }
     }
 }
