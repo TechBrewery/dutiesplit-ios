@@ -13,6 +13,7 @@
 // Login Screen
 "login.placeholder.email" = "Email";
 "login.placeholder.password" = "Password";
+"login.placeholder.name" = "Name";
 "login.log.in" = "Log in";
 "login.sign.in" = "Sign in";
 

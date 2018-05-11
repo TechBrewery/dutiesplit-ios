@@ -44,6 +44,13 @@ internal final class LoginViewModel: ViewModel, BindingsSetupable {
     /// Variable for binding password text
     let passwordText = Variable<String>("")
     
+    /// Observable for binding login button `isEnabled` state
+    lazy var loginButtonEnabled = Observable.combineLatest(isEmailValid, isPasswordValid).map { $0.0 && $0.1 }
+    
+    private lazy var isEmailValid = emailText.asObservable().map { EmailValidator.validate($0) }
+    
+    private lazy var isPasswordValid = passwordText.asObservable().map { PasswordValidator.validate($0) }
+    
     /// - SeeAlso: BindingsSetupable
     func setupBindings() {
         loginButtonTap

@@ -23,6 +23,7 @@ internal struct Localizable {
     struct LoginScreen {
         static let placeholderEmail = localized("login.placeholder.email")
         static let placeholderPassword = localized("login.placeholder.password")
+        static let placeholderName = localized("login.placeholder.name")
         static let logIn = localized("login.log.in")
         static let signIn = localized("login.sign.in")
     }

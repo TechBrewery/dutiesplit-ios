@@ -33,11 +33,23 @@ internal final class RegisterViewModel: ViewModel, BindingsSetupable {
     /// Indicates when register button was tapped
     let registerButtonTap = PublishSubject<Void>()
     
+    /// Variable for binding name text
+    let nameText = Variable<String>("")
+    
     /// Variable for binding email text
     let emailText = Variable<String>("")
     
     /// Variable for binding password text
     let passwordText = Variable<String>("")
+    
+    /// Observable for binding register button `isEnabled` state
+    lazy var registerButtonEnabled = Observable.combineLatest(isNameValid, isEmailValid, isPasswordValid).map { $0.0 && $0.1 && $0.2 }
+    
+    private lazy var isNameValid = emailText.asObservable().map { !$0.isEmpty }
+    
+    private lazy var isEmailValid = emailText.asObservable().map { EmailValidator.validate($0) }
+    
+    private lazy var isPasswordValid = passwordText.asObservable().map { PasswordValidator.validate($0) }
     
     /// - SeeAlso: BindingsSetupable
     func setupBindings() {

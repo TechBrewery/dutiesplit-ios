@@ -8,6 +8,16 @@ import UIKit
 
 internal final class RegisterView: View, ViewSetupable {
     
+    /// Text Field with the name
+    lazy var nameTextField: UITextField = {
+        let textField = UITextFieldFactory.loginStyled()
+        textField.attributedPlaceholder = NSAttributedString(
+            string: Localizable.LoginScreen.placeholderName,
+            attributes: [.foregroundColor: UIColor.white.withAlphaComponent(0.6)]
+        )
+        return textField.layoutable()
+    }()
+    
     /// Text Field with the email
     lazy var emailTextField: UITextField = {
         let textField = UITextFieldFactory.loginStyled()
@@ -47,6 +57,7 @@ internal final class RegisterView: View, ViewSetupable {
     private lazy var stackView = UIStackView.make(
         axis: .vertical,
         with: [
+            nameTextField,
             emailTextField,
             passwordTextField,
             registerButton

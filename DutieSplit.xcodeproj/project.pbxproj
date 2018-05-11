@@ -60,6 +60,8 @@
 		7CB54DAB209F59C2007EC75D /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54DAA209F59C2007EC75D /* RegisterViewModel.swift */; };
 		7CB54DAD209F59CB007EC75D /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54DAC209F59CB007EC75D /* RegisterView.swift */; };
 		7CB54DAF209F613D007EC75D /* HomeFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54DAE209F613D007EC75D /* HomeFlowController.swift */; };
+		7CC4567A20A5BB7F0037463B /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC4567820A5BB7E0037463B /* EmailValidator.swift */; };
+		7CC4567B20A5BB7F0037463B /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC4567920A5BB7F0037463B /* PasswordValidator.swift */; };
 		7CCB039620891033009E2680 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039520891033009E2680 /* LoginView.swift */; };
 		7CCB03982089103B009E2680 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB03972089103B009E2680 /* LoginViewModel.swift */; };
 		7CCB039A20891045009E2680 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039920891045009E2680 /* LoginViewController.swift */; };
@@ -150,6 +152,8 @@
 		7CB54DAA209F59C2007EC75D /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		7CB54DAC209F59CB007EC75D /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		7CB54DAE209F613D007EC75D /* HomeFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowController.swift; sourceTree = "<group>"; };
+		7CC4567820A5BB7E0037463B /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		7CC4567920A5BB7F0037463B /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		7CCB039520891033009E2680 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7CCB03972089103B009E2680 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7CCB039920891045009E2680 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -339,6 +343,7 @@
 				7C9FA3B820839E2F0095E647 /* Extensions */,
 				7C9FA3B720839E290095E647 /* Abstraction */,
 				7CCB039D2089142A009E2680 /* Factories */,
+				7CC4567720A5BB5A0037463B /* Validators */,
 				7C9FA3B620839E1D0095E647 /* Base classes */,
 			);
 			path = Common;
@@ -454,6 +459,15 @@
 				7CB54DAC209F59CB007EC75D /* RegisterView.swift */,
 			);
 			path = "Register screen";
+			sourceTree = "<group>";
+		};
+		7CC4567720A5BB5A0037463B /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				7CC4567820A5BB7E0037463B /* EmailValidator.swift */,
+				7CC4567920A5BB7F0037463B /* PasswordValidator.swift */,
+			);
+			path = Validators;
 			sourceTree = "<group>";
 		};
 		7CCB039D2089142A009E2680 /* Factories */ = {
@@ -678,6 +692,7 @@
 				7CB54D9E209E219C007EC75D /* UITextFieldFactory.swift in Sources */,
 				7CF7D55D209DC2C2003A3FC1 /* NetworkResponse.swift in Sources */,
 				7C9BF59B2088F6DC002BF7B2 /* ApplicationDependency.swift in Sources */,
+				7CC4567A20A5BB7F0037463B /* EmailValidator.swift in Sources */,
 				7C9BF5C92088FCA0002BF7B2 /* UITableViewExtension.swift in Sources */,
 				7C9BF5CF2088FD95002BF7B2 /* NavigationBarSetupable.swift in Sources */,
 				7C9BF5E320890E14002BF7B2 /* KeyboardAwareViewController.swift in Sources */,
@@ -700,6 +715,7 @@
 				7C9BF5D6208902BE002BF7B2 /* BindingsSetupable.swift in Sources */,
 				7CF7D560209DC2C2003A3FC1 /* NetworkService.swift in Sources */,
 				7C9B8F732083946200661EFE /* ApplicationDelegate.swift in Sources */,
+				7CC4567B20A5BB7F0037463B /* PasswordValidator.swift in Sources */,
 				7CF7D562209DC2C2003A3FC1 /* URLRequestExtension+Networking.swift in Sources */,
 				7C9BF5B02088FB64002BF7B2 /* DutieSplitKeys.m in Sources */,
 				7CF7D563209DC2C2003A3FC1 /* NetworkError.swift in Sources */,

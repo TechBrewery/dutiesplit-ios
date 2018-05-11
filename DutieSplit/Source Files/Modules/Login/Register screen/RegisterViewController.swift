@@ -17,6 +17,11 @@ internal final class RegisterViewController: ViewController<RegisterView, Regist
     
     /// - SeeAlso: BindingsSetupable
     func setupBindings() {
+        customView.nameTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.nameText)
+            .disposed(by: disposeBag)
+        
         customView.emailTextField.rx.text
             .orEmpty
             .bind(to: viewModel.emailText)
@@ -29,6 +34,10 @@ internal final class RegisterViewController: ViewController<RegisterView, Regist
         
         customView.registerButton.rx.tap
             .bind(to: viewModel.registerButtonTap)
+            .disposed(by: disposeBag)
+        
+        viewModel.registerButtonEnabled.asDriver(onErrorJustReturn: false)
+            .drive(customView.registerButton.rx.isEnabled)
             .disposed(by: disposeBag)
     }
 }

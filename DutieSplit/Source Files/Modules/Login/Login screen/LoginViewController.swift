@@ -33,5 +33,9 @@ internal final class LoginViewController: ViewController<LoginView, LoginViewMod
         customView.registerButton.rx.tap
             .bind(to: viewModel.registerButtonTap)
             .disposed(by: disposeBag)
+        
+        viewModel.loginButtonEnabled.asDriver(onErrorJustReturn: false)
+            .drive(customView.loginButton.rx.isEnabled)
+            .disposed(by: disposeBag)
     }
 }
