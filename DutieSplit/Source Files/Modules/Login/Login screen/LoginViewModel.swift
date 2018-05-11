@@ -52,6 +52,7 @@ internal final class LoginViewModel: ViewModel, BindingsSetupable {
             .map { LoginRequest(email: $0, password: $1) }
             .flatMapLatest { [unowned self] in self.dependencies.networkService.perform(request: $0) }
             .do(onNext: { [unowned self] _ in self.isLoading.value = false })
+            .observeOn(MainScheduler.instance)
             .subscribe( onNext: { [unowned self] response in
                 switch response {
                 case .success(let response):
@@ -66,6 +67,15 @@ internal final class LoginViewModel: ViewModel, BindingsSetupable {
         registerButtonTap
             .subscribe(onNext: { [unowned self] _ in
                 self.eventTriggered?(.didTapRegister)
+            })
+            .disposed(by: disposeBag)
+        
+        viewDidAppear
+            .subscribe(onNext: { [unowned self] in
+                #if ENV_DEVELOPMENT
+                    self.emailText.value = "michal+1@kwiecien.co"
+                    self.passwordText.value = "password"
+                #endif
             })
             .disposed(by: disposeBag)
     }
