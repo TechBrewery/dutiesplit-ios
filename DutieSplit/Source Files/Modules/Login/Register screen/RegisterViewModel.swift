@@ -43,7 +43,9 @@ internal final class RegisterViewModel: ViewModel, BindingsSetupable {
     let passwordText = Variable<String>("")
     
     /// Observable for binding register button `isEnabled` state
-    lazy var registerButtonEnabled = Observable.combineLatest(isNameValid, isEmailValid, isPasswordValid).map { $0.0 && $0.1 && $0.2 }
+    lazy var registerButtonEnabled = Observable
+        .combineLatest(isNameValid, isEmailValid, isPasswordValid)
+        .map { $0.0 && $0.1 && $0.2 }
     
     private lazy var isNameValid = emailText.asObservable().map { !$0.isEmpty }
     
@@ -54,8 +56,24 @@ internal final class RegisterViewModel: ViewModel, BindingsSetupable {
     /// - SeeAlso: BindingsSetupable
     func setupBindings() {
         registerButtonTap
-            .subscribe(onNext: { [unowned self] _ in
-                self.eventTriggered?(.userSignedIn)
+            .do(onNext: { [unowned self] in self.isLoading.value = true })
+            .withLatestFrom(Observable.combineLatest(
+                nameText.asObservable(),
+                emailText.asObservable(),
+                passwordText.asObservable()
+            ))
+            .map { RegisterRequest(name: $0, email: $1, password: $2) }
+            .flatMapLatest { [unowned self] in self.dependencies.networkService.perform(request: $0) }
+            .do(onNext: { [unowned self] _ in self.isLoading.value = false })
+            .observeOn(MainScheduler.instance)
+            .subscribe( onNext: { [unowned self] response in
+                switch response {
+                case .success(let response):
+                    self.dependencies.authenticationService.save(token: response.token)
+                    self.eventTriggered?(.userSignedIn)
+                case .failure(let error):
+                    self.errorOccurred.onNext(error.description)
+                }
             })
             .disposed(by: disposeBag)
     }
