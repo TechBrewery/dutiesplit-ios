@@ -21,9 +21,7 @@ internal class View: UIView {
     init() {
         super.init(frame: .zero)
         guard let setupableView = self as? ViewSetupable else { return }
-        setupableView.setupViewHierarchy()
-        setupableView.setupConstraints()
-        setupableView.setupProperties()
+        setupableView.setupViews()
     }
     
     /// - SeeAlso: UIView.touchesBegan()

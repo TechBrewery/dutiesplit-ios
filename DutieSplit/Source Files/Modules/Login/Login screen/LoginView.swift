@@ -33,7 +33,7 @@ internal final class LoginView: View, ViewSetupable {
     /// Button for logging in using email and password
     lazy var loginButton: UIButton = {
         let button = UIButtonFactory.loginStyled()
-        button.tintColor = .DSRed
+        button.tintColor = .dsRed
         button.setTitle(Localizable.LoginScreen.logIn, for: .normal)
         return button.layoutable()
     }()
@@ -41,7 +41,7 @@ internal final class LoginView: View, ViewSetupable {
     /// Button for signing up
     lazy var registerButton: UIButton = {
         let button = UIButtonFactory.loginStyled()
-        button.tintColor = .DSGreen
+        button.tintColor = .dsGreen
         button.setTitle(Localizable.LoginScreen.signIn, for: .normal)
         return button.layoutable()
     }()

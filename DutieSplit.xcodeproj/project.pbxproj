@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C4F2C6920A5C70000E19EB0 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4F2C6820A5C70000E19EB0 /* HomeTabBarController.swift */; };
 		7C9B8F732083946200661EFE /* ApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9B8F722083946200661EFE /* ApplicationDelegate.swift */; };
 		7C9B8F7A2083946400661EFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C9B8F792083946400661EFE /* Assets.xcassets */; };
 		7C9B8F882083946400661EFE /* DutieSplitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9B8F872083946400661EFE /* DutieSplitTests.swift */; };
@@ -94,6 +95,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C4F2C6820A5C70000E19EB0 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		7C9B8F6F2083946200661EFE /* DutieSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DutieSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9B8F722083946200661EFE /* ApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDelegate.swift; sourceTree = "<group>"; };
 		7C9B8F792083946400661EFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 				7C9BF5A92088F844002BF7B2 /* TypedViewController.swift */,
 				7C9BF5CC2088FD53002BF7B2 /* FlowAwareViewController.swift */,
 				7C9BF5E220890E14002BF7B2 /* KeyboardAwareViewController.swift */,
+				7C4F2C6820A5C70000E19EB0 /* HomeTabBarController.swift */,
 			);
 			path = "Base classes";
 			sourceTree = "<group>";
@@ -668,6 +671,7 @@
 			files = (
 				7CB54DA4209EE89B007EC75D /* UIButtonFactory.swift in Sources */,
 				7CCB039C2089112E009E2680 /* SeparatorView.swift in Sources */,
+				7C4F2C6920A5C70000E19EB0 /* HomeTabBarController.swift in Sources */,
 				7C9BF5A82088F7B2002BF7B2 /* LoginFlowController.swift in Sources */,
 				7C9BF5C42088FCA0002BF7B2 /* NSObjectExtension.swift in Sources */,
 				7CC4567F20A5BDDD0037463B /* RegisterRequest.swift in Sources */,

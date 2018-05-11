@@ -21,4 +21,11 @@ internal extension ViewSetupable {
     
     // Empty default implementation - not every class need this method
     func setupProperties() { }
+    
+    /// Calls all other setup methods in proper order
+    func setupViews() {
+        setupViewHierarchy()
+        setupConstraints()
+        setupProperties()
+    }
 }

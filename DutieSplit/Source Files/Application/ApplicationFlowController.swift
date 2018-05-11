@@ -37,8 +37,8 @@ internal final class ApplicationFlowController {
         } else {
             // TODO: Replace below line with commented one.
             // It's changed for now because there's no logout method
-            // changeRootFlowController(to: makeLoginFlowController())
-            changeRootFlowController(to: makeLoginFlowController())
+             changeRootFlowController(to: makeHomeFlowController())
+//            changeRootFlowController(to: makeLoginFlowController())
         }
         
     }
