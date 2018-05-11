@@ -37,20 +37,20 @@ internal final class HomeFlowController: FlowController {
     /// Root view controler of the flow
     var rootViewController: UIViewController?
     
-    /// Root view controller casted as navigation controller
-    var navigationController: UINavigationController? {
-        return rootViewController as? UINavigationController
-    }
-    
-    private func makeTabBarController() -> UITabBarController {
+    private func makeTabBarController() -> HomeTabBarController {
         let tabBarController = HomeTabBarController()
+        let dashboardViewController = UINavigationController(rootViewController: UIViewController())
+        let manageViewController = UINavigationController(rootViewController: UIViewController())
+        dashboardViewController.tabBarItem = UITabBarItem(title: "Dashboard", image: #imageLiteral(resourceName: "dashboard-icon"), tag: 0)
+        manageViewController.tabBarItem = UITabBarItem(title: "Manage", image: #imageLiteral(resourceName: "dashboard-icon"), tag: 0)
+        tabBarController.viewControllers = [dashboardViewController, UIViewController(), manageViewController]
+
         tabBarController.eventTriggered = { event in
             switch event {
             case .didTapAddActivity:
                 print("didTapAddActivity called")
             }
         }
-        tabBarController.viewControllers = [UIViewController(), UIViewController(), UIViewController()]
         return tabBarController
     }
 }

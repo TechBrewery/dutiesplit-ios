@@ -18,23 +18,23 @@ internal extension UIColor {
         self.init(red: red, green: green, blue: blue, alpha: 1)
     }
     
-    class var DSRed: UIColor {
+    class var dsRed: UIColor {
         return .init(hex: 0xAF1F31)
     }
     
-    class var DSGreen: UIColor {
+    class var dsGreen: UIColor {
         return .init(hex: 0x056D17)
     }
     
-    class var DSBlue: UIColor {
+    class var dsBlue: UIColor {
         return .init(hex: 0x0076FF)
     }
     
-    class var DSGray: UIColor {
-        return .init(hex: 0xEFEFF4)
+    class var dsGray: UIColor {
+        return .init(hex: 0xA4AAB3)
     }
     
-    class var DSTextGray: UIColor {
+    class var dsTextGray: UIColor {
         return .init(hex: 0x8F8E94)
     }
 }

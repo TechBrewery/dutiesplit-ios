@@ -23,7 +23,7 @@ internal extension ViewSetupable {
     func setupProperties() { }
     
     /// Calls all other setup methods in proper order
-    func setup() {
+    func setupViews() {
         setupViewHierarchy()
         setupConstraints()
         setupProperties()

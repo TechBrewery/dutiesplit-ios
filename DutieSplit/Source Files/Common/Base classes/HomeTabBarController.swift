@@ -20,7 +20,7 @@ internal final class HomeTabBarController: UITabBarController, UITabBarControlle
         case didTapAddActivity
     }
     
-    /// Callback for triggered event
+    /// Callback with triggered event
     var eventTriggered: EventCallback?
     
     private lazy var centerButton: UIButton = {
@@ -32,7 +32,8 @@ internal final class HomeTabBarController: UITabBarController, UITabBarControlle
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
-        setup()
+        setupViews()
+        setupBindings()
     }
 
     /// - SeeAlso: ViewSetupable
@@ -47,6 +48,12 @@ internal final class HomeTabBarController: UITabBarController, UITabBarControlle
             centerButton.centerXAnchor.constraint(equalTo: tabBar.centerXAnchor),
             centerButton.centerYAnchor.constraint(equalTo: tabBar.centerYAnchor, constant: -8)
         ])
+    }
+    
+    /// - SeeAlso: ViewSetupable
+    func setupProperties() {
+        tabBar.tintColor = .dsRed
+        tabBar.unselectedItemTintColor = .dsGray
     }
     
     /// - SeeAlso: BindingsSetupable
