@@ -22,21 +22,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="aHU-9t-Ufr">
-                                <rect key="frame" x="79" y="511" width="280" height="140"/>
+                                <rect key="frame" x="112" y="271" width="150" height="124"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="Dm8-hI-E2K"/>
-                                    <constraint firstAttribute="width" constant="280" id="REG-d7-DuO"/>
+                                    <constraint firstAttribute="width" constant="150" id="REG-d7-DuO"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="OzF-xQ-P33" firstAttribute="trailing" secondItem="6gd-bR-gRp" secondAttribute="trailing" id="BDe-Pe-Z3B"/>
-                            <constraint firstItem="6gd-bR-gRp" firstAttribute="trailing" secondItem="aHU-9t-Ufr" secondAttribute="trailing" constant="16" id="Hhn-VF-NZU"/>
-                            <constraint firstItem="OzF-xQ-P33" firstAttribute="leading" secondItem="6gd-bR-gRp" secondAttribute="leading" id="MOi-cf-dhR"/>
-                            <constraint firstItem="6gd-bR-gRp" firstAttribute="bottom" secondItem="aHU-9t-Ufr" secondAttribute="bottom" constant="16" id="UJ0-IK-dI7"/>
-                            <constraint firstItem="OzF-xQ-P33" firstAttribute="bottom" secondItem="6gd-bR-gRp" secondAttribute="bottom" id="gDo-TZ-DU3"/>
+                            <constraint firstItem="OzF-xQ-P33" firstAttribute="leading" secondItem="A9u-nO-nFJ" secondAttribute="leading" id="A63-f2-C4V"/>
+                            <constraint firstItem="aHU-9t-Ufr" firstAttribute="centerY" secondItem="A9u-nO-nFJ" secondAttribute="centerY" id="DPs-Nh-tbb"/>
+                            <constraint firstAttribute="trailing" secondItem="OzF-xQ-P33" secondAttribute="trailing" id="EO5-Rj-CFl"/>
+                            <constraint firstAttribute="bottom" secondItem="OzF-xQ-P33" secondAttribute="bottom" id="lof-ag-7Ph"/>
                             <constraint firstItem="OzF-xQ-P33" firstAttribute="top" secondItem="A9u-nO-nFJ" secondAttribute="top" id="orA-Ya-Ydh"/>
+                            <constraint firstItem="aHU-9t-Ufr" firstAttribute="centerX" secondItem="A9u-nO-nFJ" secondAttribute="centerX" id="svY-b4-RNk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6gd-bR-gRp"/>
                     </view>

@@ -48,7 +48,7 @@ internal final class LoginView: View, ViewSetupable {
     
     private lazy var backgroundImageView: UIImageView = {
         let view = UIImageView(image: #imageLiteral(resourceName: "splash-screen"))
-        view.contentMode = .scaleAspectFit
+        view.contentMode = .scaleAspectFill
         return view.layoutable()
     }()
     
