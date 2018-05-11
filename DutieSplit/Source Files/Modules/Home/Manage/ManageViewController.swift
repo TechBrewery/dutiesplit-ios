@@ -20,6 +20,9 @@ internal final class ManageViewController: ViewController<ManageView, ManageView
     /// - SeeAlso: NavigationBarSetupable
     func setup(navigationBar: UINavigationBar) {
         navigationBar.tintColor = .dsRed
+        if #available(iOS 11.0, *) {
+            navigationBar.prefersLargeTitles = true
+        }
     }
     
     /// - SeeAlso: BindingsSetupable

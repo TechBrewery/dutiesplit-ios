@@ -32,7 +32,7 @@ internal final class HomeTabBarController: UITabBarController, UITabBarControlle
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
-        setupViews()
+        setupView()
         setupBindings()
     }
 

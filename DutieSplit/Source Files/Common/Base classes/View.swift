@@ -21,7 +21,7 @@ internal class View: UIView {
     init() {
         super.init(frame: .zero)
         guard let setupableView = self as? ViewSetupable else { return }
-        setupableView.setupViews()
+        setupableView.setupView()
     }
     
     /// - SeeAlso: UIView.touchesBegan()
