@@ -7,7 +7,7 @@
 import RxSwift
 
 internal final class ManageViewModel: ViewModel, BindingsSetupable {
-    internal typealias Dependencies = HasNetworkService
+    internal typealias Dependencies = HasNetworkService & HasAuthenticationService
     internal typealias EventCallback = (Event) -> ()
     
     /// Enum describing events that can be triggered
@@ -30,9 +30,17 @@ internal final class ManageViewModel: ViewModel, BindingsSetupable {
         self.dependencies = dependencies
     }
     
+    /// Indicates when logout button was tapped
+    let logoutButtonTap = PublishSubject<Void>()
+    
     /// - SeeAlso: BindingsSetupable
     func setupBindings() {
-        
+        logoutButtonTap
+            .subscribe(onNext: { [unowned self] _ in
+                self.dependencies.authenticationService.removeToken()
+                self.eventTriggered?(.userLoggedOut)
+            })
+            .disposed(by: disposeBag)
     }
 }
 
