@@ -35,6 +35,10 @@ internal struct Localizable {
         static let recentActivities = localized("dashboard.recent.activities")
     }
     
+    struct ManageScreen {
+        static let title = localized("manage.title")
+    }
+    
     struct Error {
         static let title = localized("error.title")
         static let unknownErrorOccurred = localized("error.unknown.error.occurred")

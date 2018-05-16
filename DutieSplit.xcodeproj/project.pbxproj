@@ -47,6 +47,7 @@
 		7C9E1AC420AC92890027CF6E /* DashboardSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E1AC320AC92890027CF6E /* DashboardSectionHeader.swift */; };
 		7C9E1AC620AC9C340027CF6E /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E1AC520AC9C340027CF6E /* PersonTableViewCell.swift */; };
 		7C9E1AC820AC9D780027CF6E /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E1AC720AC9D780027CF6E /* ActivityTableViewCell.swift */; };
+		7C9E1ACA20ACA86D0027CF6E /* DashboardFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E1AC920ACA86D0027CF6E /* DashboardFlowController.swift */; };
 		7C9FA39C208399000095E647 /* App-AppStore.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7C9FA396208399000095E647 /* App-AppStore.xcconfig */; };
 		7C9FA39D208399000095E647 /* App-Beta.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7C9FA397208399000095E647 /* App-Beta.xcconfig */; };
 		7C9FA39E208399000095E647 /* App-Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7C9FA398208399000095E647 /* App-Development.xcconfig */; };
@@ -151,6 +152,7 @@
 		7C9E1AC320AC92890027CF6E /* DashboardSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardSectionHeader.swift; sourceTree = "<group>"; };
 		7C9E1AC520AC9C340027CF6E /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		7C9E1AC720AC9D780027CF6E /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		7C9E1AC920ACA86D0027CF6E /* DashboardFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardFlowController.swift; sourceTree = "<group>"; };
 		7C9FA396208399000095E647 /* App-AppStore.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "App-AppStore.xcconfig"; sourceTree = "<group>"; };
 		7C9FA397208399000095E647 /* App-Beta.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "App-Beta.xcconfig"; sourceTree = "<group>"; };
 		7C9FA398208399000095E647 /* App-Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "App-Development.xcconfig"; sourceTree = "<group>"; };
@@ -299,6 +301,17 @@
 				7C9E1AC720AC9D780027CF6E /* ActivityTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		7C9E1ACB20ACA8850027CF6E /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				7C9E1AC220AC918D0027CF6E /* Cells */,
+				7CE656DA20A5D84000BA8FCA /* DashboardViewController.swift */,
+				7CE656DE20A5D85400BA8FCA /* DashboardViewModel.swift */,
+				7CE656DC20A5D84A00BA8FCA /* DashboardView.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 		7C9FA395208399000095E647 /* Configuration */ = {
@@ -524,10 +537,8 @@
 		7CE656D820A5D81800BA8FCA /* Dashboard  */ = {
 			isa = PBXGroup;
 			children = (
-				7C9E1AC220AC918D0027CF6E /* Cells */,
-				7CE656DA20A5D84000BA8FCA /* DashboardViewController.swift */,
-				7CE656DE20A5D85400BA8FCA /* DashboardViewModel.swift */,
-				7CE656DC20A5D84A00BA8FCA /* DashboardView.swift */,
+				7C9E1AC920ACA86D0027CF6E /* DashboardFlowController.swift */,
+				7C9E1ACB20ACA8850027CF6E /* Root */,
 			);
 			path = "Dashboard ";
 			sourceTree = "<group>";
@@ -758,6 +769,7 @@
 				7C9BF5C72088FCA0002BF7B2 /* UIViewExtension+Constraint.swift in Sources */,
 				7CF7D55E209DC2C2003A3FC1 /* NetworkApplication.swift in Sources */,
 				7CF7D567209DC3A6003A3FC1 /* AuthenticationService.swift in Sources */,
+				7C9E1ACA20ACA86D0027CF6E /* DashboardFlowController.swift in Sources */,
 				7CB54DA0209EDC1D007EC75D /* Loader.swift in Sources */,
 				7C9E1AC420AC92890027CF6E /* DashboardSectionHeader.swift in Sources */,
 				7CCB03A120891A3B009E2680 /* UIStackViewExtension.swift in Sources */,

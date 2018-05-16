@@ -23,6 +23,8 @@ internal final class HomeFlowController: FlowController {
     
     private let eventTriggered: EventCallback?
     
+    private lazy var dashboardFlowController: DashboardFlowController = makeDashboardFlowController()
+    
     /// Initializes Flow controllers with given dependencies
     ///
     /// - Parameters:
@@ -39,12 +41,14 @@ internal final class HomeFlowController: FlowController {
     
     private func makeTabBarController() -> HomeTabBarController {
         let tabBarController = HomeTabBarController()
-        let dashboardViewController = UINavigationController(rootViewController: makeDashboardViewController())
+        
+        let dashboardViewController = dashboardFlowController.rootViewController!
+        dashboardViewController.tabBarItem = UITabBarItem(title: Localizable.DashboardScreen.title, image: #imageLiteral(resourceName: "dashboard-icon"), tag: 0)
+        
         let manageViewController = UINavigationController(rootViewController: makeManageViewController())
-        dashboardViewController.tabBarItem = UITabBarItem(title: "Dashboard", image: #imageLiteral(resourceName: "dashboard-icon"), tag: 0)
-        manageViewController.tabBarItem = UITabBarItem(title: "Manage", image: #imageLiteral(resourceName: "dashboard-icon"), tag: 2)
+        manageViewController.tabBarItem = UITabBarItem(title: Localizable.ManageScreen.title, image: #imageLiteral(resourceName: "manage-icon"), tag: 2)
+        
         tabBarController.viewControllers = [dashboardViewController, UIViewController(), manageViewController]
-
         tabBarController.eventTriggered = { event in
             switch event {
             case .didTapAddActivity:
@@ -54,17 +58,9 @@ internal final class HomeFlowController: FlowController {
         return tabBarController
     }
     
-    private func makeDashboardViewController() -> DashboardViewController {
-        let viewController = dependencies.viewControllerFactory.dashboardViewController()
-        viewController.viewModel.eventTriggered = { event in
-            switch event {
-            case .didTapDetailedRanking:
-                print("didTapDetailedRanking called")
-            case .didTapAllActivities:
-                print("didTapAllActivities called")
-            }
-        }
-        return viewController
+    private func makeDashboardFlowController() -> DashboardFlowController {
+        let flowController = DashboardFlowController(dependencies: dependencies)
+        return flowController
     }
     
     private func makeManageViewController() -> ManageViewController {
