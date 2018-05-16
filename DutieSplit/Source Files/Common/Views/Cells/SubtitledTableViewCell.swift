@@ -25,7 +25,7 @@ internal class SubtitledTableViewCell: TableViewCell, ViewSetupable {
         return view
     }()
     
-    private lazy var stackView = UIStackView.make(
+    private lazy var leftStackView = UIStackView.make(
         axis: .vertical,
         with: [titleLabel, subtitleLabel],
         spacing: 2
@@ -33,15 +33,15 @@ internal class SubtitledTableViewCell: TableViewCell, ViewSetupable {
     
     /// - SeeAlso: ViewSetupable
     func setupViewHierarchy() {
-        contentView.addSubview(stackView)
+        contentView.addSubview(leftStackView)
     }
     
     /// - SeeAlso: ViewSetupable
     func setupConstraints() {
         NSLayoutConstraint.activate([
             contentView.heightAnchor.constraint(equalToConstant: 52),
-            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            stackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            leftStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            leftStackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
     }
     
