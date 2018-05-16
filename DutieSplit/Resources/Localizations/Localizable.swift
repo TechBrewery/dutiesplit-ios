@@ -28,6 +28,10 @@ internal struct Localizable {
         static let signIn = localized("login.sign.in")
     }
     
+    struct DashboardScreen {
+        static let buttonAll = localized("dashboard.button.all")
+    }
+    
     struct Error {
         static let title = localized("error.title")
         static let unknownErrorOccurred = localized("error.unknown.error.occurred")

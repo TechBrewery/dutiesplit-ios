@@ -17,6 +17,9 @@
 "login.log.in" = "Log in";
 "login.sign.in" = "Sign in";
 
+// Dashboard
+"dashboard.button.all" = "ALL >";
+
 // Error
 "error.title" = "Error";
 "error.unknown.error.occurred" = "Unknown error occurred";

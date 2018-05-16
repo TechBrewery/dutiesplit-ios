@@ -36,11 +36,22 @@ internal final class DashboardViewController: ViewController<DashboardView, Dash
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return section == 0 ? 3 : 5
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell: PersonTableViewCell = tableView.dequeueReusableCell(for: indexPath) else { return UITableViewCell() }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = DashbaordSectionHeader(leftLabelTitle: "RANKING", onRightButtonTap: {
+            print("section header tap")
+        })
+        return view
     }
 }

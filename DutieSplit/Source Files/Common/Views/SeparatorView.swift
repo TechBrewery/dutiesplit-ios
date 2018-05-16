@@ -23,6 +23,7 @@ internal final class SeparatorView: View {
         self.axis = axis
         self.thickness = thickness
         super.init()
+        translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = color
     }
 
