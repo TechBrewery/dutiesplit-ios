@@ -44,8 +44,16 @@ internal final class DashboardViewController: ViewController<DashboardView, Dash
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell: PersonTableViewCell = tableView.dequeueReusableCell(for: indexPath) else { return UITableViewCell() }
-        return cell
+        switch indexPath.section {
+        case 0:
+            guard let cell: PersonTableViewCell = tableView.dequeueReusableCell(for: indexPath) else { return UITableViewCell() }
+            return cell
+        case 1:
+            guard let cell: ActivityTableViewCell = tableView.dequeueReusableCell(for: indexPath) else { return UITableViewCell() }
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

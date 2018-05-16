@@ -1,21 +1,24 @@
 //
-//  PersonTableViewCell.swift
+//  SubtitledTableViewCell.swift
 //  DutieSplit
 //
 
 
 import UIKit
 
-internal final class PersonTableViewCell: TableViewCell, ViewSetupable {
+/// Cell with title and subitle, should be used as the base cell for similar ones
+internal class SubtitledTableViewCell: TableViewCell, ViewSetupable {
     
-    private lazy var nameLabel: UILabel = {
+    /// Title label at the top with bigger font
+    lazy var titleLabel: UILabel = {
         let view = UILabel()
         view.font = .systemFont(ofSize: 17)
         view.textColor = .dsTextBlack
         return view
     }()
     
-    private lazy var balanceLabel: UILabel = {
+    /// Subtitle gray label with smaller font below the title
+    lazy var subtitleLabel: UILabel = {
         let view = UILabel()
         view.font = .systemFont(ofSize: 12)
         view.textColor = .dsTextLightGray
@@ -24,7 +27,7 @@ internal final class PersonTableViewCell: TableViewCell, ViewSetupable {
     
     private lazy var stackView = UIStackView.make(
         axis: .vertical,
-        with: [nameLabel, balanceLabel],
+        with: [titleLabel, subtitleLabel],
         spacing: 2
     ).layoutable()
     
@@ -43,8 +46,6 @@ internal final class PersonTableViewCell: TableViewCell, ViewSetupable {
     }
     
     /// - SeeAlso: ViewSetupable
-    func setupProperties() {
-        nameLabel.text = "Barack Obama"
-        balanceLabel.text = "0 pt"
-    }
+    /// Empty implementation only to route the method to the child classes
+    func setupProperties() { }
 }

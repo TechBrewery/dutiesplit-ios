@@ -11,6 +11,7 @@ internal final class DashboardView: View, ViewSetupable {
     lazy var tableView: UITableView = {
         let view = UITableView()
         view.register(cell: PersonTableViewCell.self)
+        view.register(cell: ActivityTableViewCell.self)
         view.estimatedRowHeight = 52
         view.tableFooterView = UIView()
         return view.layoutable()
