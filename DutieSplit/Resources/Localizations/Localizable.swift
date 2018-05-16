@@ -25,7 +25,18 @@ internal struct Localizable {
         static let placeholderPassword = localized("login.placeholder.password")
         static let placeholderName = localized("login.placeholder.name")
         static let logIn = localized("login.log.in")
-        static let signIn = localized("login.sign.in")
+        static let register = localized("login.register")
+    }
+    
+    struct DashboardScreen {
+        static let title = localized("dashboard.title")
+        static let buttonAll = localized("dashboard.button.all")
+        static let ranking = localized("dashboard.ranking")
+        static let recentActivities = localized("dashboard.recent.activities")
+    }
+    
+    struct ManageScreen {
+        static let title = localized("manage.title")
     }
     
     struct Error {

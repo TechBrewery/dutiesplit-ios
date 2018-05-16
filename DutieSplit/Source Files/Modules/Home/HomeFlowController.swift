@@ -23,6 +23,8 @@ internal final class HomeFlowController: FlowController {
     
     private let eventTriggered: EventCallback?
     
+    private lazy var dashboardFlowController: DashboardFlowController = makeDashboardFlowController()
+    
     /// Initializes Flow controllers with given dependencies
     ///
     /// - Parameters:
@@ -39,12 +41,14 @@ internal final class HomeFlowController: FlowController {
     
     private func makeTabBarController() -> HomeTabBarController {
         let tabBarController = HomeTabBarController()
-        let dashboardViewController = UINavigationController(rootViewController: UIViewController())
-        let manageViewController = UINavigationController(rootViewController: UIViewController())
-        dashboardViewController.tabBarItem = UITabBarItem(title: "Dashboard", image: #imageLiteral(resourceName: "dashboard-icon"), tag: 0)
-        manageViewController.tabBarItem = UITabBarItem(title: "Manage", image: #imageLiteral(resourceName: "dashboard-icon"), tag: 0)
+        
+        let dashboardViewController = dashboardFlowController.rootViewController!
+        dashboardViewController.tabBarItem = UITabBarItem(title: Localizable.DashboardScreen.title, image: #imageLiteral(resourceName: "dashboard-icon"), tag: 0)
+        
+        let manageViewController = UINavigationController(rootViewController: makeManageViewController())
+        manageViewController.tabBarItem = UITabBarItem(title: Localizable.ManageScreen.title, image: #imageLiteral(resourceName: "manage-icon"), tag: 2)
+        
         tabBarController.viewControllers = [dashboardViewController, UIViewController(), manageViewController]
-
         tabBarController.eventTriggered = { event in
             switch event {
             case .didTapAddActivity:
@@ -52,5 +56,21 @@ internal final class HomeFlowController: FlowController {
             }
         }
         return tabBarController
+    }
+    
+    private func makeDashboardFlowController() -> DashboardFlowController {
+        let flowController = DashboardFlowController(dependencies: dependencies)
+        return flowController
+    }
+    
+    private func makeManageViewController() -> ManageViewController {
+        let viewController = dependencies.viewControllerFactory.manageViewController()
+        viewController.viewModel.eventTriggered = { [unowned self] event in
+            switch event {
+            case .userLoggedOut:
+                self.eventTriggered?(.userLoggedOut)
+            }
+        }
+        return viewController
     }
 }

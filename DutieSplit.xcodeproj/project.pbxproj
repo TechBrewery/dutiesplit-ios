@@ -44,6 +44,10 @@
 		7C9BF5DD20890654002BF7B2 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5DC20890654002BF7B2 /* View.swift */; };
 		7C9BF5E1208908D1002BF7B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5E0208908D1002BF7B2 /* ViewController.swift */; };
 		7C9BF5E320890E14002BF7B2 /* KeyboardAwareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5E220890E14002BF7B2 /* KeyboardAwareViewController.swift */; };
+		7C9E1AC420AC92890027CF6E /* DashboardSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E1AC320AC92890027CF6E /* DashboardSectionHeader.swift */; };
+		7C9E1AC620AC9C340027CF6E /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E1AC520AC9C340027CF6E /* PersonTableViewCell.swift */; };
+		7C9E1AC820AC9D780027CF6E /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E1AC720AC9D780027CF6E /* ActivityTableViewCell.swift */; };
+		7C9E1ACA20ACA86D0027CF6E /* DashboardFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E1AC920ACA86D0027CF6E /* DashboardFlowController.swift */; };
 		7C9FA39C208399000095E647 /* App-AppStore.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7C9FA396208399000095E647 /* App-AppStore.xcconfig */; };
 		7C9FA39D208399000095E647 /* App-Beta.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7C9FA397208399000095E647 /* App-Beta.xcconfig */; };
 		7C9FA39E208399000095E647 /* App-Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7C9FA398208399000095E647 /* App-Development.xcconfig */; };
@@ -70,6 +74,14 @@
 		7CCB039C2089112E009E2680 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039B2089112E009E2680 /* SeparatorView.swift */; };
 		7CCB039F2089144C009E2680 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039E2089144C009E2680 /* ViewControllerFactory.swift */; };
 		7CCB03A120891A3B009E2680 /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB03A020891A3B009E2680 /* UIStackViewExtension.swift */; };
+		7CE656DB20A5D84000BA8FCA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DA20A5D84000BA8FCA /* DashboardViewController.swift */; };
+		7CE656DD20A5D84A00BA8FCA /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DC20A5D84A00BA8FCA /* DashboardView.swift */; };
+		7CE656DF20A5D85400BA8FCA /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DE20A5D85400BA8FCA /* DashboardViewModel.swift */; };
+		7CE656E120A5D86400BA8FCA /* ManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656E020A5D86400BA8FCA /* ManageViewController.swift */; };
+		7CE656E320A5D87200BA8FCA /* ManageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656E220A5D87200BA8FCA /* ManageViewModel.swift */; };
+		7CE656E520A5D87B00BA8FCA /* ManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656E420A5D87B00BA8FCA /* ManageView.swift */; };
+		7CE656E820A5ED2A00BA8FCA /* SubtitledTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656E720A5ED2A00BA8FCA /* SubtitledTableViewCell.swift */; };
+		7CE656EA20A5F53A00BA8FCA /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656E920A5F53A00BA8FCA /* TableViewCell.swift */; };
 		7CF7D55D209DC2C2003A3FC1 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7D556209DC2C1003A3FC1 /* NetworkResponse.swift */; };
 		7CF7D55E209DC2C2003A3FC1 /* NetworkApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7D557209DC2C1003A3FC1 /* NetworkApplication.swift */; };
 		7CF7D55F209DC2C2003A3FC1 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7D558209DC2C1003A3FC1 /* NetworkRequest.swift */; };
@@ -137,6 +149,10 @@
 		7C9BF5DC20890654002BF7B2 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		7C9BF5E0208908D1002BF7B2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7C9BF5E220890E14002BF7B2 /* KeyboardAwareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAwareViewController.swift; sourceTree = "<group>"; };
+		7C9E1AC320AC92890027CF6E /* DashboardSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardSectionHeader.swift; sourceTree = "<group>"; };
+		7C9E1AC520AC9C340027CF6E /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		7C9E1AC720AC9D780027CF6E /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		7C9E1AC920ACA86D0027CF6E /* DashboardFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardFlowController.swift; sourceTree = "<group>"; };
 		7C9FA396208399000095E647 /* App-AppStore.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "App-AppStore.xcconfig"; sourceTree = "<group>"; };
 		7C9FA397208399000095E647 /* App-Beta.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "App-Beta.xcconfig"; sourceTree = "<group>"; };
 		7C9FA398208399000095E647 /* App-Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "App-Development.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +180,14 @@
 		7CCB039B2089112E009E2680 /* SeparatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		7CCB039E2089144C009E2680 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		7CCB03A020891A3B009E2680 /* UIStackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
+		7CE656DA20A5D84000BA8FCA /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		7CE656DC20A5D84A00BA8FCA /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		7CE656DE20A5D85400BA8FCA /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		7CE656E020A5D86400BA8FCA /* ManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageViewController.swift; sourceTree = "<group>"; };
+		7CE656E220A5D87200BA8FCA /* ManageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageViewModel.swift; sourceTree = "<group>"; };
+		7CE656E420A5D87B00BA8FCA /* ManageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageView.swift; sourceTree = "<group>"; };
+		7CE656E720A5ED2A00BA8FCA /* SubtitledTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitledTableViewCell.swift; sourceTree = "<group>"; };
+		7CE656E920A5F53A00BA8FCA /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		7CF7D556209DC2C1003A3FC1 /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
 		7CF7D557209DC2C1003A3FC1 /* NetworkApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkApplication.swift; sourceTree = "<group>"; };
 		7CF7D558209DC2C1003A3FC1 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
@@ -269,6 +293,27 @@
 			path = "Login screen";
 			sourceTree = "<group>";
 		};
+		7C9E1AC220AC918D0027CF6E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7C9E1AC320AC92890027CF6E /* DashboardSectionHeader.swift */,
+				7C9E1AC520AC9C340027CF6E /* PersonTableViewCell.swift */,
+				7C9E1AC720AC9D780027CF6E /* ActivityTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7C9E1ACB20ACA8850027CF6E /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				7C9E1AC220AC918D0027CF6E /* Cells */,
+				7CE656DA20A5D84000BA8FCA /* DashboardViewController.swift */,
+				7CE656DE20A5D85400BA8FCA /* DashboardViewModel.swift */,
+				7CE656DC20A5D84A00BA8FCA /* DashboardView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		7C9FA395208399000095E647 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +413,8 @@
 			isa = PBXGroup;
 			children = (
 				7CB54DAE209F613D007EC75D /* HomeFlowController.swift */,
+				7CE656D820A5D81800BA8FCA /* Dashboard  */,
+				7CE656D920A5D82A00BA8FCA /* Manage */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -392,6 +439,7 @@
 				7C9BF5CC2088FD53002BF7B2 /* FlowAwareViewController.swift */,
 				7C9BF5E220890E14002BF7B2 /* KeyboardAwareViewController.swift */,
 				7C4F2C6820A5C70000E19EB0 /* HomeTabBarController.swift */,
+				7CE656E920A5F53A00BA8FCA /* TableViewCell.swift */,
 			);
 			path = "Base classes";
 			sourceTree = "<group>";
@@ -438,6 +486,7 @@
 		7C9FA3BA20839E3A0095E647 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7CE656E620A5ED0000BA8FCA /* Cells */,
 				7CCB039B2089112E009E2680 /* SeparatorView.swift */,
 				7CB54DA1209EDD04007EC75D /* DefaultLoader.swift */,
 			);
@@ -483,6 +532,33 @@
 				7CB54DA3209EE89B007EC75D /* UIButtonFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		7CE656D820A5D81800BA8FCA /* Dashboard  */ = {
+			isa = PBXGroup;
+			children = (
+				7C9E1AC920ACA86D0027CF6E /* DashboardFlowController.swift */,
+				7C9E1ACB20ACA8850027CF6E /* Root */,
+			);
+			path = "Dashboard ";
+			sourceTree = "<group>";
+		};
+		7CE656D920A5D82A00BA8FCA /* Manage */ = {
+			isa = PBXGroup;
+			children = (
+				7CE656E020A5D86400BA8FCA /* ManageViewController.swift */,
+				7CE656E220A5D87200BA8FCA /* ManageViewModel.swift */,
+				7CE656E420A5D87B00BA8FCA /* ManageView.swift */,
+			);
+			path = Manage;
+			sourceTree = "<group>";
+		};
+		7CE656E620A5ED0000BA8FCA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7CE656E720A5ED2A00BA8FCA /* SubtitledTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		7CF7D555209DC2AE003A3FC1 /* Networking Helpers */ = {
@@ -674,13 +750,18 @@
 				7C4F2C6920A5C70000E19EB0 /* HomeTabBarController.swift in Sources */,
 				7C9BF5A82088F7B2002BF7B2 /* LoginFlowController.swift in Sources */,
 				7C9BF5C42088FCA0002BF7B2 /* NSObjectExtension.swift in Sources */,
+				7CE656E320A5D87200BA8FCA /* ManageViewModel.swift in Sources */,
+				7CE656E120A5D86400BA8FCA /* ManageViewController.swift in Sources */,
 				7CC4567F20A5BDDD0037463B /* RegisterRequest.swift in Sources */,
 				7C9BF5AA2088F844002BF7B2 /* TypedViewController.swift in Sources */,
+				7CE656DB20A5D84000BA8FCA /* DashboardViewController.swift in Sources */,
 				7C9BF5C32088FCA0002BF7B2 /* UICollectionViewExtension.swift in Sources */,
+				7CE656E520A5D87B00BA8FCA /* ManageView.swift in Sources */,
 				7C9BF5A02088F712002BF7B2 /* HasDependency.swift in Sources */,
 				7CF7D55F209DC2C2003A3FC1 /* NetworkRequest.swift in Sources */,
 				7C9BF5E1208908D1002BF7B2 /* ViewController.swift in Sources */,
 				7CB54DAD209F59CB007EC75D /* RegisterView.swift in Sources */,
+				7CE656DF20A5D85400BA8FCA /* DashboardViewModel.swift in Sources */,
 				7CB54DAB209F59C2007EC75D /* RegisterViewModel.swift in Sources */,
 				7CCB039F2089144C009E2680 /* ViewControllerFactory.swift in Sources */,
 				7C9BF5D12088FFC2002BF7B2 /* ViewModel.swift in Sources */,
@@ -688,12 +769,16 @@
 				7C9BF5C72088FCA0002BF7B2 /* UIViewExtension+Constraint.swift in Sources */,
 				7CF7D55E209DC2C2003A3FC1 /* NetworkApplication.swift in Sources */,
 				7CF7D567209DC3A6003A3FC1 /* AuthenticationService.swift in Sources */,
+				7C9E1ACA20ACA86D0027CF6E /* DashboardFlowController.swift in Sources */,
 				7CB54DA0209EDC1D007EC75D /* Loader.swift in Sources */,
+				7C9E1AC420AC92890027CF6E /* DashboardSectionHeader.swift in Sources */,
 				7CCB03A120891A3B009E2680 /* UIStackViewExtension.swift in Sources */,
 				7C9BF5A52088F719002BF7B2 /* AlertPresentable.swift in Sources */,
 				7C9FA3BF20839E500095E647 /* Localizable.swift in Sources */,
+				7CE656EA20A5F53A00BA8FCA /* TableViewCell.swift in Sources */,
 				7C9BF5C62088FCA0002BF7B2 /* BoolExtension.swift in Sources */,
 				7CF7D571209E03B7003A3FC1 /* NetworkStatus.swift in Sources */,
+				7C9E1AC820AC9D780027CF6E /* ActivityTableViewCell.swift in Sources */,
 				7CCB039A20891045009E2680 /* LoginViewController.swift in Sources */,
 				7C9BF5DD20890654002BF7B2 /* View.swift in Sources */,
 				7CB54DA9209F59BA007EC75D /* RegisterViewController.swift in Sources */,
@@ -707,10 +792,13 @@
 				7CCB03982089103B009E2680 /* LoginViewModel.swift in Sources */,
 				7C9BF5C82088FCA0002BF7B2 /* UIDeviceExtension.swift in Sources */,
 				7CCB039620891033009E2680 /* LoginView.swift in Sources */,
+				7CE656DD20A5D84A00BA8FCA /* DashboardView.swift in Sources */,
 				7CF7D566209DC3A6003A3FC1 /* SecureStorageService.swift in Sources */,
 				7CF7D56F209DF697003A3FC1 /* LoginResponse.swift in Sources */,
 				7C9BF5A42088F719002BF7B2 /* FlowController.swift in Sources */,
 				7C9BF59C2088F6DC002BF7B2 /* ApplicationFlowController.swift in Sources */,
+				7CE656E820A5ED2A00BA8FCA /* SubtitledTableViewCell.swift in Sources */,
+				7C9E1AC620AC9C340027CF6E /* PersonTableViewCell.swift in Sources */,
 				7CB54DA6209EF30B007EC75D /* UINavigationBarExtension.swift in Sources */,
 				7C9BF5C52088FCA0002BF7B2 /* UIColorExtension.swift in Sources */,
 				7C9BF5DB2089059D002BF7B2 /* ViewSetupable.swift in Sources */,

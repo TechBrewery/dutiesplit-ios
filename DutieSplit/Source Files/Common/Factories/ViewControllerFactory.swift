@@ -22,4 +22,14 @@ internal struct ViewControllerFactory {
         let viewModel = RegisterViewModel(dependencies: applicationDependencies)
         return RegisterViewController(viewModel: viewModel, viewMaker: RegisterView())
     }
+    
+    func dashboardViewController() -> DashboardViewController {
+        let viewModel = DashboardViewModel(dependencies: applicationDependencies)
+        return DashboardViewController(viewModel: viewModel, viewMaker: DashboardView())
+    }
+    
+    func manageViewController() -> ManageViewController {
+        let viewModel = ManageViewModel(dependencies: applicationDependencies)
+        return ManageViewController(viewModel: viewModel, viewMaker: ManageView())
+    }
 }

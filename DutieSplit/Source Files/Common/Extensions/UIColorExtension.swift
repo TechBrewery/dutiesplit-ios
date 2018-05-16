@@ -34,7 +34,19 @@ internal extension UIColor {
         return .init(hex: 0xA4AAB3)
     }
     
+    class var dsDarkGray: UIColor {
+        return .init(hex: 0xEFEFF4)
+    }
+    
     class var dsTextGray: UIColor {
         return .init(hex: 0x8F8E94)
+    }
+    
+    class var dsTextLightGray: UIColor {
+        return .init(hex: 0x8F8E94)
+    }
+    
+    class var dsTextBlack: UIColor {
+        return .init(hex: 0x030303)
     }
 }

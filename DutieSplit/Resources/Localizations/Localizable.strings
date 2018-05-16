@@ -15,7 +15,16 @@
 "login.placeholder.password" = "Password";
 "login.placeholder.name" = "Name";
 "login.log.in" = "Log in";
-"login.sign.in" = "Sign in";
+"login.register" = "Register";
+
+// Dashboard
+"dashboard.title" = "Dashboard";
+"dashboard.button.all" = "ALL >";
+"dashboard.ranking" = "RANKING";
+"dashboard.recent.activities" = "RECENT ACTIVITIES";
+
+// Manage
+"manage.title" = "Manage";
 
 // Error
 "error.title" = "Error";
