@@ -8,6 +8,11 @@ import UIKit
 
 internal final class ActivityTableViewCell: SubtitledTableViewCell {
     
+    /// - SeeAlso: SubtitledTableViewCell.textLeadingMargin
+    override var textLeadingMargin: CGFloat {
+        return 54
+    }
+    
     private lazy var personLabel: UILabel = {
         let view = UILabel()
         view.font = .systemFont(ofSize: 12)
@@ -24,6 +29,14 @@ internal final class ActivityTableViewCell: SubtitledTableViewCell {
         return view
     }()
     
+    private lazy var emojiView: UIView = {
+        let view = UIView()
+        view.layer.borderColor = UIColor.dsRed.cgColor
+        view.layer.borderWidth = 1
+        view.layer.cornerRadius = 6
+        return view.layoutable()
+    }()
+    
     private lazy var rightStackView = UIStackView.make(
         axis: .vertical,
         with: [personLabel, dateLabel],
@@ -33,13 +46,16 @@ internal final class ActivityTableViewCell: SubtitledTableViewCell {
     /// - SeeAlso: ViewSetupable
     override func setupViewHierarchy() {
         super.setupViewHierarchy()
-        contentView.addSubview(rightStackView)
+        [emojiView, rightStackView].forEach { contentView.addSubview($0) }
     }
     
     /// - SeeAlso: ViewSetupable
     override func setupConstraints() {
         super.setupConstraints()
+        emojiView.constraintToConstant(.init(width: 28, height: 28))
         NSLayoutConstraint.activate([
+            emojiView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            emojiView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             rightStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             rightStackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])

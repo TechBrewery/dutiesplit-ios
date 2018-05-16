@@ -12,6 +12,7 @@ internal final class DashboardView: View, ViewSetupable {
         let view = UITableView()
         view.register(cell: PersonTableViewCell.self)
         view.register(cell: ActivityTableViewCell.self)
+        view.separatorStyle = .none
         view.estimatedRowHeight = 52
         view.tableFooterView = UIView()
         return view.layoutable()

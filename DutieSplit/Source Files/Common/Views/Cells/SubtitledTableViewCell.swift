@@ -9,6 +9,11 @@ import UIKit
 /// Cell with title and subitle, should be used as the base cell for similar ones
 internal class SubtitledTableViewCell: TableViewCell, ViewSetupable {
     
+    /// Constant to be set as the leading for the title and subtitle
+    var textLeadingMargin: CGFloat {
+        return 16
+    }
+    
     /// Title label at the top with bigger font
     lazy var titleLabel: UILabel = {
         let view = UILabel()
@@ -40,7 +45,7 @@ internal class SubtitledTableViewCell: TableViewCell, ViewSetupable {
     func setupConstraints() {
         NSLayoutConstraint.activate([
             contentView.heightAnchor.constraint(equalToConstant: 52),
-            leftStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            leftStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: textLeadingMargin),
             leftStackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
     }

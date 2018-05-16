@@ -4,6 +4,8 @@
 //
 
 
+import UIKit
+
 internal final class PersonTableViewCell: SubtitledTableViewCell {
     
     /// - SeeAlso: ViewSetupable
