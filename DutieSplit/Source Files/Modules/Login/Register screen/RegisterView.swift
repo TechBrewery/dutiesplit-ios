@@ -44,7 +44,7 @@ internal final class RegisterView: View, ViewSetupable {
     lazy var registerButton: UIButton = {
         let button = UIButtonFactory.loginStyled()
         button.tintColor = .dsGreen
-        button.setTitle(Localizable.LoginScreen.signIn, for: .normal)
+        button.setTitle(Localizable.LoginScreen.register, for: .normal)
         return button.layoutable()
     }()
     

@@ -15,7 +15,7 @@
 "login.placeholder.password" = "Password";
 "login.placeholder.name" = "Name";
 "login.log.in" = "Log in";
-"login.sign.in" = "Sign in";
+"login.register" = "Register";
 
 // Dashboard
 "dashboard.button.all" = "ALL >";

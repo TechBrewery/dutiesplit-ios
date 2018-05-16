@@ -39,13 +39,23 @@ internal final class DashbaordSectionHeader: View, ViewSetupable {
     
     private lazy var bottomBorder: UIView = .separator(axis: .vertical, thickness: 1, color: UIColor.dsGray.withAlphaComponent(0.6))
     
+    private lazy var blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .regular)).layoutable()
+    
     /// - SeeAlso: ViewSetupable
     func setupViewHierarchy() {
+        // Add blur effect if it's not disabled in the settings
+        if !UIAccessibilityIsReduceTransparencyEnabled() {
+            addSubview(blurEffectView)
+        }
+        
         [leftLabel, rightButton, bottomBorder].forEach { addSubview($0) }
     }
     
     /// - SeeAlso: ViewSetupable
     func setupConstraints() {
+        if blurEffectView.superview != nil {
+            blurEffectView.constraintToSuperviewEdges()
+        }
         bottomBorder.constraintToSuperviewEdges(excludingAnchors: [.top])
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: 30),
