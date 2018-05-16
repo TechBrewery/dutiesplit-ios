@@ -18,7 +18,13 @@
 "login.register" = "Register";
 
 // Dashboard
+
+"dashboard.title" = "Dashboard";
 "dashboard.button.all" = "ALL >";
+"dashboard.ranking" = "RANKING";
+"dashboard.recent.activities" = "RECENT ACTIVITIES";
+
+
 
 // Error
 "error.title" = "Error";

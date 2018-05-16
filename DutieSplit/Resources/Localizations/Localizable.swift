@@ -29,7 +29,10 @@ internal struct Localizable {
     }
     
     struct DashboardScreen {
+        static let title = localized("dashboard.title")
         static let buttonAll = localized("dashboard.button.all")
+        static let ranking = localized("dashboard.ranking")
+        static let recentActivities = localized("dashboard.recent.activities")
     }
     
     struct Error {

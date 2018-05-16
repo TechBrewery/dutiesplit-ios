@@ -11,7 +11,7 @@ internal final class DashboardViewController: ViewController<DashboardView, Dash
     /// - SeeAlso: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Dashboard"
+        navigationItem.title = Localizable.DashboardScreen.title
         customView.tableView.delegate = self
         customView.tableView.dataSource = self
     }
@@ -57,9 +57,19 @@ internal final class DashboardViewController: ViewController<DashboardView, Dash
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = DashbaordSectionHeader(leftLabelTitle: "RANKING", onRightButtonTap: {
-            print("section header tap")
-        })
-        return view
+        switch section {
+        case 0:
+            let view = DashbaordSectionHeader(leftLabelTitle: Localizable.DashboardScreen.ranking, onRightButtonTap: {
+                print("section RANKING all tap")
+            })
+            return view
+        case 1:
+            let view = DashbaordSectionHeader(leftLabelTitle: Localizable.DashboardScreen.recentActivities, onRightButtonTap: {
+                print("section RECENT ACTIVITIES all tap")
+            })
+            return view
+        default:
+            return nil
+        }
     }
 }
