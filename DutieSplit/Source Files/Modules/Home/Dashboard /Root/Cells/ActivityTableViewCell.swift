@@ -10,7 +10,7 @@ internal final class ActivityTableViewCell: SubtitledTableViewCell {
     
     /// - SeeAlso: SubtitledTableViewCell.textLeadingMargin
     override var textLeadingMargin: CGFloat {
-        return 54
+        return 46
     }
     
     private lazy var personLabel: UILabel = {
