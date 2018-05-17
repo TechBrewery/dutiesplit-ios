@@ -25,6 +25,8 @@
 
 // Manage
 "manage.title" = "Manage";
+"manage.group" = "GROUP";
+"manage.settings" = "SETTINGS";
 
 // Error
 "error.title" = "Error";

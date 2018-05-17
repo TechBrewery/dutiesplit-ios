@@ -55,9 +55,9 @@ internal final class ManageViewController: ViewController<ManageView, ManageView
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         switch section {
         case 0:
-            return SectionHeader(leftLabelTitle: "GROUP", height: .large)
+            return SectionHeader(leftLabelTitle: Localizable.ManageScreen.group, height: .large)
         case 1:
-            return SectionHeader(leftLabelTitle: "SETTINGS", height: .large)
+            return SectionHeader(leftLabelTitle: Localizable.ManageScreen.settings, height: .large)
         default:
             return nil
         }

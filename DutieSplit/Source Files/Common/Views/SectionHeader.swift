@@ -88,7 +88,7 @@ internal final class SectionHeader: View, ViewSetupable {
     
     /// - SeeAlso: ViewSetupable
     func setupProperties() {
-        backgroundColor = .dsDarkGray
+        backgroundColor = UIColor.dsDarkGray.withAlphaComponent(0.8)
     }
     
     @objc private func didTapRightButton() {
