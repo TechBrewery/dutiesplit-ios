@@ -41,13 +41,14 @@ internal final class ManageTableViewCell: TableViewCell, ViewSetupable {
             leftStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
             leftStackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             bottomBorder.leadingAnchor.constraint(equalTo: leftStackView.leadingAnchor),
-            bottomBorder.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            bottomBorder.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 40),
             bottomBorder.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
     
     /// - SeeAlso: ViewSetupable
     func setupProperties() {
+        accessoryType = .disclosureIndicator
         titleLabel.text = "Submenu"
         iconImageView.image = #imageLiteral(resourceName: "duties-icon")
     }
