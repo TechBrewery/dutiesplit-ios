@@ -1,16 +1,3 @@
-# Environment variables to be set up as secret in bitrise workflow settings:
-#
-# - `HOCKEYAPP_APP_ID_STAGING`, `HOCKEYAPP_API_TOKEN_STAGING`
-# - `HOCKEYAPP_APP_ID_BETA, `HOCKEYAPP_APP_TOKEN_BETA`
-# - `SLACK_WEBHOOK_URL`, `SLACK_CHANNEL`
-# -  Take a look into .env.sample file for other secrets to set
-#
-# Environment variables to be set up in this file:
-#
-# - `XCODEBUILD_PROJECT`
-# - `XCODEBUILD_SCHEME`
-# - `XCODEBUILD_OPTIONS'
-
 format_version: 1.3.1
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 
@@ -60,7 +47,6 @@ workflows:
       - cache-push
       - deploy-hockeyapp
       - deploy-bitriseio
-      - notify-slack
 
   build-beta:
     envs:
@@ -77,7 +63,6 @@ workflows:
       - cache-push
       - deploy-hockeyapp
       - deploy-bitriseio
-      - notify-slack
 
   build-pull-request:
     envs:
@@ -90,7 +75,6 @@ workflows:
     after_run:
       - cache-push
       - deploy-bitriseio
-      - notify-slack
 
 
   # Specific workflows declarations
