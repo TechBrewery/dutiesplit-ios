@@ -37,6 +37,8 @@ internal struct Localizable {
     
     struct ManageScreen {
         static let title = localized("manage.title")
+        static let group = localized("manage.group")
+        static let settings = localized("manage.settings")
     }
     
     struct Error {

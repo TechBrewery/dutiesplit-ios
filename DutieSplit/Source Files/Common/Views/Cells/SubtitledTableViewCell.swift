@@ -15,7 +15,7 @@ internal class SubtitledTableViewCell: TableViewCell, ViewSetupable {
     }
     
     /// Title label at the top with bigger font
-    lazy var titleLabel: UILabel = {
+    private (set) lazy var titleLabel: UILabel = {
         let view = UILabel()
         view.font = .systemFont(ofSize: 17)
         view.textColor = .dsTextBlack
@@ -23,7 +23,7 @@ internal class SubtitledTableViewCell: TableViewCell, ViewSetupable {
     }()
     
     /// Subtitle gray label with smaller font below the title
-    lazy var subtitleLabel: UILabel = {
+    private (set) lazy var subtitleLabel: UILabel = {
         let view = UILabel()
         view.font = .systemFont(ofSize: 12)
         view.textColor = .dsTextLightGray

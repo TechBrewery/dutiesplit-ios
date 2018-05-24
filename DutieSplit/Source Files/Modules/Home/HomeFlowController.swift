@@ -25,6 +25,8 @@ internal final class HomeFlowController: FlowController {
     
     private lazy var dashboardFlowController: DashboardFlowController = makeDashboardFlowController()
     
+    private lazy var manageFlowController: ManageFlowController = makeManageFlowController()
+    
     /// Initializes Flow controllers with given dependencies
     ///
     /// - Parameters:
@@ -45,7 +47,7 @@ internal final class HomeFlowController: FlowController {
         let dashboardViewController = dashboardFlowController.rootViewController!
         dashboardViewController.tabBarItem = UITabBarItem(title: Localizable.DashboardScreen.title, image: #imageLiteral(resourceName: "dashboard-icon"), tag: 0)
         
-        let manageViewController = UINavigationController(rootViewController: makeManageViewController())
+        let manageViewController = manageFlowController.rootViewController!
         manageViewController.tabBarItem = UITabBarItem(title: Localizable.ManageScreen.title, image: #imageLiteral(resourceName: "manage-icon"), tag: 2)
         
         tabBarController.viewControllers = [dashboardViewController, UIViewController(), manageViewController]
@@ -63,14 +65,14 @@ internal final class HomeFlowController: FlowController {
         return flowController
     }
     
-    private func makeManageViewController() -> ManageViewController {
-        let viewController = dependencies.viewControllerFactory.manageViewController()
-        viewController.viewModel.eventTriggered = { [unowned self] event in
+    private func makeManageFlowController() -> ManageFlowController {
+        let flowController = ManageFlowController(dependencies: dependencies)
+        flowController.eventTriggered = { [unowned self] event in
             switch event {
             case .userLoggedOut:
                 self.eventTriggered?(.userLoggedOut)
             }
         }
-        return viewController
+        return flowController
     }
 }

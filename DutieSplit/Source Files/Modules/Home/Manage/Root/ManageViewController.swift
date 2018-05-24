@@ -1,22 +1,25 @@
 //
-//  DashboardViewController.swift
+//  ManageViewController.swift
 //  DutieSplit
 //
 
 
 import UIKit
 
-internal final class DashboardViewController: ViewController<DashboardView, DashboardViewModel>, BindingsSetupable, NavigationBarSetupable, UITableViewDataSource, UITableViewDelegate {
+internal final class ManageViewController: ViewController<ManageView, ManageViewModel>, BindingsSetupable, NavigationBarSetupable, UITableViewDelegate, UITableViewDataSource {
+    
+    private lazy var logoutButton = UIBarButtonItem(title: "Logout", style: .plain, target: nil, action: nil)
     
     /// - SeeAlso: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = Localizable.DashboardScreen.title
+        title = "Group name"
+        navigationItem.rightBarButtonItem = logoutButton
         customView.tableView.delegate = self
         customView.tableView.dataSource = self
     }
     
-     /// - SeeAlso: UIViewController
+    /// - SeeAlso: UIViewController
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         guard let selectedRow = customView.tableView.indexPathForSelectedRow else { return }
@@ -25,6 +28,7 @@ internal final class DashboardViewController: ViewController<DashboardView, Dash
     
     /// - SeeAlso: NavigationBarSetupable
     func setup(navigationBar: UINavigationBar) {
+        navigationBar.tintColor = .dsRed
         if #available(iOS 11.0, *) {
             navigationBar.prefersLargeTitles = true
         }
@@ -32,11 +36,11 @@ internal final class DashboardViewController: ViewController<DashboardView, Dash
     
     /// - SeeAlso: BindingsSetupable
     func setupBindings() {
-        
+        logoutButton.rx.tap.bind(to: viewModel.logoutButtonTap).disposed(by: disposeBag)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 3 : 5
+        return section == 0 ? 2 : 3
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -44,32 +48,19 @@ internal final class DashboardViewController: ViewController<DashboardView, Dash
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section {
-        case 0:
-            guard let cell: PersonTableViewCell = tableView.dequeueReusableCell(for: indexPath) else { return UITableViewCell() }
-            return cell
-        case 1:
-            guard let cell: ActivityTableViewCell = tableView.dequeueReusableCell(for: indexPath) else { return UITableViewCell() }
-            return cell
-        default:
-            return UITableViewCell()
-        }
+        guard let cell: ManageTableViewCell = tableView.dequeueReusableCell(for: indexPath) else { return UITableViewCell() }
+        return cell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         switch section {
         case 0:
-            let view = SectionHeader(leftLabelTitle: Localizable.DashboardScreen.ranking, height: .small, onRightButtonTap: {
-                print("section RANKING all tap")
-            })
-            return view
+            return SectionHeader(leftLabelTitle: Localizable.ManageScreen.group, height: .large)
         case 1:
-            let view = SectionHeader(leftLabelTitle: Localizable.DashboardScreen.recentActivities, height: .small, onRightButtonTap: {
-                print("section RECENT ACTIVITIES all tap")
-            })
-            return view
+            return SectionHeader(leftLabelTitle: Localizable.ManageScreen.settings, height: .large)
         default:
             return nil
         }
     }
 }
+

@@ -38,6 +38,10 @@ internal extension UIColor {
         return .init(hex: 0xEFEFF4)
     }
     
+    class var dsBorderGray: UIColor {
+        return .init(hex: 0xC8C7CC)
+    }
+    
     class var dsTextGray: UIColor {
         return .init(hex: 0x8F8E94)
     }
