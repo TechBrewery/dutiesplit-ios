@@ -3,7 +3,3 @@
 
 
 ### Task Description
-*
-
-
-### Aditional Notes (optional)

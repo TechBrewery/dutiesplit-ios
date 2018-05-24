@@ -2,13 +2,14 @@
 
 ## Tools & Services
 
-* Tools:
+### Tools:
 * Xcode 9.3
-* [Carthage](https://github.com/Carthage/Carthage) 0.26 or higher
-* [CocoaPods](https://github.com/CocoaPods/CocoaPods) 1.2 or higher
-* Services:
-* [Trelo](https://trello.com/b/TWsynwg3/dutiesplit-ios)
-* [Bitrise](https://www.bitrise.io/app/f4df44375524278a)
+* [Carthage](https://github.com/Carthage/Carthage) 0.29 or higher
+* [CocoaPods](https://github.com/CocoaPods/CocoaPods) 1.3 or higher
+
+### Services:
+* [Trello](https://trello.com/b/TWsynwg3/dutiesplit-ios)
+* [Bitrise](https://www.bitrise.io/app/d628af113970023d)
 * [HockeyApp - Staging](https://rink.hockeyapp.net/manage/apps/748112)
 * [HockeyApp - Beta](https://rink.hockeyapp.net/manage/apps/748113)
 
@@ -27,9 +28,9 @@
 
 ```bash
 # over https:
-https://MichalTKwiecien@bitbucket.org/techbrewery/ios-dutiesplit.git
+https://github.com/TechBrewery/dutiesplit-ios.git
 # or over SSH:
-git@bitbucket.org:techbrewery/ios-dutiesplit.git
+git@github.com:TechBrewery/dutiesplit-ios.git
 ```
 
 2. Install required Gems:

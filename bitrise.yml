@@ -38,13 +38,11 @@ workflows:
       - HOCKEYAPP_API_TOKEN: $HOCKEYAPP_API_TOKEN_STAGING
       - HOCKEYAPP_APP_ID: $HOCKEYAPP_APP_ID_STAGING
     before_run:
-      - cache-pull
       - bootstrap-carthage
       - bootstrap-cocoapods
       - bootstrap-code-signing
       - archive-xcode
     after_run:
-      - cache-push
       - deploy-hockeyapp
       - deploy-bitriseio
 
@@ -54,13 +52,11 @@ workflows:
       - HOCKEYAPP_API_TOKEN: $HOCKEYAPP_API_TOKEN_BETA
       - HOCKEYAPP_APP_ID: $HOCKEYAPP_APP_ID_BETA
     before_run:
-      - cache-pull
       - bootstrap-carthage
       - bootstrap-cocoapods
       - bootstrap-code-signing
       - archive-xcode
     after_run:
-      - cache-push
       - deploy-hockeyapp
       - deploy-bitriseio
 
@@ -68,28 +64,14 @@ workflows:
     envs:
       - XCODEBUILD_SCHEME: Staging
     before_run:
-      - cache-pull
       - bootstrap-carthage
       - bootstrap-cocoapods
       - test-xcode
     after_run:
-      - cache-push
       - deploy-bitriseio
 
 
   # Specific workflows declarations
-
-  cache-pull:
-    steps:
-      - cache-pull: {}
-
-  cache-push:
-    steps:
-      - cache-push:
-          inputs:
-            - cache_paths: |-
-                ./Carthage
-                ./Pods
 
   bootstrap-carthage:
     steps:
