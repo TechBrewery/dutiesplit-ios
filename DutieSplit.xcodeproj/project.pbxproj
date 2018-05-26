@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C19903E20B9EAEB00DF098E /* MockApplicationDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C19903D20B9EAEB00DF098E /* MockApplicationDependencies.swift */; };
+		7C19904220B9EB7900DF098E /* MockCrashLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C19904120B9EB7900DF098E /* MockCrashLogger.swift */; };
+		7C19904420B9EC1C00DF098E /* MockSecureStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C19904320B9EC1C00DF098E /* MockSecureStorageService.swift */; };
+		7C19904620B9EC9B00DF098E /* MockAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C19904520B9EC9B00DF098E /* MockAuthenticationService.swift */; };
+		7C19904820B9EDD900DF098E /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C19904720B9EDD900DF098E /* MockNetworkService.swift */; };
+		7C19904A20B9FBEF00DF098E /* LoginViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C19904920B9FBEF00DF098E /* LoginViewModelSpec.swift */; };
 		7C4F2C6920A5C70000E19EB0 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4F2C6820A5C70000E19EB0 /* HomeTabBarController.swift */; };
 		7C7E9E6B20AE185D0034D448 /* ManageFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7E9E6A20AE185D0034D448 /* ManageFlowController.swift */; };
 		7C7E9E6E20AE1D5F0034D448 /* ManageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7E9E6D20AE1D5F0034D448 /* ManageTableViewCell.swift */; };
@@ -14,7 +20,7 @@
 		7C9B8F7A2083946400661EFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C9B8F792083946400661EFE /* Assets.xcassets */; };
 		7C9B8F882083946400661EFE /* DutieSplitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9B8F872083946400661EFE /* DutieSplitTests.swift */; };
 		7C9BF59A2088F6DC002BF7B2 /* ApplicationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5972088F6DB002BF7B2 /* ApplicationKeys.swift */; };
-		7C9BF59B2088F6DC002BF7B2 /* ApplicationDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5982088F6DB002BF7B2 /* ApplicationDependency.swift */; };
+		7C9BF59B2088F6DC002BF7B2 /* ApplicationDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5982088F6DB002BF7B2 /* ApplicationDependencies.swift */; };
 		7C9BF59C2088F6DC002BF7B2 /* ApplicationFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5992088F6DB002BF7B2 /* ApplicationFlowController.swift */; };
 		7C9BF59E2088F6F7002BF7B2 /* HockeyAppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF59D2088F6F7002BF7B2 /* HockeyAppService.swift */; };
 		7C9BF5A02088F712002BF7B2 /* HasDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF59F2088F712002BF7B2 /* HasDependency.swift */; };
@@ -109,6 +115,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C19903D20B9EAEB00DF098E /* MockApplicationDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApplicationDependencies.swift; sourceTree = "<group>"; };
+		7C19904120B9EB7900DF098E /* MockCrashLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCrashLogger.swift; sourceTree = "<group>"; };
+		7C19904320B9EC1C00DF098E /* MockSecureStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSecureStorageService.swift; sourceTree = "<group>"; };
+		7C19904520B9EC9B00DF098E /* MockAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthenticationService.swift; sourceTree = "<group>"; };
+		7C19904720B9EDD900DF098E /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		7C19904920B9FBEF00DF098E /* LoginViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelSpec.swift; sourceTree = "<group>"; };
 		7C4F2C6820A5C70000E19EB0 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		7C7E9E6A20AE185D0034D448 /* ManageFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageFlowController.swift; sourceTree = "<group>"; };
 		7C7E9E6D20AE1D5F0034D448 /* ManageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTableViewCell.swift; sourceTree = "<group>"; };
@@ -120,7 +132,7 @@
 		7C9B8F872083946400661EFE /* DutieSplitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DutieSplitTests.swift; sourceTree = "<group>"; };
 		7C9B8F892083946400661EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C9BF5972088F6DB002BF7B2 /* ApplicationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationKeys.swift; sourceTree = "<group>"; };
-		7C9BF5982088F6DB002BF7B2 /* ApplicationDependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationDependency.swift; sourceTree = "<group>"; };
+		7C9BF5982088F6DB002BF7B2 /* ApplicationDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationDependencies.swift; sourceTree = "<group>"; };
 		7C9BF5992088F6DB002BF7B2 /* ApplicationFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationFlowController.swift; sourceTree = "<group>"; };
 		7C9BF59D2088F6F7002BF7B2 /* HockeyAppService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HockeyAppService.swift; sourceTree = "<group>"; };
 		7C9BF59F2088F712002BF7B2 /* HasDependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasDependency.swift; sourceTree = "<group>"; };
@@ -224,6 +236,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C19903320B98C7900DF098E /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				7C9B8F872083946400661EFE /* DutieSplitTests.swift */,
+				7C19904920B9FBEF00DF098E /* LoginViewModelSpec.swift */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		7C19903420B98C7E00DF098E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				7C19903D20B9EAEB00DF098E /* MockApplicationDependencies.swift */,
+				7C19904120B9EB7900DF098E /* MockCrashLogger.swift */,
+				7C19904320B9EC1C00DF098E /* MockSecureStorageService.swift */,
+				7C19904520B9EC9B00DF098E /* MockAuthenticationService.swift */,
+				7C19904720B9EDD900DF098E /* MockNetworkService.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		7C19903620B98C9000DF098E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		7C7E9E6920AE18420034D448 /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,7 +316,9 @@
 		7C9B8F862083946400661EFE /* DutieSplitTests */ = {
 			isa = PBXGroup;
 			children = (
-				7C9B8F872083946400661EFE /* DutieSplitTests.swift */,
+				7C19903320B98C7900DF098E /* Specs */,
+				7C19903620B98C9000DF098E /* Models */,
+				7C19903420B98C7E00DF098E /* Mocks */,
 				7C9FA3AB20839A9D0095E647 /* Supporting Files */,
 			);
 			path = DutieSplitTests;
@@ -424,7 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				7C9B8F722083946200661EFE /* ApplicationDelegate.swift */,
-				7C9BF5982088F6DB002BF7B2 /* ApplicationDependency.swift */,
+				7C9BF5982088F6DB002BF7B2 /* ApplicationDependencies.swift */,
 				7C9BF5992088F6DB002BF7B2 /* ApplicationFlowController.swift */,
 				7C9BF5972088F6DB002BF7B2 /* ApplicationKeys.swift */,
 			);
@@ -658,6 +700,7 @@
 				7C9B8F7F2083946400661EFE /* Sources */,
 				7C9B8F802083946400661EFE /* Frameworks */,
 				7C9B8F812083946400661EFE /* Resources */,
+				7C19903220B98B7400DF098E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -740,6 +783,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7C19903220B98B7400DF098E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(_CARTHAGE_BUILD_PATH)/HockeySDK.framework",
+				"$(_CARTHAGE_BUILD_PATH)/KeychainAccess.framework",
+				"$(_CARTHAGE_BUILD_PATH)/RxSwift.framework",
+				"$(_CARTHAGE_BUILD_PATH)/RxCocoa.framework",
+				"$(_CARTHAGE_BUILD_PATH)/RxOptional.framework",
+				"$(_CARTHAGE_BUILD_PATH)/ResponseDetective.framework",
+				"$(_CARTHAGE_BUILD_PATH)/Quick.framework",
+				"$(_CARTHAGE_BUILD_PATH)/Nimble.framework",
+				"$(_CARTHAGE_BUILD_PATH)/RxTest.framework",
+				"$(_CARTHAGE_BUILD_PATH)/RxBlocking.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "carthage copy-frameworks";
+		};
 		7C9BF5D4208901D3002BF7B2 /* Carthage script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -807,7 +873,7 @@
 				7CB54DA9209F59BA007EC75D /* RegisterViewController.swift in Sources */,
 				7CB54D9E209E219C007EC75D /* UITextFieldFactory.swift in Sources */,
 				7CF7D55D209DC2C2003A3FC1 /* NetworkResponse.swift in Sources */,
-				7C9BF59B2088F6DC002BF7B2 /* ApplicationDependency.swift in Sources */,
+				7C9BF59B2088F6DC002BF7B2 /* ApplicationDependencies.swift in Sources */,
 				7CC4567A20A5BB7F0037463B /* EmailValidator.swift in Sources */,
 				7C9BF5C92088FCA0002BF7B2 /* UITableViewExtension.swift in Sources */,
 				7C9BF5CF2088FD95002BF7B2 /* NavigationBarSetupable.swift in Sources */,
@@ -847,7 +913,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C19904820B9EDD900DF098E /* MockNetworkService.swift in Sources */,
+				7C19904420B9EC1C00DF098E /* MockSecureStorageService.swift in Sources */,
+				7C19904220B9EB7900DF098E /* MockCrashLogger.swift in Sources */,
+				7C19904620B9EC9B00DF098E /* MockAuthenticationService.swift in Sources */,
+				7C19904A20B9FBEF00DF098E /* LoginViewModelSpec.swift in Sources */,
 				7C9B8F882083946400661EFE /* DutieSplitTests.swift in Sources */,
+				7C19903E20B9EAEB00DF098E /* MockApplicationDependencies.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

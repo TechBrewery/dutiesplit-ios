@@ -10,12 +10,6 @@ import RxSwift
 /// Service for performing network requests
 internal protocol NetworkService {
     
-    /// URL Session to use for performing requests
-    var session: URLSession { get }
-    
-    /// Authenticator service for requests authorization
-    var authenticationService: AuthenticationService { get }
-    
     /// Method for registering callback when 401 error occurred
     ///
     /// - Parameter callback: Callback to call when 401 unauthorized error occurred
@@ -31,11 +25,9 @@ internal protocol NetworkService {
 /// Default network application for performing API requests
 internal final class DefaultNetworkService: NetworkService {
     
-    /// URL Session to use for performing requests
-    let session: URLSession
+    private let authenticationService: AuthenticationService
     
-    /// Authenticator service for requests authorization
-    let authenticationService: AuthenticationService
+    private let session: URLSession
     
     private let acceptableStatusCodes = 200 ..< 300
     
