@@ -62,26 +62,18 @@ internal final class LoginViewModelSpec: QuickSpec {
             }
             
             it("login button should be disabled when input fields aren't correct") {
-                var expectation = false
+                let expectedResults = [false, false, false, false, false, true, false]
+                var counter = 0
                 self.viewModel.loginButtonEnabled.subscribe(onNext: { event in
-                    expect(event) == expectation
+                    expect(event) == expectedResults[counter]
+                    counter += 1
                 }).disposed(by: self.disposeBag)
-                
-                expectation = false
+
                 emailInput.onNext("abc")
-                
-                expectation = false
                 emailInput.onNext("abc@abc")
-                
-                expectation = false
                 emailInput.onNext("abc@abc.com")
-                
-                expectation = false
                 emailInput.onNext("abc@abc.com")
-                expectation = true
                 passwordInput.onNext("abc")
-                
-                expectation = false
                 emailInput.onNext("")
             }
             
@@ -122,6 +114,7 @@ internal final class LoginViewModelSpec: QuickSpec {
                         self.viewModel.errorOccurred.subscribe(onNext: { message in
                             expect(message).toEventually(equal("fixture.error"))
                         }).disposed(by: self.disposeBag)
+                        self.viewModel.loginButtonTap.onNext(())
                     }
                 }
             }
