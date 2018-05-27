@@ -9,7 +9,7 @@ import RxSwift
 
 internal final class MockNetworkService: NetworkService {
     
-    var mockedResponses = [String : NetworkResponseResult<NetworkResponse>]()
+    var mockResponses = MockResponses()
     
     private let authenticationService: AuthenticationService
     
@@ -37,10 +37,13 @@ internal final class MockNetworkService: NetworkService {
     /// - Returns: Observable of type Request.Response
     func perform<Request>(request: Request) -> Observable<NetworkResponseResult<Request.Response>> where Request: NetworkRequest {
         return Observable<NetworkResponseResult<Request.Response>>.create { [unowned self] observer in
-            guard let mock = self.mockedResponses[request.path] else {
+            if request is LoginRequest {
+                observer.onNext(self.mockResponses.loginResponse as! NetworkResponseResult<Request.Response>)
+            } else if request is RegisterRequest {
+                
+            } else {
                 fatalError("No stub provided for request: \(request.method) \(request.path)")
             }
-            observer.onNext(mock as! NetworkResponseResult<Request.Response>)
             observer.onCompleted()
             return Disposables.create()
         }

@@ -26,9 +26,6 @@ internal final class LoginViewModelSpec: QuickSpec {
             self.didTapRegisterCalled = false
             
             self.dependencies = MockApplicationDependencies()
-            (self.dependencies.networkService as! MockNetworkService).mockedResponses = [
-                "/auth/login": .success(LoginResponse(name: "fixture_name", email: "fixture@email.com", token: "fixture_token"))
-            ]
             self.viewModel = LoginViewModel(dependencies: self.dependencies)
             self.viewModel.eventTriggered = { [unowned self] event in
                 switch event {
@@ -107,6 +104,24 @@ internal final class LoginViewModelSpec: QuickSpec {
                     
                     it("should tell flow controller that user logged in") {
                         expect(self.userLoggedInCalled).toEventually(equal(true))
+                    }
+                }
+                
+                context("with wrong credentials") {
+                    
+                    beforeEach {
+                        (self.dependencies.networkService as! MockNetworkService).mockResponses.setFailureLoginResponse()
+                        self.viewModel.loginButtonTap.onNext(())
+                    }
+                    
+                    it("should not have token saved") {
+                        expect(self.dependencies.authenticationService.token).toEventually(beNil())
+                    }
+                    
+                    it("should show error message") {
+                        self.viewModel.errorOccurred.subscribe(onNext: { message in
+                            expect(message).toEventually(equal("fixture.error"))
+                        }).disposed(by: self.disposeBag)
                     }
                 }
             }
