@@ -14,6 +14,8 @@ class MockResponses {
         setSuccessLoginResponse()
     }
     
+    // MARK: LoginRequest
+    
     func setSuccessLoginResponse() {
         loginResponse = .success(LoginResponse(name: "fixture_name", email: "fixture@email.com", token: "fixture_token"))
     }

@@ -59,7 +59,7 @@ internal final class LoginFlowController: FlowController {
         let viewController = dependencies.viewControllerFactory.registerViewController()
         viewController.viewModel.eventTriggered = { [unowned self] event in
             switch event {
-            case .userSignedIn:
+            case .userRegistered:
                 self.eventTriggered?(.userLoggedIn)
             }
         }
