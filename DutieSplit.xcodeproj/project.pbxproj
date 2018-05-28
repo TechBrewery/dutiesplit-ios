@@ -15,6 +15,7 @@
 		7C19904A20B9FBEF00DF098E /* LoginViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C19904920B9FBEF00DF098E /* LoginViewModelSpec.swift */; };
 		7C19904C20BAB23A00DF098E /* MockResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C19904B20BAB23A00DF098E /* MockResponses.swift */; };
 		7C33DFBE20BC7F0C00784D63 /* RegisterViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C33DFBD20BC7F0C00784D63 /* RegisterViewModelSpec.swift */; };
+		7C33DFC020BC84E400784D63 /* AuthenticationServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C33DFBF20BC84E400784D63 /* AuthenticationServiceSpec.swift */; };
 		7C4F2C6920A5C70000E19EB0 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4F2C6820A5C70000E19EB0 /* HomeTabBarController.swift */; };
 		7C7E9E6B20AE185D0034D448 /* ManageFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7E9E6A20AE185D0034D448 /* ManageFlowController.swift */; };
 		7C7E9E6E20AE1D5F0034D448 /* ManageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7E9E6D20AE1D5F0034D448 /* ManageTableViewCell.swift */; };
@@ -124,6 +125,7 @@
 		7C19904920B9FBEF00DF098E /* LoginViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelSpec.swift; sourceTree = "<group>"; };
 		7C19904B20BAB23A00DF098E /* MockResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResponses.swift; sourceTree = "<group>"; };
 		7C33DFBD20BC7F0C00784D63 /* RegisterViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelSpec.swift; sourceTree = "<group>"; };
+		7C33DFBF20BC84E400784D63 /* AuthenticationServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceSpec.swift; sourceTree = "<group>"; };
 		7C4F2C6820A5C70000E19EB0 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		7C7E9E6A20AE185D0034D448 /* ManageFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageFlowController.swift; sourceTree = "<group>"; };
 		7C7E9E6D20AE1D5F0034D448 /* ManageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTableViewCell.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			children = (
 				7C19904920B9FBEF00DF098E /* LoginViewModelSpec.swift */,
 				7C33DFBD20BC7F0C00784D63 /* RegisterViewModelSpec.swift */,
+				7C33DFBF20BC84E400784D63 /* AuthenticationServiceSpec.swift */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -923,6 +926,7 @@
 				7C19904220B9EB7900DF098E /* MockCrashLogger.swift in Sources */,
 				7C19904620B9EC9B00DF098E /* MockAuthenticationService.swift in Sources */,
 				7C19904A20B9FBEF00DF098E /* LoginViewModelSpec.swift in Sources */,
+				7C33DFC020BC84E400784D63 /* AuthenticationServiceSpec.swift in Sources */,
 				7C19903E20B9EAEB00DF098E /* MockApplicationDependencies.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
