@@ -40,7 +40,7 @@ internal final class MockNetworkService: NetworkService {
             if request is LoginRequest {
                 observer.onNext(self.mockResponses.loginResponse as! NetworkResponseResult<Request.Response>)
             } else if request is RegisterRequest {
-                
+                observer.onNext(self.mockResponses.loginResponse as! NetworkResponseResult<Request.Response>)
             } else {
                 fatalError("No stub provided for request: \(request.method) \(request.path)")
             }

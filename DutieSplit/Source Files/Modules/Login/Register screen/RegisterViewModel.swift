@@ -12,9 +12,9 @@ internal final class RegisterViewModel: ViewModel, BindingsSetupable {
     
     /// Enum describing events that can be triggered
     ///
-    /// - userSignedIn: send when user sucessfully created new account
+    /// - userRegistered: send when user sucessfully created new account
     internal enum Event {
-        case userSignedIn
+        case userRegistered
     }
     
     /// Callback with triggered event
@@ -47,7 +47,7 @@ internal final class RegisterViewModel: ViewModel, BindingsSetupable {
         .combineLatest(isNameValid, isEmailValid, isPasswordValid)
         .map { $0.0 && $0.1 && $0.2 }
     
-    private lazy var isNameValid = emailText.asObservable().map { !$0.isEmpty }
+    private lazy var isNameValid = nameText.asObservable().map { !$0.isEmpty }
     
     private lazy var isEmailValid = emailText.asObservable().map { EmailValidator.validate($0) }
     
@@ -70,7 +70,7 @@ internal final class RegisterViewModel: ViewModel, BindingsSetupable {
                 switch response {
                 case .success(let response):
                     self.dependencies.authenticationService.save(token: response.token)
-                    self.eventTriggered?(.userSignedIn)
+                    self.eventTriggered?(.userRegistered)
                 case .failure(let error):
                     self.errorOccurred.onNext(error.description)
                 }
