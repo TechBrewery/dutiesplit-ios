@@ -86,7 +86,10 @@ workflows:
           title: 'bundle-install'
           inputs:
             - content: bundle install
-      - cocoapods-install: {}
+      - script:
+          title: 'pod-install'
+          inputs:
+            - content: bundle exec pod install
 
   bootstrap-code-signing:
     steps:

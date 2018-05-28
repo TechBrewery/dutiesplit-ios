@@ -13,7 +13,8 @@ internal enum NetworkMethod: String {
 
 /// Contains all needed infomations to make request
 internal protocol NetworkRequest: Encodable {
-    /// Type of the response.
+    
+    /// Type of the response
     associatedtype Response: Decodable
     
     /// HTTP method for request
