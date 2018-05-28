@@ -85,6 +85,7 @@ workflows:
           inputs:
             - carthage_command: bootstrap
             - carthage_options: --platform iOS --cache-builds
+            - github_access_token: $GITHUB_ACCESS_TOKEN
 
   bootstrap-cocoapods:
     steps:
