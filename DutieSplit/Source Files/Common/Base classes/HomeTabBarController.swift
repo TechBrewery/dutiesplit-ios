@@ -38,7 +38,7 @@ internal final class HomeTabBarController: UITabBarController, UITabBarControlle
 
     /// - SeeAlso: ViewSetupable
     func setupViewHierarchy() {
-        view.addSubview(centerButton)
+        tabBar.addSubview(centerButton)
     }
     
     /// - SeeAlso: ViewSetupable
