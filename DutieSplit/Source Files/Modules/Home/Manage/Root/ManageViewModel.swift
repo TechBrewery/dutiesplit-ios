@@ -13,8 +13,13 @@ internal final class ManageViewModel: ViewModel, BindingsSetupable {
     /// Enum describing events that can be triggered
     ///
     /// - userLoggedOut: send when user logged out
+    /// - didTapDuties, didTapSettings, didTapProfile, didTapSwitchGroup: send when user tapped one of cell
     internal enum Event {
         case userLoggedOut
+        case didTapDuties
+        case didTapSettings
+        case didTapProfile
+        case didTapSwitchGroup
     }
     
     /// Callback with triggered event

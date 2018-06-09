@@ -44,8 +44,40 @@ internal final class ManageFlowController: FlowController {
             switch event {
             case .userLoggedOut:
                 self.eventTriggered?(.userLoggedOut)
+            case .didTapDuties:
+                self.navigationController?.pushViewController(self.makeDutiesViewController(), animated: true)
+            case .didTapSettings:
+                self.navigationController?.pushViewController(self.makeSettingsViewController(), animated: true)
+            case .didTapProfile:
+                self.navigationController?.pushViewController(self.makeProfileViewController(), animated: true)
+            case .didTapSwitchGroup:
+                self.navigationController?.pushViewController(self.makeSwitchGroupViewController(), animated: true)
             }
         }
+        return viewController
+    }
+    
+    private func makeDutiesViewController() -> UIViewController {
+        let viewController = UIViewController()
+        viewController.title = "Duties"
+        return viewController
+    }
+    
+    private func makeSettingsViewController() -> UIViewController {
+        let viewController = UIViewController()
+        viewController.title = "Settings"
+        return viewController
+    }
+    
+    private func makeProfileViewController() -> UIViewController {
+        let viewController = UIViewController()
+        viewController.title = "Profile"
+        return viewController
+    }
+    
+    private func makeSwitchGroupViewController() -> UIViewController {
+        let viewController = UIViewController()
+        viewController.title = "Switch group"
         return viewController
     }
 }
