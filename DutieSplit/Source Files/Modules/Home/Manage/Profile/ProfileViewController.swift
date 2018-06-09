@@ -16,7 +16,10 @@ internal final class ProfileViewController: ViewController<ProfileView, ProfileV
     
     /// - SeeAlso: NavigationBarSetupable
     func setup(navigationBar: UINavigationBar) {
-        
+        navigationBar.tintColor = .dsRed
+        if #available(iOS 11.0, *) {
+            navigationBar.prefersLargeTitles = false
+        }
     }
     
     /// - SeeAlso: BindingsSetupable

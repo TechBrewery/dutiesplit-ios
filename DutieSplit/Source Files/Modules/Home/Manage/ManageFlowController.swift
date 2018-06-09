@@ -57,27 +57,29 @@ internal final class ManageFlowController: FlowController {
         return viewController
     }
     
-    private func makeDutiesViewController() -> UIViewController {
-        let viewController = UIViewController()
-        viewController.title = "Duties"
+    private func makeDutiesViewController() -> DutiesViewController {
+        let viewController = dependencies.viewControllerFactory.dutiesViewController()
         return viewController
     }
     
-    private func makeSettingsViewController() -> UIViewController {
-        let viewController = UIViewController()
-        viewController.title = "Settings"
+    private func makeSettingsViewController() -> SettingsViewController {
+        let viewController = dependencies.viewControllerFactory.settingsViewController()
         return viewController
     }
     
-    private func makeProfileViewController() -> UIViewController {
-        let viewController = UIViewController()
-        viewController.title = "Profile"
+    private func makeProfileViewController() -> ProfileViewController {
+        let viewController = dependencies.viewControllerFactory.profileViewController()
         return viewController
     }
     
-    private func makeSwitchGroupViewController() -> UIViewController {
-        let viewController = UIViewController()
-        viewController.title = "Switch group"
+    private func makeSwitchGroupViewController() -> SwitchGroupViewController {
+        let viewController = dependencies.viewControllerFactory.switchGroupViewController()
+        viewController.viewModel.eventTriggered = { [unowned self] event in
+            switch event {
+            case .didSelectGroup:
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
         return viewController
     }
 }

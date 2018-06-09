@@ -16,7 +16,10 @@ internal final class SwitchGroupViewController: ViewController<SwitchGroupView, 
     
     /// - SeeAlso: NavigationBarSetupable
     func setup(navigationBar: UINavigationBar) {
-        
+        navigationBar.tintColor = .dsRed
+        if #available(iOS 11.0, *) {
+            navigationBar.prefersLargeTitles = false
+        }
     }
     
     /// - SeeAlso: BindingsSetupable

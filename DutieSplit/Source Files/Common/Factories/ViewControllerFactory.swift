@@ -52,4 +52,24 @@ internal class ViewControllerFactory {
         let viewModel = AddActivityViewModel(dependencies: applicationDependencies)
         return AddActivityViewController(viewModel: viewModel, viewMaker: AddActivityView())
     }
+    
+    func dutiesViewController() -> DutiesViewController {
+        let viewModel = DutiesViewModel(dependencies: applicationDependencies)
+        return DutiesViewController(viewModel: viewModel, viewMaker: DutiesView())
+    }
+    
+    func settingsViewController() -> SettingsViewController {
+        let viewModel = SettingsViewModel(dependencies: applicationDependencies)
+        return SettingsViewController(viewModel: viewModel, viewMaker: SettingsView())
+    }
+    
+    func profileViewController() -> ProfileViewController {
+        let viewModel = ProfileViewModel(dependencies: applicationDependencies)
+        return ProfileViewController(viewModel: viewModel, viewMaker: ProfileView())
+    }
+    
+    func switchGroupViewController() -> SwitchGroupViewController {
+        let viewModel = SwitchGroupViewModel(dependencies: applicationDependencies)
+        return SwitchGroupViewController(viewModel: viewModel, viewMaker: SwitchGroupView())
+    }
 }
