@@ -29,7 +29,6 @@ internal enum ManageMenuOption {
 }
 
 internal struct ManageMenuCell: ManageMenuCellType {
-    
     let icon: UIImage
     let title: String
     let option: ManageMenuOption

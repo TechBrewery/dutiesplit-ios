@@ -8,7 +8,7 @@ import UIKit
 
 internal final class ManageTableViewCell: TableViewCell, ViewSetupable {
     
-    /// Data dsiplayed on the cell. Automatically updates the view after settings this value.
+    /// Data displayed on the cell. Automatically updates the view after settings the value.
     var cellData: ManageMenuCellType! {
         didSet {
             iconImageView.image = cellData.icon

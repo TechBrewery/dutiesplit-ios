@@ -298,6 +298,7 @@
 		7C7E9E6C20AE1D4B0034D448 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				7CCCC35A20CBC384006D886A /* ManageMenuCellType.swift */,
 				7C7E9E6D20AE1D5F0034D448 /* ManageTableViewCell.swift */,
 			);
 			path = Cells;
@@ -532,6 +533,8 @@
 		7C9FA3B720839E290095E647 /* Abstraction */ = {
 			isa = PBXGroup;
 			children = (
+				7CCCC35C20CBC4A2006D886A /* StaticSection.swift */,
+				7CCCC35E20CBC56B006D886A /* StaticSectionedMenu.swift */,
 				7C9BF59F2088F712002BF7B2 /* HasDependency.swift */,
 				7C9BF5A12088F719002BF7B2 /* FlowController.swift */,
 				7C9BF5A22088F719002BF7B2 /* AlertPresentable.swift */,
@@ -564,9 +567,6 @@
 		7C9FA3B920839E350095E647 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7CCCC35A20CBC384006D886A /* ManageMenuCellType.swift */,
-				7CCCC35C20CBC4A2006D886A /* StaticSection.swift */,
-				7CCCC35E20CBC56B006D886A /* StaticSectionedMenu.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
