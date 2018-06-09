@@ -42,8 +42,6 @@ internal final class ManageFlowController: FlowController {
         let viewController = dependencies.viewControllerFactory.manageViewController()
         viewController.viewModel.eventTriggered = { [unowned self] event in
             switch event {
-            case .userLoggedOut:
-                self.eventTriggered?(.userLoggedOut)
             case .didTapDuties:
                 self.navigationController?.pushViewController(self.makeDutiesViewController(), animated: true)
             case .didTapSettings:
@@ -52,6 +50,8 @@ internal final class ManageFlowController: FlowController {
                 self.navigationController?.pushViewController(self.makeProfileViewController(), animated: true)
             case .didTapSwitchGroup:
                 self.navigationController?.pushViewController(self.makeSwitchGroupViewController(), animated: true)
+            case .didTapLogout:
+                self.eventTriggered?(.userLoggedOut)
             }
         }
         return viewController

@@ -12,15 +12,12 @@ internal final class ManageViewModel: ViewModel, BindingsSetupable {
     internal typealias EventCallback = (Event) -> ()
     
     /// Enum describing events that can be triggered
-    ///
-    /// - userLoggedOut: send when user logged out
-    /// - didTapDuties, didTapSettings, didTapProfile, didTapSwitchGroup: send when user tapped one of cell
     internal enum Event {
-        case userLoggedOut
         case didTapDuties
         case didTapSettings
         case didTapProfile
         case didTapSwitchGroup
+        case didTapLogout
     }
     
     /// Callback with triggered event
@@ -36,73 +33,49 @@ internal final class ManageViewModel: ViewModel, BindingsSetupable {
         self.dependencies = dependencies
     }
     
+    /// Data for feeding the cells on the view
     let cellsData: StaticSectionedMenu = StaticSectionedMenu(
         sections: [
             StaticSection<ManageMenuCellType>(
                 title: Localizable.ManageScreen.group.uppercased(),
                 cells: [
-                    ManageMenuCell(icon: #imageLiteral(resourceName: "duties-icon"), title: "Duties"),
-                    ManageMenuCell(icon: #imageLiteral(resourceName: "settings-icon"), title: "Settings")
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "duties-icon"), title: "Duties", option: .duties),
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "settings-icon"), title: "Settings", option: .settings)
                 ]
             ),
             StaticSection<ManageMenuCellType>(
                 title: Localizable.ManageScreen.settings.uppercased(),
                 cells: [
-                    ManageMenuCell(icon: #imageLiteral(resourceName: "profile-icon"), title: "Profile"),
-                    ManageMenuCell(icon: #imageLiteral(resourceName: "switch-group-icon"), title: "Switch group"),
-                    ManageMenuCell(icon: #imageLiteral(resourceName: "logout-icon"), title: "Logout")
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "profile-icon"), title: "Profile", option: .profile),
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "switch-group-icon"), title: "Switch group", option: .switchGroup),
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "logout-icon"), title: "Logout", option: .logout)
                 ]
             )
         ]
     )
     
-    /// Indicates when duties button was tapped
-    let dutiesButtonTap = PublishSubject<Void>()
+    func didTapCell(_ option: ManageMenuOption) {
+        switch option {
+        case .duties:
+            eventTriggered?(.didTapDuties)
+        case .settings:
+            eventTriggered?(.didTapSettings)
+        case .profile:
+            eventTriggered?(.didTapProfile)
+        case .switchGroup:
+            eventTriggered?(.didTapSwitchGroup)
+        case .logout:
+            dependencies.authenticationService.removeToken()
+            eventTriggered?(.didTapLogout)
+        }
+    }
     
-    /// Indicates when settings button was tapped
-    let settingsButtonTap = PublishSubject<Void>()
-    
-    /// Indicates when profile button was tapped
-    let profileButtonTap = PublishSubject<Void>()
-    
-    /// Indicates when switch group button was tapped
-    let switchGroupButtonTap = PublishSubject<Void>()
-    
-    /// Indicates when logout button was tapped
-    let logoutButtonTap = PublishSubject<Void>()
+    /// Indicates name of the currently selected group
+    let groupName = Variable<String>("")
     
     /// - SeeAlso: BindingsSetupable
     func setupBindings() {
-        dutiesButtonTap
-            .subscribe(onNext: { [unowned self] _ in
-                self.eventTriggered?(.didTapDuties)
-            })
-            .disposed(by: disposeBag)
-        
-        settingsButtonTap
-            .subscribe(onNext: { [unowned self] _ in
-                self.eventTriggered?(.didTapSettings)
-            })
-            .disposed(by: disposeBag)
-        
-        profileButtonTap
-            .subscribe(onNext: { [unowned self] _ in
-                self.eventTriggered?(.didTapProfile)
-            })
-            .disposed(by: disposeBag)
-        
-        switchGroupButtonTap
-            .subscribe(onNext: { [unowned self] _ in
-                self.eventTriggered?(.didTapSwitchGroup)
-            })
-            .disposed(by: disposeBag)
-        
-        logoutButtonTap
-            .subscribe(onNext: { [unowned self] _ in
-                self.dependencies.authenticationService.removeToken()
-                self.eventTriggered?(.userLoggedOut)
-            })
-            .disposed(by: disposeBag)
+        groupName.value = "Group name"
     }
 }
 
