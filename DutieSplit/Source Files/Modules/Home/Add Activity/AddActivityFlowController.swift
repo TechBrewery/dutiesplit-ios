@@ -8,6 +8,16 @@ import UIKit
 
 internal final class AddActivityFlowController: FlowController {
     typealias Dependencies = HasViewControllerFactory
+    internal typealias EventCallback = (Event) -> ()
+    
+    /// Enum describing events that can be triggered
+    ///
+    /// - didTapCancel: Send when user tapped cancel button
+    internal enum Event {
+        case didTapCancel
+    }
+    
+    var eventTriggered: EventCallback?
     
     private let dependencies: Dependencies
     
@@ -30,10 +40,10 @@ internal final class AddActivityFlowController: FlowController {
     
     private func makeAddActivityViewController() -> AddActivityViewController {
         let viewController = dependencies.viewControllerFactory.addActivityViewController()
-        viewController.viewModel.eventTriggered = { event in
+        viewController.viewModel.eventTriggered = { [unowned self] event in
             switch event {
             case .didTapCancel:
-                print("didTapCancel called")
+                self.eventTriggered?(.didTapCancel)
             }
         }
         return viewController

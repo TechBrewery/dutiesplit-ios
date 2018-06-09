@@ -25,7 +25,7 @@ internal final class HomeFlowController: FlowController {
     
     private lazy var dashboardFlowController: DashboardFlowController = makeDashboardFlowController()
     
-    private lazy var addActivityFlowController: AddActivityFlowController = makeAddActivityFlowController()
+    private var addActivityFlowController: AddActivityFlowController?
     
     private lazy var manageFlowController: ManageFlowController = makeManageFlowController()
     
@@ -51,7 +51,9 @@ internal final class HomeFlowController: FlowController {
         tabBarController.eventTriggered = { [unowned self] event in
             switch event {
             case .didTapAddActivity:
-                self.rootViewController.present(self.addActivityFlowController.rootViewController, animated: true)
+                self.addActivityFlowController = self.makeAddActivityFlowController()
+                guard let addActivityFlowController = self.addActivityFlowController else { return }
+                self.rootViewController.present(addActivityFlowController.rootViewController, animated: true)
             }
         }
         return tabBarController
@@ -64,6 +66,13 @@ internal final class HomeFlowController: FlowController {
     
     private func makeAddActivityFlowController() -> AddActivityFlowController {
         let flowController = AddActivityFlowController(dependencies: dependencies)
+        flowController.eventTriggered = { [unowned self] event in
+            switch event {
+            case .didTapCancel:
+                self.addActivityFlowController?.rootViewController.dismiss(animated: true)
+                self.addActivityFlowController = nil
+            }
+        }
         return flowController
     }
     

@@ -30,9 +30,16 @@ internal final class AddActivityViewModel: ViewModel, BindingsSetupable {
         self.dependencies = dependencies
     }
     
+    /// Indicates when cancel button was tapped
+    let cancelButtonTap = PublishSubject<Void>()
+    
     /// - SeeAlso: BindingsSetupable
     func setupBindings() {
-        
+        cancelButtonTap
+            .subscribe(onNext: { [unowned self] _ in
+                self.eventTriggered?(.didTapCancel)
+            })
+            .disposed(by: disposeBag)
     }
 }
 
