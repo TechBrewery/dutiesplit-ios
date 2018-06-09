@@ -37,18 +37,18 @@ internal final class ManageViewModel: ViewModel, BindingsSetupable {
     let cellsData: StaticSectionedMenu = StaticSectionedMenu(
         sections: [
             StaticSection<ManageMenuCellType>(
-                title: Localizable.ManageScreen.group.uppercased(),
+                title: Localizable.ManageScreen.groupSection.uppercased(),
                 cells: [
-                    ManageMenuCell(icon: #imageLiteral(resourceName: "duties-icon"), title: "Duties", option: .duties),
-                    ManageMenuCell(icon: #imageLiteral(resourceName: "settings-icon"), title: "Settings", option: .settings)
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "duties-icon"), title: Localizable.DutiesScreen.title, option: .duties),
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "settings-icon"), title: Localizable.SettingsScreen.title, option: .settings)
                 ]
             ),
             StaticSection<ManageMenuCellType>(
-                title: Localizable.ManageScreen.settings.uppercased(),
+                title: Localizable.ManageScreen.settingsSection.uppercased(),
                 cells: [
-                    ManageMenuCell(icon: #imageLiteral(resourceName: "profile-icon"), title: "Profile", option: .profile),
-                    ManageMenuCell(icon: #imageLiteral(resourceName: "switch-group-icon"), title: "Switch group", option: .switchGroup),
-                    ManageMenuCell(icon: #imageLiteral(resourceName: "logout-icon"), title: "Logout", option: .logout)
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "profile-icon"), title: Localizable.ProfileScreen.title, option: .profile),
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "switch-group-icon"), title: Localizable.SwitchGroupScreen.title, option: .switchGroup),
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "logout-icon"), title: Localizable.ManageScreen.logout, option: .logout)
                 ]
             )
         ]
