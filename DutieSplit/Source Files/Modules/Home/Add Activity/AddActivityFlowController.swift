@@ -28,9 +28,14 @@ internal final class AddActivityFlowController: FlowController {
         return rootViewController as? UINavigationController
     }
     
-    private func makeAddActivityViewController() -> UIViewController {
-        let viewController = UIViewController()
-        viewController.title = Localizable.AddActivity.title
+    private func makeAddActivityViewController() -> AddActivityViewController {
+        let viewController = dependencies.viewControllerFactory.addActivityViewController()
+        viewController.viewModel.eventTriggered = { event in
+            switch event {
+            case .didTapCancel:
+                print("didTapCancel called")
+            }
+        }
         return viewController
     }
 }

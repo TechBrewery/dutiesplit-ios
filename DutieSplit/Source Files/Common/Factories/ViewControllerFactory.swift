@@ -47,4 +47,9 @@ internal class ViewControllerFactory {
         let viewModel = ManageViewModel(dependencies: applicationDependencies)
         return ManageViewController(viewModel: viewModel, viewMaker: ManageView())
     }
+    
+    func addActivityViewController() -> AddActivityViewController {
+        let viewModel = AddActivityViewModel(dependencies: applicationDependencies)
+        return AddActivityViewController(viewModel: viewModel, viewMaker: AddActivityView())
+    }
 }

@@ -44,7 +44,10 @@ internal final class HomeFlowController: FlowController {
     private(set) var rootViewController = UIViewController()
     
     private func makeTabBarController() -> HomeTabBarController {
-        let tabBarController = dependencies.viewControllerFactory.homeTabBarController(dashboardFlowController: dashboardFlowController, manageFlowController: manageFlowController)
+        let tabBarController = dependencies.viewControllerFactory.homeTabBarController(
+            dashboardFlowController: dashboardFlowController,
+            manageFlowController: manageFlowController
+        )
         tabBarController.eventTriggered = { [unowned self] event in
             switch event {
             case .didTapAddActivity:

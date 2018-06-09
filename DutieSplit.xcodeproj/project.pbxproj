@@ -85,6 +85,9 @@
 		7CCB039F2089144C009E2680 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039E2089144C009E2680 /* ViewControllerFactory.swift */; };
 		7CCB03A120891A3B009E2680 /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB03A020891A3B009E2680 /* UIStackViewExtension.swift */; };
 		7CCCC35220CBB3E1006D886A /* AddActivityFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC35120CBB3E1006D886A /* AddActivityFlowController.swift */; };
+		7CCCC35520CBB7AF006D886A /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC35420CBB7AF006D886A /* AddActivityViewController.swift */; };
+		7CCCC35720CBB7BE006D886A /* AddActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC35620CBB7BE006D886A /* AddActivityViewModel.swift */; };
+		7CCCC35920CBB7C5006D886A /* AddActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC35820CBB7C5006D886A /* AddActivityView.swift */; };
 		7CE656DB20A5D84000BA8FCA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DA20A5D84000BA8FCA /* DashboardViewController.swift */; };
 		7CE656DD20A5D84A00BA8FCA /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DC20A5D84A00BA8FCA /* DashboardView.swift */; };
 		7CE656DF20A5D85400BA8FCA /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DE20A5D85400BA8FCA /* DashboardViewModel.swift */; };
@@ -202,6 +205,9 @@
 		7CCB039E2089144C009E2680 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		7CCB03A020891A3B009E2680 /* UIStackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
 		7CCCC35120CBB3E1006D886A /* AddActivityFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityFlowController.swift; sourceTree = "<group>"; };
+		7CCCC35420CBB7AF006D886A /* AddActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
+		7CCCC35620CBB7BE006D886A /* AddActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityViewModel.swift; sourceTree = "<group>"; };
+		7CCCC35820CBB7C5006D886A /* AddActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityView.swift; sourceTree = "<group>"; };
 		7CE656DA20A5D84000BA8FCA /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		7CE656DC20A5D84A00BA8FCA /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		7CE656DE20A5D85400BA8FCA /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
@@ -620,6 +626,9 @@
 		7CCCC35320CBB3E7006D886A /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				7CCCC35420CBB7AF006D886A /* AddActivityViewController.swift */,
+				7CCCC35620CBB7BE006D886A /* AddActivityViewModel.swift */,
+				7CCCC35820CBB7C5006D886A /* AddActivityView.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -869,6 +878,7 @@
 				7C9BF5AA2088F844002BF7B2 /* TypedViewController.swift in Sources */,
 				7CE656DB20A5D84000BA8FCA /* DashboardViewController.swift in Sources */,
 				7C9BF5C32088FCA0002BF7B2 /* UICollectionViewExtension.swift in Sources */,
+				7CCCC35720CBB7BE006D886A /* AddActivityViewModel.swift in Sources */,
 				7CE656E520A5D87B00BA8FCA /* ManageView.swift in Sources */,
 				7C9BF5A02088F712002BF7B2 /* HasDependency.swift in Sources */,
 				7CF7D55F209DC2C2003A3FC1 /* NetworkRequest.swift in Sources */,
@@ -900,6 +910,7 @@
 				7CF7D55D209DC2C2003A3FC1 /* NetworkResponse.swift in Sources */,
 				7C9BF59B2088F6DC002BF7B2 /* ApplicationDependencies.swift in Sources */,
 				7CC4567A20A5BB7F0037463B /* EmailValidator.swift in Sources */,
+				7CCCC35920CBB7C5006D886A /* AddActivityView.swift in Sources */,
 				7C9BF5C92088FCA0002BF7B2 /* UITableViewExtension.swift in Sources */,
 				7C9BF5CF2088FD95002BF7B2 /* NavigationBarSetupable.swift in Sources */,
 				7C9BF5E320890E14002BF7B2 /* KeyboardAwareViewController.swift in Sources */,
@@ -921,6 +932,7 @@
 				7C9BF59A2088F6DC002BF7B2 /* ApplicationKeys.swift in Sources */,
 				7CB54DAF209F613D007EC75D /* HomeFlowController.swift in Sources */,
 				7C9BF5CD2088FD53002BF7B2 /* FlowAwareViewController.swift in Sources */,
+				7CCCC35520CBB7AF006D886A /* AddActivityViewController.swift in Sources */,
 				7C9BF59E2088F6F7002BF7B2 /* HockeyAppService.swift in Sources */,
 				7C9BF5CB2088FCCB002BF7B2 /* UIViewExtension.swift in Sources */,
 				7C9BF5D6208902BE002BF7B2 /* BindingsSetupable.swift in Sources */,
