@@ -59,21 +59,25 @@ internal final class ManageFlowController: FlowController {
     
     private func makeDutiesViewController() -> DutiesViewController {
         let viewController = dependencies.viewControllerFactory.dutiesViewController()
+        viewController.hidesBottomBarWhenPushed = true
         return viewController
     }
     
     private func makeSettingsViewController() -> SettingsViewController {
         let viewController = dependencies.viewControllerFactory.settingsViewController()
+        viewController.hidesBottomBarWhenPushed = true
         return viewController
     }
     
     private func makeProfileViewController() -> ProfileViewController {
         let viewController = dependencies.viewControllerFactory.profileViewController()
+        viewController.hidesBottomBarWhenPushed = true
         return viewController
     }
     
     private func makeSwitchGroupViewController() -> SwitchGroupViewController {
         let viewController = dependencies.viewControllerFactory.switchGroupViewController()
+        viewController.hidesBottomBarWhenPushed = true
         viewController.viewModel.eventTriggered = { [unowned self] event in
             switch event {
             case .didSelectGroup:
