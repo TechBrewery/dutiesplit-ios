@@ -23,6 +23,9 @@
 "dashboard.ranking" = "RANKING";
 "dashboard.recent.activities" = "RECENT ACTIVITIES";
 
+// Add activity
+"add.activity.title" = "Add activity";
+
 // Manage
 "manage.title" = "Manage";
 "manage.group" = "GROUP";

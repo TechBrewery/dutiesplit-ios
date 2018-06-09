@@ -1,12 +1,12 @@
 //
-//  DashboardFlowController.swift
+//  AddActivityFlowController.swift
 //  DutieSplit
 //
 
 
 import UIKit
 
-internal final class DashboardFlowController: FlowController {
+internal final class AddActivityFlowController: FlowController {
     typealias Dependencies = HasViewControllerFactory
     
     private let dependencies: Dependencies
@@ -17,7 +17,7 @@ internal final class DashboardFlowController: FlowController {
     ///   - dependencies: Dependencies to use in the class
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
-        rootViewController = UINavigationController(rootViewController: makeDashboardViewController())
+        rootViewController = UINavigationController(rootViewController: makeAddActivityViewController())
     }
     
     /// Root view controler of the flow
@@ -28,16 +28,9 @@ internal final class DashboardFlowController: FlowController {
         return rootViewController as? UINavigationController
     }
     
-    private func makeDashboardViewController() -> DashboardViewController {
-        let viewController = dependencies.viewControllerFactory.dashboardViewController()
-        viewController.viewModel.eventTriggered = { event in
-            switch event {
-            case .didTapDetailedRanking:
-                print("didTapDetailedRanking called")
-            case .didTapAllActivities:
-                print("didTapAllActivities called")
-            }
-        }
+    private func makeAddActivityViewController() -> UIViewController {
+        let viewController = UIViewController()
+        viewController.title = Localizable.AddActivity.title
         return viewController
     }
 }

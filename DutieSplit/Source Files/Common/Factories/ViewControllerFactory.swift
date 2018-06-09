@@ -4,13 +4,28 @@
 //
 
 
+import UIKit
+
 /// Factory class that creates view controllers with its view and view model
-internal struct ViewControllerFactory {
+internal class ViewControllerFactory {
     
     private let applicationDependencies: ApplicationDependencies
     
     init(applicationDependencies: ApplicationDependencies) {
         self.applicationDependencies = applicationDependencies
+    }
+    
+    func homeTabBarController(dashboardFlowController: FlowController, manageFlowController: FlowController) -> HomeTabBarController {
+        let tabBarController = HomeTabBarController()
+        
+        let dashboardViewController = dashboardFlowController.rootViewController
+        dashboardViewController.tabBarItem = UITabBarItem(title: Localizable.DashboardScreen.title, image: #imageLiteral(resourceName: "dashboard-icon"), tag: 0)
+        
+        let manageViewController = manageFlowController.rootViewController
+        manageViewController.tabBarItem = UITabBarItem(title: Localizable.ManageScreen.title, image: #imageLiteral(resourceName: "manage-icon"), tag: 2)
+        
+        tabBarController.viewControllers = [dashboardViewController, UIViewController(), manageViewController]
+        return tabBarController
     }
  
     func loginViewController() -> LoginViewController {

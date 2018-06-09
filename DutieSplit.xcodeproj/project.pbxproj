@@ -84,6 +84,7 @@
 		7CCB039C2089112E009E2680 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039B2089112E009E2680 /* SeparatorView.swift */; };
 		7CCB039F2089144C009E2680 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB039E2089144C009E2680 /* ViewControllerFactory.swift */; };
 		7CCB03A120891A3B009E2680 /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB03A020891A3B009E2680 /* UIStackViewExtension.swift */; };
+		7CCCC35220CBB3E1006D886A /* AddActivityFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC35120CBB3E1006D886A /* AddActivityFlowController.swift */; };
 		7CE656DB20A5D84000BA8FCA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DA20A5D84000BA8FCA /* DashboardViewController.swift */; };
 		7CE656DD20A5D84A00BA8FCA /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DC20A5D84A00BA8FCA /* DashboardView.swift */; };
 		7CE656DF20A5D85400BA8FCA /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DE20A5D85400BA8FCA /* DashboardViewModel.swift */; };
@@ -200,6 +201,7 @@
 		7CCB039B2089112E009E2680 /* SeparatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		7CCB039E2089144C009E2680 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		7CCB03A020891A3B009E2680 /* UIStackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
+		7CCCC35120CBB3E1006D886A /* AddActivityFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityFlowController.swift; sourceTree = "<group>"; };
 		7CE656DA20A5D84000BA8FCA /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		7CE656DC20A5D84A00BA8FCA /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		7CE656DE20A5D85400BA8FCA /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
@@ -484,6 +486,7 @@
 			children = (
 				7CB54DAE209F613D007EC75D /* HomeFlowController.swift */,
 				7CE656D820A5D81800BA8FCA /* Dashboard  */,
+				7CCCC35020CBB3BB006D886A /* Add Activity */,
 				7CE656D920A5D82A00BA8FCA /* Manage */,
 			);
 			path = Home;
@@ -603,6 +606,22 @@
 				7CB54DA3209EE89B007EC75D /* UIButtonFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		7CCCC35020CBB3BB006D886A /* Add Activity */ = {
+			isa = PBXGroup;
+			children = (
+				7CCCC35120CBB3E1006D886A /* AddActivityFlowController.swift */,
+				7CCCC35320CBB3E7006D886A /* Root */,
+			);
+			path = "Add Activity";
+			sourceTree = "<group>";
+		};
+		7CCCC35320CBB3E7006D886A /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 		7CE656D820A5D81800BA8FCA /* Dashboard  */ = {
@@ -886,6 +905,7 @@
 				7C9BF5E320890E14002BF7B2 /* KeyboardAwareViewController.swift in Sources */,
 				7CCB03982089103B009E2680 /* LoginViewModel.swift in Sources */,
 				7C9BF5C82088FCA0002BF7B2 /* UIDeviceExtension.swift in Sources */,
+				7CCCC35220CBB3E1006D886A /* AddActivityFlowController.swift in Sources */,
 				7CCB039620891033009E2680 /* LoginView.swift in Sources */,
 				7CE656DD20A5D84A00BA8FCA /* DashboardView.swift in Sources */,
 				7CF7D566209DC3A6003A3FC1 /* SecureStorageService.swift in Sources */,

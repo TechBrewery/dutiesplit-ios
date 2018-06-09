@@ -35,6 +35,10 @@ internal struct Localizable {
         static let recentActivities = localized("dashboard.recent.activities")
     }
     
+    struct AddActivity {
+        static let title = localized("add.activity.title")
+    }
+    
     struct ManageScreen {
         static let title = localized("manage.title")
         static let group = localized("manage.group")
