@@ -40,27 +40,22 @@ internal final class ManageViewController: ViewController<ManageView, ManageView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 2 : 3
+        return viewModel.cellsData.sections[section].cells.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return viewModel.cellsData.sections.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell: ManageTableViewCell = tableView.dequeueReusableCell(for: indexPath) else { return UITableViewCell() }
+        cell.cellData = viewModel.cellsData.sections[indexPath.section].cells[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        switch section {
-        case 0:
-            return SectionHeader(leftLabelTitle: Localizable.ManageScreen.group, height: .large)
-        case 1:
-            return SectionHeader(leftLabelTitle: Localizable.ManageScreen.settings, height: .large)
-        default:
-            return nil
-        }
+        let sectionData = viewModel.cellsData.sections[section]
+        return SectionHeader(leftLabelTitle: sectionData.title, height: .large)
     }
 }
 

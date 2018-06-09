@@ -88,6 +88,9 @@
 		7CCCC35520CBB7AF006D886A /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC35420CBB7AF006D886A /* AddActivityViewController.swift */; };
 		7CCCC35720CBB7BE006D886A /* AddActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC35620CBB7BE006D886A /* AddActivityViewModel.swift */; };
 		7CCCC35920CBB7C5006D886A /* AddActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC35820CBB7C5006D886A /* AddActivityView.swift */; };
+		7CCCC35B20CBC384006D886A /* ManageMenuCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC35A20CBC384006D886A /* ManageMenuCellType.swift */; };
+		7CCCC35D20CBC4A2006D886A /* StaticSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC35C20CBC4A2006D886A /* StaticSection.swift */; };
+		7CCCC35F20CBC56B006D886A /* StaticSectionedMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC35E20CBC56B006D886A /* StaticSectionedMenu.swift */; };
 		7CE656DB20A5D84000BA8FCA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DA20A5D84000BA8FCA /* DashboardViewController.swift */; };
 		7CE656DD20A5D84A00BA8FCA /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DC20A5D84A00BA8FCA /* DashboardView.swift */; };
 		7CE656DF20A5D85400BA8FCA /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DE20A5D85400BA8FCA /* DashboardViewModel.swift */; };
@@ -208,6 +211,9 @@
 		7CCCC35420CBB7AF006D886A /* AddActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
 		7CCCC35620CBB7BE006D886A /* AddActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityViewModel.swift; sourceTree = "<group>"; };
 		7CCCC35820CBB7C5006D886A /* AddActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityView.swift; sourceTree = "<group>"; };
+		7CCCC35A20CBC384006D886A /* ManageMenuCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageMenuCellType.swift; sourceTree = "<group>"; };
+		7CCCC35C20CBC4A2006D886A /* StaticSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticSection.swift; sourceTree = "<group>"; };
+		7CCCC35E20CBC56B006D886A /* StaticSectionedMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticSectionedMenu.swift; sourceTree = "<group>"; };
 		7CE656DA20A5D84000BA8FCA /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		7CE656DC20A5D84A00BA8FCA /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		7CE656DE20A5D85400BA8FCA /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
@@ -558,6 +564,9 @@
 		7C9FA3B920839E350095E647 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7CCCC35A20CBC384006D886A /* ManageMenuCellType.swift */,
+				7CCCC35C20CBC4A2006D886A /* StaticSection.swift */,
+				7CCCC35E20CBC56B006D886A /* StaticSectionedMenu.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -907,8 +916,10 @@
 				7C9BF5DD20890654002BF7B2 /* View.swift in Sources */,
 				7CB54DA9209F59BA007EC75D /* RegisterViewController.swift in Sources */,
 				7CB54D9E209E219C007EC75D /* UITextFieldFactory.swift in Sources */,
+				7CCCC35F20CBC56B006D886A /* StaticSectionedMenu.swift in Sources */,
 				7CF7D55D209DC2C2003A3FC1 /* NetworkResponse.swift in Sources */,
 				7C9BF59B2088F6DC002BF7B2 /* ApplicationDependencies.swift in Sources */,
+				7CCCC35B20CBC384006D886A /* ManageMenuCellType.swift in Sources */,
 				7CC4567A20A5BB7F0037463B /* EmailValidator.swift in Sources */,
 				7CCCC35920CBB7C5006D886A /* AddActivityView.swift in Sources */,
 				7C9BF5C92088FCA0002BF7B2 /* UITableViewExtension.swift in Sources */,
@@ -928,6 +939,7 @@
 				7CB54DA6209EF30B007EC75D /* UINavigationBarExtension.swift in Sources */,
 				7C9BF5C52088FCA0002BF7B2 /* UIColorExtension.swift in Sources */,
 				7C9BF5DB2089059D002BF7B2 /* ViewSetupable.swift in Sources */,
+				7CCCC35D20CBC4A2006D886A /* StaticSection.swift in Sources */,
 				7CB54DA2209EDD04007EC75D /* DefaultLoader.swift in Sources */,
 				7C9BF59A2088F6DC002BF7B2 /* ApplicationKeys.swift in Sources */,
 				7CB54DAF209F613D007EC75D /* HomeFlowController.swift in Sources */,

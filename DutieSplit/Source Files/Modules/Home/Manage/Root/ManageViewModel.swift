@@ -5,6 +5,7 @@
 
 
 import RxSwift
+import UIKit.UIImage
 
 internal final class ManageViewModel: ViewModel, BindingsSetupable {
     internal typealias Dependencies = HasNetworkService & HasAuthenticationService
@@ -34,6 +35,26 @@ internal final class ManageViewModel: ViewModel, BindingsSetupable {
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
     }
+    
+    let cellsData: StaticSectionedMenu = StaticSectionedMenu(
+        sections: [
+            StaticSection<ManageMenuCellType>(
+                title: Localizable.ManageScreen.group.uppercased(),
+                cells: [
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "duties-icon"), title: "Duties"),
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "settings-icon"), title: "Settings")
+                ]
+            ),
+            StaticSection<ManageMenuCellType>(
+                title: Localizable.ManageScreen.settings.uppercased(),
+                cells: [
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "profile-icon"), title: "Profile"),
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "switch-group-icon"), title: "Switch group"),
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "logout-icon"), title: "Logout")
+                ]
+            )
+        ]
+    )
     
     /// Indicates when duties button was tapped
     let dutiesButtonTap = PublishSubject<Void>()
