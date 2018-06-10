@@ -5,16 +5,19 @@
 
 
 import RxSwift
+import UIKit.UIImage
 
 internal final class ManageViewModel: ViewModel, BindingsSetupable {
     internal typealias Dependencies = HasNetworkService & HasAuthenticationService
     internal typealias EventCallback = (Event) -> ()
     
     /// Enum describing events that can be triggered
-    ///
-    /// - userLoggedOut: send when user logged out
     internal enum Event {
-        case userLoggedOut
+        case didTapDuties
+        case didTapSettings
+        case didTapProfile
+        case didTapSwitchGroup
+        case didTapLogout
     }
     
     /// Callback with triggered event
@@ -30,17 +33,49 @@ internal final class ManageViewModel: ViewModel, BindingsSetupable {
         self.dependencies = dependencies
     }
     
-    /// Indicates when logout button was tapped
-    let logoutButtonTap = PublishSubject<Void>()
+    /// Data for feeding the cells on the view
+    let cellsData: StaticSectionedMenu = StaticSectionedMenu(
+        sections: [
+            StaticSection<ManageMenuCellType>(
+                title: Localizable.ManageScreen.groupSection.uppercased(),
+                cells: [
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "duties-icon"), title: Localizable.DutiesScreen.title, option: .duties),
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "settings-icon"), title: Localizable.SettingsScreen.title, option: .settings)
+                ]
+            ),
+            StaticSection<ManageMenuCellType>(
+                title: Localizable.ManageScreen.settingsSection.uppercased(),
+                cells: [
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "profile-icon"), title: Localizable.ProfileScreen.title, option: .profile),
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "switch-group-icon"), title: Localizable.SwitchGroupScreen.title, option: .switchGroup),
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "logout-icon"), title: Localizable.ManageScreen.logout, option: .logout)
+                ]
+            )
+        ]
+    )
+    
+    func didTapCell(_ option: ManageMenuOption) {
+        switch option {
+        case .duties:
+            eventTriggered?(.didTapDuties)
+        case .settings:
+            eventTriggered?(.didTapSettings)
+        case .profile:
+            eventTriggered?(.didTapProfile)
+        case .switchGroup:
+            eventTriggered?(.didTapSwitchGroup)
+        case .logout:
+            dependencies.authenticationService.removeToken()
+            eventTriggered?(.didTapLogout)
+        }
+    }
+    
+    /// Indicates name of the currently selected group
+    let groupName = Variable<String>("")
     
     /// - SeeAlso: BindingsSetupable
     func setupBindings() {
-        logoutButtonTap
-            .subscribe(onNext: { [unowned self] _ in
-                self.dependencies.authenticationService.removeToken()
-                self.eventTriggered?(.userLoggedOut)
-            })
-            .disposed(by: disposeBag)
+        groupName.value = "Group name"
     }
 }
 

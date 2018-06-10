@@ -10,23 +10,39 @@
 "yes" = "Yes";
 "no" = "No";
 
-// Login Screen
+// Login screen
 "login.placeholder.email" = "Email";
 "login.placeholder.password" = "Password";
 "login.placeholder.name" = "Name";
 "login.log.in" = "Log in";
 "login.register" = "Register";
 
-// Dashboard
+// Dashboard screen
 "dashboard.title" = "Dashboard";
 "dashboard.button.all" = "ALL >";
 "dashboard.ranking" = "RANKING";
 "dashboard.recent.activities" = "RECENT ACTIVITIES";
 
-// Manage
+// Add activity
+"add.activity.title" = "Add activity";
+
+// Manage screen
 "manage.title" = "Manage";
-"manage.group" = "GROUP";
-"manage.settings" = "SETTINGS";
+"manage.section.group" = "GROUP";
+"manage.section.settings" = "SETTINGS";
+"manage.logout" = "Logout";
+
+// Duties screen
+"duties.title" = "Duties";
+
+// Settings screen
+"settings.title" = "Settings";
+
+// Profile screen
+"profile.title" = "Profile";
+
+// Switch group screen
+"switch.group.title" = "Switch group";
 
 // Error
 "error.title" = "Error";

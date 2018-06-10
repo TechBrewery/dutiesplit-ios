@@ -31,7 +31,7 @@ internal final class ManageFlowController: FlowController {
     }
     
     /// Root view controler of the flow
-    var rootViewController: UIViewController?
+    private(set) var rootViewController = UIViewController()
     
     /// Root view controller casted as navigation controller
     var navigationController: UINavigationController? {
@@ -42,8 +42,46 @@ internal final class ManageFlowController: FlowController {
         let viewController = dependencies.viewControllerFactory.manageViewController()
         viewController.viewModel.eventTriggered = { [unowned self] event in
             switch event {
-            case .userLoggedOut:
+            case .didTapDuties:
+                self.navigationController?.pushViewController(self.makeDutiesViewController(), animated: true)
+            case .didTapSettings:
+                self.navigationController?.pushViewController(self.makeSettingsViewController(), animated: true)
+            case .didTapProfile:
+                self.navigationController?.pushViewController(self.makeProfileViewController(), animated: true)
+            case .didTapSwitchGroup:
+                self.navigationController?.pushViewController(self.makeSwitchGroupViewController(), animated: true)
+            case .didTapLogout:
                 self.eventTriggered?(.userLoggedOut)
+            }
+        }
+        return viewController
+    }
+    
+    private func makeDutiesViewController() -> DutiesViewController {
+        let viewController = dependencies.viewControllerFactory.dutiesViewController()
+        viewController.hidesBottomBarWhenPushed = true
+        return viewController
+    }
+    
+    private func makeSettingsViewController() -> SettingsViewController {
+        let viewController = dependencies.viewControllerFactory.settingsViewController()
+        viewController.hidesBottomBarWhenPushed = true
+        return viewController
+    }
+    
+    private func makeProfileViewController() -> ProfileViewController {
+        let viewController = dependencies.viewControllerFactory.profileViewController()
+        viewController.hidesBottomBarWhenPushed = true
+        return viewController
+    }
+    
+    private func makeSwitchGroupViewController() -> SwitchGroupViewController {
+        let viewController = dependencies.viewControllerFactory.switchGroupViewController()
+        viewController.hidesBottomBarWhenPushed = true
+        viewController.viewModel.eventTriggered = { [unowned self] event in
+            switch event {
+            case .didSelectGroup:
+                self.navigationController?.popViewController(animated: true)
             }
         }
         return viewController

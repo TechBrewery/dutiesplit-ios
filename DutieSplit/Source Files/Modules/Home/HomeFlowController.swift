@@ -25,6 +25,8 @@ internal final class HomeFlowController: FlowController {
     
     private lazy var dashboardFlowController: DashboardFlowController = makeDashboardFlowController()
     
+    private var addActivityFlowController: AddActivityFlowController?
+    
     private lazy var manageFlowController: ManageFlowController = makeManageFlowController()
     
     /// Initializes Flow controllers with given dependencies
@@ -39,22 +41,19 @@ internal final class HomeFlowController: FlowController {
     }
     
     /// Root view controler of the flow
-    var rootViewController: UIViewController?
+    private(set) var rootViewController = UIViewController()
     
     private func makeTabBarController() -> HomeTabBarController {
-        let tabBarController = HomeTabBarController()
-        
-        let dashboardViewController = dashboardFlowController.rootViewController!
-        dashboardViewController.tabBarItem = UITabBarItem(title: Localizable.DashboardScreen.title, image: #imageLiteral(resourceName: "dashboard-icon"), tag: 0)
-        
-        let manageViewController = manageFlowController.rootViewController!
-        manageViewController.tabBarItem = UITabBarItem(title: Localizable.ManageScreen.title, image: #imageLiteral(resourceName: "manage-icon"), tag: 2)
-        
-        tabBarController.viewControllers = [dashboardViewController, UIViewController(), manageViewController]
-        tabBarController.eventTriggered = { event in
+        let tabBarController = dependencies.viewControllerFactory.homeTabBarController(
+            dashboardFlowController: dashboardFlowController,
+            manageFlowController: manageFlowController
+        )
+        tabBarController.eventTriggered = { [unowned self] event in
             switch event {
             case .didTapAddActivity:
-                print("didTapAddActivity called")
+                self.addActivityFlowController = self.makeAddActivityFlowController()
+                guard let addActivityFlowController = self.addActivityFlowController else { return }
+                self.rootViewController.present(addActivityFlowController.rootViewController, animated: true)
             }
         }
         return tabBarController
@@ -62,6 +61,18 @@ internal final class HomeFlowController: FlowController {
     
     private func makeDashboardFlowController() -> DashboardFlowController {
         let flowController = DashboardFlowController(dependencies: dependencies)
+        return flowController
+    }
+    
+    private func makeAddActivityFlowController() -> AddActivityFlowController {
+        let flowController = AddActivityFlowController(dependencies: dependencies)
+        flowController.eventTriggered = { [unowned self] event in
+            switch event {
+            case .didTapCancel:
+                self.addActivityFlowController?.rootViewController.dismiss(animated: true)
+                self.addActivityFlowController = nil
+            }
+        }
         return flowController
     }
     

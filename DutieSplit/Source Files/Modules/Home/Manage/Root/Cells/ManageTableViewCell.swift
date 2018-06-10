@@ -8,6 +8,14 @@ import UIKit
 
 internal final class ManageTableViewCell: TableViewCell, ViewSetupable {
     
+    /// Data displayed on the cell. Automatically updates the view after settings the value.
+    var cellData: ManageMenuCellType! {
+        didSet {
+            iconImageView.image = cellData.icon
+            titleLabel.text = cellData.title
+        }
+    }
+    
     private lazy var titleLabel: UILabel = {
         let view = UILabel()
         view.font = .systemFont(ofSize: 17)
@@ -49,7 +57,5 @@ internal final class ManageTableViewCell: TableViewCell, ViewSetupable {
     /// - SeeAlso: ViewSetupable
     func setupProperties() {
         accessoryType = .disclosureIndicator
-        titleLabel.text = "Submenu"
-        iconImageView.image = #imageLiteral(resourceName: "duties-icon")
     }
 }

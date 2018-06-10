@@ -35,10 +35,31 @@ internal struct Localizable {
         static let recentActivities = localized("dashboard.recent.activities")
     }
     
+    struct AddActivity {
+        static let title = localized("add.activity.title")
+    }
+    
     struct ManageScreen {
         static let title = localized("manage.title")
-        static let group = localized("manage.group")
-        static let settings = localized("manage.settings")
+        static let groupSection = localized("manage.section.group")
+        static let settingsSection = localized("manage.section.settings")
+        static let logout = localized("manage.logout")
+    }
+    
+    struct DutiesScreen {
+        static let title = localized("duties.title")
+    }
+    
+    struct SettingsScreen {
+        static let title = localized("settings.title")
+    }
+    
+    struct ProfileScreen {
+        static let title = localized("profile.title")
+    }
+    
+    struct SwitchGroupScreen {
+        static let title = localized("switch.group.title")
     }
     
     struct Error {

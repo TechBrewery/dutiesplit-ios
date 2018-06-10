@@ -21,7 +21,7 @@ internal final class DashboardFlowController: FlowController {
     }
     
     /// Root view controler of the flow
-    var rootViewController: UIViewController?
+    private(set) var rootViewController = UIViewController()
     
     /// Root view controller casted as navigation controller
     var navigationController: UINavigationController? {

@@ -29,16 +29,26 @@ internal final class HomeTabBarController: UITabBarController, UITabBarControlle
         return button.layoutable()
     }()
     
+    /// - SeeAlso: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
         setupView()
         setupBindings()
     }
+    
+    /// - SeeAlso: UIViewController
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        // View by default is covered by UITabBarItem and not accepting touches.
+        // Bringing it to the front fixes the problem.
+        tabBar.bringSubview(toFront: centerButton)
+    }
 
     /// - SeeAlso: ViewSetupable
     func setupViewHierarchy() {
-        view.addSubview(centerButton)
+        tabBar.addSubview(centerButton)
     }
     
     /// - SeeAlso: ViewSetupable
@@ -65,7 +75,7 @@ internal final class HomeTabBarController: UITabBarController, UITabBarControlle
     
     /// - SeeAlso: UITabBarControllerDelegate
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        guard let viewControllers = viewControllers, viewController != viewControllers[1] else { return false }
+//        guard let viewControllers = viewControllers, viewController != viewControllers[1] else { return false }
         return true
     }
 }
