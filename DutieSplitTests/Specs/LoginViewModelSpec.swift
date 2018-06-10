@@ -35,6 +35,18 @@ internal final class LoginViewModelSpec: QuickSpec {
                     self.didTapRegisterCalled = true
                 }
             }
+            
+            MockNetworkService.mockedResponse = (
+                json: """
+                {
+                    "name": "fixture_name",
+                    "email": "fixture@email.com",
+                    "token" : "fixture_token"
+                }
+                """,
+                statusCode: 200,
+                error: nil
+            )
         }
     
         describe("when tapping register button") {
@@ -102,7 +114,17 @@ internal final class LoginViewModelSpec: QuickSpec {
                 context("with wrong credentials") {
                     
                     beforeEach {
-                        (self.dependencies.networkService as! MockNetworkService).mockResponses.setFailureLoginResponse()
+                        MockNetworkService.mockedResponse = (
+                            json: """
+                            {
+                                "status": {
+                                    "message": "fixture.error"
+                                }
+                            }
+                            """,
+                            statusCode: 400,
+                            error: nil
+                        )
                         self.viewModel.loginButtonTap.onNext(())
                     }
                     

@@ -103,6 +103,7 @@
 		7CCCC37920CBDBF7006D886A /* SwitchGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC37820CBDBF7006D886A /* SwitchGroupViewController.swift */; };
 		7CCCC37B20CBDC17006D886A /* SwitchGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC37A20CBDC17006D886A /* SwitchGroupViewModel.swift */; };
 		7CCCC37D20CBDC1E006D886A /* SwitchGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC37C20CBDC1E006D886A /* SwitchGroupView.swift */; };
+		7CCCC38320CD9E2C006D886A /* URLSessionDataTaskResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC38220CD9E2C006D886A /* URLSessionDataTaskResponse.swift */; };
 		7CE656DB20A5D84000BA8FCA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DA20A5D84000BA8FCA /* DashboardViewController.swift */; };
 		7CE656DD20A5D84A00BA8FCA /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DC20A5D84A00BA8FCA /* DashboardView.swift */; };
 		7CE656DF20A5D85400BA8FCA /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DE20A5D85400BA8FCA /* DashboardViewModel.swift */; };
@@ -238,6 +239,7 @@
 		7CCCC37820CBDBF7006D886A /* SwitchGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchGroupViewController.swift; sourceTree = "<group>"; };
 		7CCCC37A20CBDC17006D886A /* SwitchGroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchGroupViewModel.swift; sourceTree = "<group>"; };
 		7CCCC37C20CBDC1E006D886A /* SwitchGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchGroupView.swift; sourceTree = "<group>"; };
+		7CCCC38220CD9E2C006D886A /* URLSessionDataTaskResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskResponse.swift; sourceTree = "<group>"; };
 		7CE656DA20A5D84000BA8FCA /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		7CE656DC20A5D84A00BA8FCA /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		7CE656DE20A5D85400BA8FCA /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
@@ -745,6 +747,7 @@
 				7CF7D55C209DC2C2003A3FC1 /* NetworkError.swift */,
 				7CF7D570209E03B7003A3FC1 /* NetworkStatus.swift */,
 				7CF7D55B209DC2C1003A3FC1 /* URLRequestExtension+Networking.swift */,
+				7CCCC38220CD9E2C006D886A /* URLSessionDataTaskResponse.swift */,
 			);
 			path = "Networking Helpers";
 			sourceTree = "<group>";
@@ -948,6 +951,7 @@
 				7CCB039C2089112E009E2680 /* SeparatorView.swift in Sources */,
 				7C4F2C6920A5C70000E19EB0 /* HomeTabBarController.swift in Sources */,
 				7C9BF5A82088F7B2002BF7B2 /* LoginFlowController.swift in Sources */,
+				7CCCC38320CD9E2C006D886A /* URLSessionDataTaskResponse.swift in Sources */,
 				7C9BF5C42088FCA0002BF7B2 /* NSObjectExtension.swift in Sources */,
 				7CE656E320A5D87200BA8FCA /* ManageViewModel.swift in Sources */,
 				7CE656E120A5D86400BA8FCA /* ManageViewController.swift in Sources */,
