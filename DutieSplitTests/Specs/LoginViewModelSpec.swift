@@ -37,13 +37,7 @@ internal final class LoginViewModelSpec: QuickSpec {
             }
             
             MockNetworkService.mockedResponse = (
-                json: """
-                {
-                    "name": "fixture_name",
-                    "email": "fixture@email.com",
-                    "token" : "fixture_token"
-                }
-                """,
+                json: try! String(contentsOfFile: Bundle(for: type(of: self)).path(forResource: "LoginSuccess", ofType: "json")!),
                 statusCode: 200,
                 error: nil
             )
@@ -115,13 +109,7 @@ internal final class LoginViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         MockNetworkService.mockedResponse = (
-                            json: """
-                            {
-                                "status": {
-                                    "message": "fixture.error"
-                                }
-                            }
-                            """,
+                            json: try! String(contentsOfFile: Bundle(for: type(of: self)).path(forResource: "LoginFailure", ofType: "json")!),
                             statusCode: 400,
                             error: nil
                         )

@@ -103,6 +103,8 @@
 		7CCCC37B20CBDC17006D886A /* SwitchGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC37A20CBDC17006D886A /* SwitchGroupViewModel.swift */; };
 		7CCCC37D20CBDC1E006D886A /* SwitchGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC37C20CBDC1E006D886A /* SwitchGroupView.swift */; };
 		7CCCC38320CD9E2C006D886A /* URLSessionDataTaskResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC38220CD9E2C006D886A /* URLSessionDataTaskResponse.swift */; };
+		7CCCC38620CDB042006D886A /* LoginSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = 7CCCC38520CDB042006D886A /* LoginSuccess.json */; };
+		7CCCC38A20CDB0A2006D886A /* LoginFailure.json in Resources */ = {isa = PBXBuildFile; fileRef = 7CCCC38920CDB0A2006D886A /* LoginFailure.json */; };
 		7CE656DB20A5D84000BA8FCA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DA20A5D84000BA8FCA /* DashboardViewController.swift */; };
 		7CE656DD20A5D84A00BA8FCA /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DC20A5D84A00BA8FCA /* DashboardView.swift */; };
 		7CE656DF20A5D85400BA8FCA /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DE20A5D85400BA8FCA /* DashboardViewModel.swift */; };
@@ -238,6 +240,8 @@
 		7CCCC37A20CBDC17006D886A /* SwitchGroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchGroupViewModel.swift; sourceTree = "<group>"; };
 		7CCCC37C20CBDC1E006D886A /* SwitchGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchGroupView.swift; sourceTree = "<group>"; };
 		7CCCC38220CD9E2C006D886A /* URLSessionDataTaskResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskResponse.swift; sourceTree = "<group>"; };
+		7CCCC38520CDB042006D886A /* LoginSuccess.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LoginSuccess.json; sourceTree = "<group>"; };
+		7CCCC38920CDB0A2006D886A /* LoginFailure.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LoginFailure.json; sourceTree = "<group>"; };
 		7CE656DA20A5D84000BA8FCA /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		7CE656DC20A5D84A00BA8FCA /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		7CE656DE20A5D85400BA8FCA /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
@@ -354,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				7C19903320B98C7900DF098E /* Specs */,
+				7CCCC38420CDAFDA006D886A /* Fixture responses */,
 				7C19903420B98C7E00DF098E /* Mocks */,
 				7C9FA3AB20839A9D0095E647 /* Supporting Files */,
 			);
@@ -697,6 +702,15 @@
 			path = Duties;
 			sourceTree = "<group>";
 		};
+		7CCCC38420CDAFDA006D886A /* Fixture responses */ = {
+			isa = PBXGroup;
+			children = (
+				7CCCC38520CDB042006D886A /* LoginSuccess.json */,
+				7CCCC38920CDB0A2006D886A /* LoginFailure.json */,
+			);
+			path = "Fixture responses";
+			sourceTree = "<group>";
+		};
 		7CE656D820A5D81800BA8FCA /* Dashboard  */ = {
 			isa = PBXGroup;
 			children = (
@@ -880,6 +894,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CCCC38A20CDB0A2006D886A /* LoginFailure.json in Resources */,
+				7CCCC38620CDB042006D886A /* LoginSuccess.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
