@@ -22,4 +22,10 @@ internal final class MockNetworkService: DefaultNetworkService {
             return Disposables.create()
         }
     }
+    
+    static func jsonFrom(filename: String) -> String {
+        let bundle = Bundle(for: self)
+        let path = bundle.path(forResource: filename, ofType: "json")
+        return try! String(contentsOfFile: path!)
+    }
 }

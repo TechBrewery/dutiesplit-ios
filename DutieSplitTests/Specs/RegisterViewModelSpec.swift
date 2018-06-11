@@ -33,7 +33,7 @@ internal final class RegisterViewModelSpec: QuickSpec {
             }
             
             MockNetworkService.mockedResponse = (
-                json: try! String(contentsOfFile: Bundle(for: type(of: self)).path(forResource: "LoginSuccess", ofType: "json")!),
+                json: MockNetworkService.jsonFrom(filename: "LoginSuccess"),
                 statusCode: 200,
                 error: nil
             )
@@ -97,7 +97,7 @@ internal final class RegisterViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         MockNetworkService.mockedResponse = (
-                            json: try! String(contentsOfFile: Bundle(for: type(of: self)).path(forResource: "LoginFailure", ofType: "json")!),
+                            json: MockNetworkService.jsonFrom(filename: "LoginFailure"),
                             statusCode: 400,
                             error: nil
                         )
