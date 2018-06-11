@@ -31,6 +31,12 @@ internal final class RegisterViewModelSpec: QuickSpec {
                     self.userRegisterdCalled = true
                 }
             }
+            
+            MockNetworkService.mockedResponse = (
+                json: MockNetworkService.jsonFrom(filename: "LoginSuccess"),
+                statusCode: 200,
+                error: nil
+            )
         }
         
         describe("when typing inside text fields") {
@@ -90,7 +96,11 @@ internal final class RegisterViewModelSpec: QuickSpec {
                 context("with wrong credentials") {
                     
                     beforeEach {
-                        (self.dependencies.networkService as! MockNetworkService).mockResponses.setFailureLoginResponse()
+                        MockNetworkService.mockedResponse = (
+                            json: MockNetworkService.jsonFrom(filename: "LoginFailure"),
+                            statusCode: 400,
+                            error: nil
+                        )
                         self.viewModel.registerButtonTap.onNext(())
                     }
                     

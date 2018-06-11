@@ -7,45 +7,25 @@
 @testable import DutieSplit
 import RxSwift
 
-internal final class MockNetworkService: NetworkService {
+internal final class MockNetworkService: DefaultNetworkService {
     
-    var mockResponses = MockResponses()
-    
-    private let authenticationService: AuthenticationService
-    
-    private let acceptableStatusCodes = 200 ..< 300
-    
-    private let authorizationErrorStatusCode = 401
-    
-    private var onUnauthorizedError: () -> () = { }
-    
-    /// Initialize network service with given session (leave empty for shared session)
-    ///
-    /// - Parameter session: Session to be used for requests
-    init(authenticationService: AuthenticationService) {
-        self.authenticationService = authenticationService
-    }
-    
-    /// - SeeAlso: NetworkService.setUnauthorizedErrorCallback()
-    func setUnauthorizedErrorCallback(_ callback: @escaping () -> ()) {
-        onUnauthorizedError = callback
-    }
-    
-    /// Performs network request and returns Single of its reponse
-    ///
-    /// - Parameter request: Request to be performed
-    /// - Returns: Observable of type Request.Response
-    func perform<Request>(request: Request) -> Observable<NetworkResponseResult<Request.Response>> where Request: NetworkRequest {
+    static var mockedResponse: (json: String, statusCode: Int, error: Error?) = (json: "", statusCode: 400, error: nil)
+
+    override func perform<Request>(request: Request) -> Observable<NetworkResponseResult<Request.Response>> where Request: NetworkRequest {
         return Observable<NetworkResponseResult<Request.Response>>.create { [unowned self] observer in
-            if request is LoginRequest {
-                observer.onNext(self.mockResponses.loginResponse as! NetworkResponseResult<Request.Response>)
-            } else if request is RegisterRequest {
-                observer.onNext(self.mockResponses.loginResponse as! NetworkResponseResult<Request.Response>)
-            } else {
-                fatalError("No stub provided for request: \(request.method) \(request.path)")
-            }
-            observer.onCompleted()
+            let response = URLSessionDataTaskResponse(
+                data: MockNetworkService.mockedResponse.json.data(using: .utf8)!,
+                response: URLResponseWrapper(statusCode: MockNetworkService.mockedResponse.statusCode),
+                error: MockNetworkService.mockedResponse.error
+            )
+            self.handle(dataTaskResponse: response, for: request, observer: observer)
             return Disposables.create()
         }
+    }
+    
+    static func jsonFrom(filename: String) -> String {
+        let bundle = Bundle(for: self)
+        let path = bundle.path(forResource: filename, ofType: "json")
+        return try! String(contentsOfFile: path!)
     }
 }
