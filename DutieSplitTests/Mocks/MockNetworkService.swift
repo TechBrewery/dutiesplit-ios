@@ -15,7 +15,7 @@ internal final class MockNetworkService: DefaultNetworkService {
         return Observable<NetworkResponseResult<Request.Response>>.create { [unowned self] observer in
             let response = URLSessionDataTaskResponse(
                 data: MockNetworkService.mockedResponse.json.data(using: .utf8)!,
-                response: URLResponseWrapper(statusCode: MockNetworkService.mockedResponse.statusCode),
+                response: HTTPURLResponseWrapper(statusCode: MockNetworkService.mockedResponse.statusCode),
                 error: MockNetworkService.mockedResponse.error
             )
             self.handle(dataTaskResponse: response, for: request, observer: observer)

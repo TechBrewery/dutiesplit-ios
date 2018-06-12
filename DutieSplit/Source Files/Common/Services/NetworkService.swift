@@ -61,10 +61,7 @@ internal class DefaultNetworkService: NetworkService {
         return Observable<NetworkResponseResult<Request.Response>>.create { [unowned self] observer in
             let urlRequest = URLRequest(request: request, authenticationService: self.authenticationService)
             let task = self.session.dataTask(with: urlRequest) { [weak self] data, response, error in
-                var wrappedResponse: URLResponseWrapper?
-                if let response = response as? HTTPURLResponse {
-                    wrappedResponse = URLResponseWrapper(statusCode: response.statusCode)
-                }
+                let wrappedResponse = HTTPURLResponseWrapper(response: response)
                 let response = URLSessionDataTaskResponse(data: data, response: wrappedResponse, error: error)
                 self?.handle(dataTaskResponse: response, for: request, observer: observer)
             }
