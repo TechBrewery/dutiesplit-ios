@@ -7,7 +7,7 @@
 import ResponseDetective
 
 /// Shared dependencies used extensively in the application
-internal protocol ApplicationDependencies:
+internal protocol ApplicationDependencies: class,
     HasViewControllerFactory,
     HasApplicationKeys,
     HasCrashLogger,
