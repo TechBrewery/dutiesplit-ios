@@ -8,6 +8,7 @@ import UIKit
 
 internal final class DashboardView: View, ViewSetupable {
     
+    /// Main table view of the screen
     lazy var tableView: UITableView = {
         let view = UITableView()
         view.register(cell: PersonTableViewCell.self)

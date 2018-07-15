@@ -105,6 +105,7 @@
 		7CCCC38320CD9E2C006D886A /* URLSessionDataTaskResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC38220CD9E2C006D886A /* URLSessionDataTaskResponse.swift */; };
 		7CCCC38620CDB042006D886A /* LoginSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = 7CCCC38520CDB042006D886A /* LoginSuccess.json */; };
 		7CCCC38A20CDB0A2006D886A /* LoginFailure.json in Resources */ = {isa = PBXBuildFile; fileRef = 7CCCC38920CDB0A2006D886A /* LoginFailure.json */; };
+		7CDE5C0720FB59B500F25F58 /* DutieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE5C0620FB59B500F25F58 /* DutieTableViewCell.swift */; };
 		7CE656DB20A5D84000BA8FCA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DA20A5D84000BA8FCA /* DashboardViewController.swift */; };
 		7CE656DD20A5D84A00BA8FCA /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DC20A5D84A00BA8FCA /* DashboardView.swift */; };
 		7CE656DF20A5D85400BA8FCA /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE656DE20A5D85400BA8FCA /* DashboardViewModel.swift */; };
@@ -242,6 +243,7 @@
 		7CCCC38220CD9E2C006D886A /* URLSessionDataTaskResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskResponse.swift; sourceTree = "<group>"; };
 		7CCCC38520CDB042006D886A /* LoginSuccess.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LoginSuccess.json; sourceTree = "<group>"; };
 		7CCCC38920CDB0A2006D886A /* LoginFailure.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LoginFailure.json; sourceTree = "<group>"; };
+		7CDE5C0620FB59B500F25F58 /* DutieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DutieTableViewCell.swift; sourceTree = "<group>"; };
 		7CE656DA20A5D84000BA8FCA /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		7CE656DC20A5D84A00BA8FCA /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		7CE656DE20A5D85400BA8FCA /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
@@ -399,19 +401,9 @@
 			path = "Login screen";
 			sourceTree = "<group>";
 		};
-		7C9E1AC220AC918D0027CF6E /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				7C9E1AC520AC9C340027CF6E /* PersonTableViewCell.swift */,
-				7C9E1AC720AC9D780027CF6E /* ActivityTableViewCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
 		7C9E1ACB20ACA8850027CF6E /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				7C9E1AC220AC918D0027CF6E /* Cells */,
 				7CE656DA20A5D84000BA8FCA /* DashboardViewController.swift */,
 				7CE656DE20A5D85400BA8FCA /* DashboardViewModel.swift */,
 				7CE656DC20A5D84A00BA8FCA /* DashboardView.swift */,
@@ -695,6 +687,7 @@
 		7CCCC36520CBDA13006D886A /* Duties */ = {
 			isa = PBXGroup;
 			children = (
+				7CDE5C0520FB59A300F25F58 /* Cells */,
 				7CCCC36620CBDA45006D886A /* DutiesViewController.swift */,
 				7CCCC36820CBDA51006D886A /* DutiesViewModel.swift */,
 				7CCCC36A20CBDA59006D886A /* DutiesView.swift */,
@@ -709,6 +702,14 @@
 				7CCCC38920CDB0A2006D886A /* LoginFailure.json */,
 			);
 			path = "Fixture responses";
+			sourceTree = "<group>";
+		};
+		7CDE5C0520FB59A300F25F58 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7CDE5C0620FB59B500F25F58 /* DutieTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		7CE656D820A5D81800BA8FCA /* Dashboard  */ = {
@@ -737,6 +738,8 @@
 			isa = PBXGroup;
 			children = (
 				7CE656E720A5ED2A00BA8FCA /* SubtitledTableViewCell.swift */,
+				7C9E1AC520AC9C340027CF6E /* PersonTableViewCell.swift */,
+				7C9E1AC720AC9D780027CF6E /* ActivityTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -971,6 +974,7 @@
 				7CF7D55F209DC2C2003A3FC1 /* NetworkRequest.swift in Sources */,
 				7CCCC37B20CBDC17006D886A /* SwitchGroupViewModel.swift in Sources */,
 				7C9BF5E1208908D1002BF7B2 /* ViewController.swift in Sources */,
+				7CDE5C0720FB59B500F25F58 /* DutieTableViewCell.swift in Sources */,
 				7CB54DAD209F59CB007EC75D /* RegisterView.swift in Sources */,
 				7CE656DF20A5D85400BA8FCA /* DashboardViewModel.swift in Sources */,
 				7CB54DAB209F59C2007EC75D /* RegisterViewModel.swift in Sources */,

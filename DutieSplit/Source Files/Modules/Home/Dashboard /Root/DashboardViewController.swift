@@ -35,14 +35,17 @@ internal final class DashboardViewController: ViewController<DashboardView, Dash
         
     }
     
+    /// - SeeAlso: UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return section == 0 ? 3 : 5
     }
     
+    /// - SeeAlso: UITableViewDataSource
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
+    /// - SeeAlso: UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
@@ -56,6 +59,7 @@ internal final class DashboardViewController: ViewController<DashboardView, Dash
         }
     }
     
+    /// - SeeAlso: UITableViewDataSource
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         switch section {
         case 0:
