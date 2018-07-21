@@ -1,17 +1,16 @@
 //
-//  DutiesViewController.swift
+//  GroupDutiesViewController.swift
 //  DutieSplit
 //
 
 
 import UIKit
 
-internal final class DutiesViewController: ViewController<DutiesView, DutiesViewModel>, BindingsSetupable, NavigationBarSetupable, UITableViewDataSource, UITableViewDelegate {
+internal final class GroupDutiesViewController: ViewController<GroupDutiesView, GroupDutiesViewModel>, BindingsSetupable, NavigationBarSetupable, UITableViewDataSource, UITableViewDelegate {
     
     /// - SeeAlso: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = Localizable.DutiesScreen.title
         customView.tableView.dataSource = self
     }
     
@@ -25,7 +24,7 @@ internal final class DutiesViewController: ViewController<DutiesView, DutiesView
     
     /// - SeeAlso: BindingsSetupable
     func setupBindings() {
-        
+        viewModel.groupName.asDriver().drive(rx.title).disposed(by: disposeBag)
     }
     
     /// - SeeAlso: UITableViewDataSource

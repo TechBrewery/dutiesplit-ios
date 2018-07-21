@@ -19,12 +19,14 @@ internal final class SectionHeader: View, ViewSetupable {
     /// - Parameters:
     ///   - leftLabelTitle: Title to be set on the label on the left side
     ///   - height: Height that should be applied to the view
+    ///   - rightButtonTitle: Title to be set on the label on the right side
     ///   - onRightButtonTap: Callback invoked when button on the right was tapped. Pass nil to hide the button
-    init(leftLabelTitle: String, height: SectionHeight, onRightButtonTap: (() -> ())? = nil) {
+    init(leftLabelTitle: String, height: SectionHeight, rightButtonTitle: String = Localizable.DashboardScreen.buttonAll, onRightButtonTap: (() -> ())? = nil) {
         self.onRightButtonTap = onRightButtonTap
         self.height = height
         super.init()
         leftLabel.text = leftLabelTitle
+        rightButton.setTitle(rightButtonTitle, for: .normal)
     }
     
     private let height: SectionHeight
@@ -44,7 +46,6 @@ internal final class SectionHeader: View, ViewSetupable {
         let view = UIButton(type: .system)
         view.tintColor = .dsRed
         view.titleLabel?.font = .systemFont(ofSize: 13)
-        view.setTitle(Localizable.DashboardScreen.buttonAll, for: .normal)
         view.addTarget(self, action: #selector(didTapRightButton), for: .touchUpInside)
         return view.layoutable()
     }()

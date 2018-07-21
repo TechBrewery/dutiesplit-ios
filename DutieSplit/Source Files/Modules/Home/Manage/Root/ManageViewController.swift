@@ -11,6 +11,7 @@ internal final class ManageViewController: ViewController<ManageView, ManageView
     /// - SeeAlso: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = Localizable.ManageScreen.title
         customView.tableView.delegate = self
         customView.tableView.dataSource = self
     }
@@ -32,7 +33,7 @@ internal final class ManageViewController: ViewController<ManageView, ManageView
     
     /// - SeeAlso: BindingsSetupable
     func setupBindings() {
-        viewModel.groupName.asDriver().drive(rx.title).disposed(by: disposeBag)
+        
     }
     
     /// - SeeAlso: UITableViewDataSource

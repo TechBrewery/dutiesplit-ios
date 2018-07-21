@@ -14,7 +14,7 @@ internal final class ManageViewModel: ViewModel, BindingsSetupable {
     /// Enum describing events that can be triggered
     internal enum Event {
         case didTapDuties
-        case didTapSettings
+        case didTapGroupSettings
         case didTapProfile
         case didTapSwitchGroup
         case didTapLogout
@@ -39,8 +39,8 @@ internal final class ManageViewModel: ViewModel, BindingsSetupable {
             StaticSection<ManageMenuCellType>(
                 title: Localizable.ManageScreen.groupSection.uppercased(),
                 cells: [
-                    ManageMenuCell(icon: #imageLiteral(resourceName: "duties-icon"), title: Localizable.DutiesScreen.title, option: .duties),
-                    ManageMenuCell(icon: #imageLiteral(resourceName: "settings-icon"), title: Localizable.SettingsScreen.title, option: .settings)
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "duties-icon"), title: Localizable.GroupDutiesScreen.title, option: .duties),
+                    ManageMenuCell(icon: #imageLiteral(resourceName: "settings-icon"), title: Localizable.GroupSettingsScreen.title, option: .groupSettings)
                 ]
             ),
             StaticSection<ManageMenuCellType>(
@@ -58,8 +58,8 @@ internal final class ManageViewModel: ViewModel, BindingsSetupable {
         switch option {
         case .duties:
             eventTriggered?(.didTapDuties)
-        case .settings:
-            eventTriggered?(.didTapSettings)
+        case .groupSettings:
+            eventTriggered?(.didTapGroupSettings)
         case .profile:
             eventTriggered?(.didTapProfile)
         case .switchGroup:
@@ -70,12 +70,9 @@ internal final class ManageViewModel: ViewModel, BindingsSetupable {
         }
     }
     
-    /// Indicates name of the currently selected group
-    let groupName = Variable<String>("")
-    
     /// - SeeAlso: BindingsSetupable
     func setupBindings() {
-        groupName.value = "Group name"
+        
     }
 }
 

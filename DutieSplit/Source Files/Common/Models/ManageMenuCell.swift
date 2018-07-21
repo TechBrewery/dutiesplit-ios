@@ -1,5 +1,5 @@
 //
-//  ManageMenuCellType.swift
+//  ManageMenuCell.swift
 //  DutieSplit
 //
 
@@ -22,7 +22,7 @@ internal protocol ManageMenuCellType {
 /// Enum describing all available options
 internal enum ManageMenuOption {
     case duties
-    case settings
+    case groupSettings
     case profile
     case switchGroup
     case logout

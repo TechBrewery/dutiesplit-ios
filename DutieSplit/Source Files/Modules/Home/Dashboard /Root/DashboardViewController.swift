@@ -61,19 +61,19 @@ internal final class DashboardViewController: ViewController<DashboardView, Dash
     
     /// - SeeAlso: UITableViewDataSource
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view: UIView?
         switch section {
         case 0:
-            let view = SectionHeader(leftLabelTitle: Localizable.DashboardScreen.ranking, height: .small, onRightButtonTap: {
+            view = SectionHeader(leftLabelTitle: Localizable.DashboardScreen.ranking, height: .small, onRightButtonTap: {
                 print("section RANKING all tap")
             })
-            return view
         case 1:
-            let view = SectionHeader(leftLabelTitle: Localizable.DashboardScreen.recentActivities, height: .small, onRightButtonTap: {
+            view = SectionHeader(leftLabelTitle: Localizable.DashboardScreen.recentActivities, height: .small, onRightButtonTap: {
                 print("section RECENT ACTIVITIES all tap")
             })
-            return view
         default:
-            return nil
+            view = nil
         }
+        return view
     }
 }

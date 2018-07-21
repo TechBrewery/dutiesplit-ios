@@ -46,12 +46,15 @@ internal struct Localizable {
         static let logout = localized("manage.logout")
     }
     
-    struct DutiesScreen {
-        static let title = localized("duties.title")
+    struct GroupDutiesScreen {
+        static let title = localized("group.duties.title")
     }
     
-    struct SettingsScreen {
-        static let title = localized("settings.title")
+    struct GroupSettingsScreen {
+        static let title = localized("group.settings.title")
+        static let groupMembers = localized("group.settings.group.members")
+        static let addMember = localized("group.settings.add.member")
+        static let editName = localized("group.settings.edit.name")
     }
     
     struct ProfileScreen {
