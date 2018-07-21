@@ -43,9 +43,9 @@ internal final class ManageFlowController: FlowController {
         viewController.viewModel.eventTriggered = { [unowned self] event in
             switch event {
             case .didTapDuties:
-                self.navigationController?.pushViewController(self.makeDutiesViewController(), animated: true)
-            case .didTapSettings:
-                self.navigationController?.pushViewController(self.makeSettingsViewController(), animated: true)
+                self.navigationController?.pushViewController(self.makeGroupDutiesViewController(), animated: true)
+            case .didTapGroupSettings:
+                self.navigationController?.pushViewController(self.makeGroupSettingsViewController(), animated: true)
             case .didTapProfile:
                 self.navigationController?.pushViewController(self.makeProfileViewController(), animated: true)
             case .didTapSwitchGroup:
@@ -57,14 +57,14 @@ internal final class ManageFlowController: FlowController {
         return viewController
     }
     
-    private func makeDutiesViewController() -> DutiesViewController {
-        let viewController = dependencies.viewControllerFactory.dutiesViewController()
+    private func makeGroupDutiesViewController() -> GroupDutiesViewController {
+        let viewController = dependencies.viewControllerFactory.groupDutiesViewController()
         viewController.hidesBottomBarWhenPushed = true
         return viewController
     }
     
-    private func makeSettingsViewController() -> SettingsViewController {
-        let viewController = dependencies.viewControllerFactory.settingsViewController()
+    private func makeGroupSettingsViewController() -> GroupSettingsViewController {
+        let viewController = dependencies.viewControllerFactory.groupSettingsViewController()
         viewController.hidesBottomBarWhenPushed = true
         return viewController
     }

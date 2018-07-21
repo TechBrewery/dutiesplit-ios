@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C0F2B0E2103364A003F1CF8 /* GroupMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0F2B0D2103364A003F1CF8 /* GroupMemberTableViewCell.swift */; };
 		7C19903E20B9EAEB00DF098E /* MockApplicationDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C19903D20B9EAEB00DF098E /* MockApplicationDependencies.swift */; };
 		7C19904220B9EB7900DF098E /* MockCrashLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C19904120B9EB7900DF098E /* MockCrashLogger.swift */; };
 		7C19904420B9EC1C00DF098E /* MockSecureStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C19904320B9EC1C00DF098E /* MockSecureStorageService.swift */; };
@@ -81,15 +82,15 @@
 		7CCCC35520CBB7AF006D886A /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC35420CBB7AF006D886A /* AddActivityViewController.swift */; };
 		7CCCC35720CBB7BE006D886A /* AddActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC35620CBB7BE006D886A /* AddActivityViewModel.swift */; };
 		7CCCC35920CBB7C5006D886A /* AddActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC35820CBB7C5006D886A /* AddActivityView.swift */; };
-		7CCCC35B20CBC384006D886A /* ManageMenuCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC35A20CBC384006D886A /* ManageMenuCellType.swift */; };
+		7CCCC35B20CBC384006D886A /* ManageMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC35A20CBC384006D886A /* ManageMenuCell.swift */; };
 		7CCCC35D20CBC4A2006D886A /* StaticSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC35C20CBC4A2006D886A /* StaticSection.swift */; };
 		7CCCC35F20CBC56B006D886A /* StaticSectionedMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC35E20CBC56B006D886A /* StaticSectionedMenu.swift */; };
-		7CCCC36720CBDA45006D886A /* DutiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC36620CBDA45006D886A /* DutiesViewController.swift */; };
-		7CCCC36920CBDA51006D886A /* DutiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC36820CBDA51006D886A /* DutiesViewModel.swift */; };
-		7CCCC36B20CBDA59006D886A /* DutiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC36A20CBDA59006D886A /* DutiesView.swift */; };
-		7CCCC36D20CBDB19006D886A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC36C20CBDB19006D886A /* SettingsViewController.swift */; };
-		7CCCC36F20CBDB39006D886A /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC36E20CBDB39006D886A /* SettingsViewModel.swift */; };
-		7CCCC37120CBDB42006D886A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC37020CBDB42006D886A /* SettingsView.swift */; };
+		7CCCC36720CBDA45006D886A /* GroupDutiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC36620CBDA45006D886A /* GroupDutiesViewController.swift */; };
+		7CCCC36920CBDA51006D886A /* GroupDutiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC36820CBDA51006D886A /* GroupDutiesViewModel.swift */; };
+		7CCCC36B20CBDA59006D886A /* GroupDutiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC36A20CBDA59006D886A /* GroupDutiesView.swift */; };
+		7CCCC36D20CBDB19006D886A /* GroupSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC36C20CBDB19006D886A /* GroupSettingsViewController.swift */; };
+		7CCCC36F20CBDB39006D886A /* GroupSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC36E20CBDB39006D886A /* GroupSettingsViewModel.swift */; };
+		7CCCC37120CBDB42006D886A /* GroupSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC37020CBDB42006D886A /* GroupSettingsView.swift */; };
 		7CCCC37320CBDB8E006D886A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC37220CBDB8E006D886A /* ProfileViewController.swift */; };
 		7CCCC37520CBDB9B006D886A /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC37420CBDB9B006D886A /* ProfileViewModel.swift */; };
 		7CCCC37720CBDBA2006D886A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCC37620CBDBA2006D886A /* ProfileView.swift */; };
@@ -133,6 +134,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C0F2B0D2103364A003F1CF8 /* GroupMemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMemberTableViewCell.swift; sourceTree = "<group>"; };
 		7C19903D20B9EAEB00DF098E /* MockApplicationDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApplicationDependencies.swift; sourceTree = "<group>"; };
 		7C19904120B9EB7900DF098E /* MockCrashLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCrashLogger.swift; sourceTree = "<group>"; };
 		7C19904320B9EC1C00DF098E /* MockSecureStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSecureStorageService.swift; sourceTree = "<group>"; };
@@ -219,15 +221,15 @@
 		7CCCC35420CBB7AF006D886A /* AddActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
 		7CCCC35620CBB7BE006D886A /* AddActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityViewModel.swift; sourceTree = "<group>"; };
 		7CCCC35820CBB7C5006D886A /* AddActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityView.swift; sourceTree = "<group>"; };
-		7CCCC35A20CBC384006D886A /* ManageMenuCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageMenuCellType.swift; sourceTree = "<group>"; };
+		7CCCC35A20CBC384006D886A /* ManageMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageMenuCell.swift; sourceTree = "<group>"; };
 		7CCCC35C20CBC4A2006D886A /* StaticSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticSection.swift; sourceTree = "<group>"; };
 		7CCCC35E20CBC56B006D886A /* StaticSectionedMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticSectionedMenu.swift; sourceTree = "<group>"; };
-		7CCCC36620CBDA45006D886A /* DutiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DutiesViewController.swift; sourceTree = "<group>"; };
-		7CCCC36820CBDA51006D886A /* DutiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DutiesViewModel.swift; sourceTree = "<group>"; };
-		7CCCC36A20CBDA59006D886A /* DutiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DutiesView.swift; sourceTree = "<group>"; };
-		7CCCC36C20CBDB19006D886A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		7CCCC36E20CBDB39006D886A /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		7CCCC37020CBDB42006D886A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7CCCC36620CBDA45006D886A /* GroupDutiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDutiesViewController.swift; sourceTree = "<group>"; };
+		7CCCC36820CBDA51006D886A /* GroupDutiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDutiesViewModel.swift; sourceTree = "<group>"; };
+		7CCCC36A20CBDA59006D886A /* GroupDutiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDutiesView.swift; sourceTree = "<group>"; };
+		7CCCC36C20CBDB19006D886A /* GroupSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSettingsViewController.swift; sourceTree = "<group>"; };
+		7CCCC36E20CBDB39006D886A /* GroupSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSettingsViewModel.swift; sourceTree = "<group>"; };
+		7CCCC37020CBDB42006D886A /* GroupSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSettingsView.swift; sourceTree = "<group>"; };
 		7CCCC37220CBDB8E006D886A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7CCCC37420CBDB9B006D886A /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		7CCCC37620CBDBA2006D886A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -303,21 +305,11 @@
 		7C7E9E6920AE18420034D448 /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				7C7E9E6C20AE1D4B0034D448 /* Cells */,
 				7CE656E020A5D86400BA8FCA /* ManageViewController.swift */,
 				7CE656E220A5D87200BA8FCA /* ManageViewModel.swift */,
 				7CE656E420A5D87B00BA8FCA /* ManageView.swift */,
 			);
 			path = Root;
-			sourceTree = "<group>";
-		};
-		7C7E9E6C20AE1D4B0034D448 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				7CCCC35A20CBC384006D886A /* ManageMenuCellType.swift */,
-				7C7E9E6D20AE1D5F0034D448 /* ManageTableViewCell.swift */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		7C9B8F662083946200661EFE = {
@@ -573,6 +565,7 @@
 		7C9FA3B920839E350095E647 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7CCCC35A20CBC384006D886A /* ManageMenuCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -668,25 +661,24 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		7CCCC36420CBDA0E006D886A /* Settings */ = {
+		7CCCC36420CBDA0E006D886A /* Group Settings */ = {
 			isa = PBXGroup;
 			children = (
-				7CCCC36C20CBDB19006D886A /* SettingsViewController.swift */,
-				7CCCC36E20CBDB39006D886A /* SettingsViewModel.swift */,
-				7CCCC37020CBDB42006D886A /* SettingsView.swift */,
+				7CCCC36C20CBDB19006D886A /* GroupSettingsViewController.swift */,
+				7CCCC36E20CBDB39006D886A /* GroupSettingsViewModel.swift */,
+				7CCCC37020CBDB42006D886A /* GroupSettingsView.swift */,
 			);
-			path = Settings;
+			path = "Group Settings";
 			sourceTree = "<group>";
 		};
-		7CCCC36520CBDA13006D886A /* Duties */ = {
+		7CCCC36520CBDA13006D886A /* Group Duties */ = {
 			isa = PBXGroup;
 			children = (
-				7CDE5C0520FB59A300F25F58 /* Cells */,
-				7CCCC36620CBDA45006D886A /* DutiesViewController.swift */,
-				7CCCC36820CBDA51006D886A /* DutiesViewModel.swift */,
-				7CCCC36A20CBDA59006D886A /* DutiesView.swift */,
+				7CCCC36620CBDA45006D886A /* GroupDutiesViewController.swift */,
+				7CCCC36820CBDA51006D886A /* GroupDutiesViewModel.swift */,
+				7CCCC36A20CBDA59006D886A /* GroupDutiesView.swift */,
 			);
-			path = Duties;
+			path = "Group Duties";
 			sourceTree = "<group>";
 		};
 		7CCCC38420CDAFDA006D886A /* Fixture responses */ = {
@@ -696,14 +688,6 @@
 				7CCCC38920CDB0A2006D886A /* LoginFailure.json */,
 			);
 			path = "Fixture responses";
-			sourceTree = "<group>";
-		};
-		7CDE5C0520FB59A300F25F58 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				7CDE5C0620FB59B500F25F58 /* DutieTableViewCell.swift */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		7CE656D820A5D81800BA8FCA /* Dashboard  */ = {
@@ -720,8 +704,8 @@
 			children = (
 				7C7E9E6A20AE185D0034D448 /* ManageFlowController.swift */,
 				7C7E9E6920AE18420034D448 /* Root */,
-				7CCCC36520CBDA13006D886A /* Duties */,
-				7CCCC36420CBDA0E006D886A /* Settings */,
+				7CCCC36520CBDA13006D886A /* Group Duties */,
+				7CCCC36420CBDA0E006D886A /* Group Settings */,
 				7CCCC36320CBDA07006D886A /* Profile */,
 				7CCCC36220CBD9F1006D886A /* Switch Group */,
 			);
@@ -734,6 +718,9 @@
 				7CE656E720A5ED2A00BA8FCA /* SubtitledTableViewCell.swift */,
 				7C9E1AC520AC9C340027CF6E /* PersonTableViewCell.swift */,
 				7C9E1AC720AC9D780027CF6E /* ActivityTableViewCell.swift */,
+				7CDE5C0620FB59B500F25F58 /* DutieTableViewCell.swift */,
+				7C7E9E6D20AE1D5F0034D448 /* ManageTableViewCell.swift */,
+				7C0F2B0D2103364A003F1CF8 /* GroupMemberTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -951,7 +938,7 @@
 				7C9BF5C42088FCA0002BF7B2 /* NSObjectExtension.swift in Sources */,
 				7CE656E320A5D87200BA8FCA /* ManageViewModel.swift in Sources */,
 				7CE656E120A5D86400BA8FCA /* ManageViewController.swift in Sources */,
-				7CCCC36B20CBDA59006D886A /* DutiesView.swift in Sources */,
+				7CCCC36B20CBDA59006D886A /* GroupDutiesView.swift in Sources */,
 				7CC4567F20A5BDDD0037463B /* RegisterRequest.swift in Sources */,
 				7C9BF5AA2088F844002BF7B2 /* TypedViewController.swift in Sources */,
 				7CE656DB20A5D84000BA8FCA /* DashboardViewController.swift in Sources */,
@@ -970,9 +957,9 @@
 				7C9BF5D12088FFC2002BF7B2 /* ViewModel.swift in Sources */,
 				7CCCC37720CBDBA2006D886A /* ProfileView.swift in Sources */,
 				7C9BF5A62088F719002BF7B2 /* CrashLogger.swift in Sources */,
-				7CCCC36D20CBDB19006D886A /* SettingsViewController.swift in Sources */,
+				7CCCC36D20CBDB19006D886A /* GroupSettingsViewController.swift in Sources */,
 				7C9BF5C72088FCA0002BF7B2 /* UIViewExtension+Constraint.swift in Sources */,
-				7CCCC36F20CBDB39006D886A /* SettingsViewModel.swift in Sources */,
+				7CCCC36F20CBDB39006D886A /* GroupSettingsViewModel.swift in Sources */,
 				7CF7D55E209DC2C2003A3FC1 /* NetworkApplication.swift in Sources */,
 				7CF7D567209DC3A6003A3FC1 /* AuthenticationService.swift in Sources */,
 				7C9E1ACA20ACA86D0027CF6E /* DashboardFlowController.swift in Sources */,
@@ -986,7 +973,7 @@
 				7C9BF5C62088FCA0002BF7B2 /* BoolExtension.swift in Sources */,
 				7CF7D571209E03B7003A3FC1 /* NetworkStatus.swift in Sources */,
 				7C9E1AC820AC9D780027CF6E /* ActivityTableViewCell.swift in Sources */,
-				7CCCC36920CBDA51006D886A /* DutiesViewModel.swift in Sources */,
+				7CCCC36920CBDA51006D886A /* GroupDutiesViewModel.swift in Sources */,
 				7CCB039A20891045009E2680 /* LoginViewController.swift in Sources */,
 				7C9BF5DD20890654002BF7B2 /* View.swift in Sources */,
 				7CCCC37320CBDB8E006D886A /* ProfileViewController.swift in Sources */,
@@ -995,7 +982,7 @@
 				7CCCC35F20CBC56B006D886A /* StaticSectionedMenu.swift in Sources */,
 				7CF7D55D209DC2C2003A3FC1 /* NetworkResponse.swift in Sources */,
 				7C9BF59B2088F6DC002BF7B2 /* ApplicationDependencies.swift in Sources */,
-				7CCCC35B20CBC384006D886A /* ManageMenuCellType.swift in Sources */,
+				7CCCC35B20CBC384006D886A /* ManageMenuCell.swift in Sources */,
 				7CC4567A20A5BB7F0037463B /* EmailValidator.swift in Sources */,
 				7CCCC35920CBB7C5006D886A /* AddActivityView.swift in Sources */,
 				7C9BF5C92088FCA0002BF7B2 /* UITableViewExtension.swift in Sources */,
@@ -1003,8 +990,9 @@
 				7C9BF5CF2088FD95002BF7B2 /* NavigationBarSetupable.swift in Sources */,
 				7C9BF5E320890E14002BF7B2 /* KeyboardAwareViewController.swift in Sources */,
 				7CCB03982089103B009E2680 /* LoginViewModel.swift in Sources */,
+				7C0F2B0E2103364A003F1CF8 /* GroupMemberTableViewCell.swift in Sources */,
 				7C9BF5C82088FCA0002BF7B2 /* UIDeviceExtension.swift in Sources */,
-				7CCCC37120CBDB42006D886A /* SettingsView.swift in Sources */,
+				7CCCC37120CBDB42006D886A /* GroupSettingsView.swift in Sources */,
 				7CCCC35220CBB3E1006D886A /* AddActivityFlowController.swift in Sources */,
 				7CCB039620891033009E2680 /* LoginView.swift in Sources */,
 				7CE656DD20A5D84A00BA8FCA /* DashboardView.swift in Sources */,
@@ -1035,7 +1023,7 @@
 				7CF7D562209DC2C2003A3FC1 /* URLRequestExtension+Networking.swift in Sources */,
 				7C9BF5B02088FB64002BF7B2 /* DutieSplitKeys.m in Sources */,
 				7CF7D563209DC2C2003A3FC1 /* NetworkError.swift in Sources */,
-				7CCCC36720CBDA45006D886A /* DutiesViewController.swift in Sources */,
+				7CCCC36720CBDA45006D886A /* GroupDutiesViewController.swift in Sources */,
 				7CF7D56D209DF68D003A3FC1 /* LoginRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,15 +1,18 @@
 //
-//  DutiesViewModel.swift
+//  GroupDutiesViewModel.swift
 //  DutieSplit
 //
 
 
 import RxSwift
 
-internal final class DutiesViewModel: ViewModel, BindingsSetupable {
+internal final class GroupDutiesViewModel: ViewModel, BindingsSetupable {
     internal typealias Dependencies = HasNetworkService
 
     private let dependencies: Dependencies
+
+    /// Indicates name of the currently selected group
+    let groupName = Variable<String>("")
     
     /// Initialize View model with needed dependencies
     ///
@@ -21,6 +24,6 @@ internal final class DutiesViewModel: ViewModel, BindingsSetupable {
     
     /// - SeeAlso: BindingsSetupable
     func setupBindings() {
-        
+        groupName.value = "White House"
     }
 }

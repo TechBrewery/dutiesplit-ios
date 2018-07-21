@@ -32,11 +32,14 @@
 "manage.section.settings" = "SETTINGS";
 "manage.logout" = "Logout";
 
-// Duties screen
-"duties.title" = "Duties";
+// Group duties screen
+"group.duties.title" = "Group duties";
 
-// Settings screen
-"settings.title" = "Settings";
+// Group settings screen
+"group.settings.title" = "Group settings";
+"group.settings.group.members" = "GROUP MEMBERS";
+"group.settings.add.member" = "ADD MEMBER >";
+"group.settings.edit.name" = "Edit name";
 
 // Profile screen
 "profile.title" = "Profile";
