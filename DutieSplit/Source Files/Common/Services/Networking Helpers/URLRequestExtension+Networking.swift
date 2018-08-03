@@ -11,7 +11,7 @@ internal extension URLRequest {
     /// Convenience initializer for NetworkRequest
     ///
     /// - Parameter request: type conforming to NetworkRequest
-    init<Request>(request: Request, authenticationService: AuthenticationService) where Request: NetworkRequest {
+    init<Request>(request: Request, token: String?) where Request: NetworkRequest {
         
         // Build the URL
         var urlComponents = URLComponents()
@@ -41,7 +41,7 @@ internal extension URLRequest {
         headers["Content-Type"] = "application/json; charset=utf-8"
         
         // Add authorization header if needed
-        if request.requiresAuthorization, let token = authenticationService.token {
+        if request.requiresAuthorization, let token = token {
             headers["Authorization"] = "jwt " + token
         }
         

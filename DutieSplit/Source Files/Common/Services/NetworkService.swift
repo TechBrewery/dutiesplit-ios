@@ -19,7 +19,7 @@ internal protocol NetworkService {
     ///
     /// - Parameter request: Request to be performed
     /// - Returns: Observable of type Request.Response
-    func perform<Request>(request: Request) -> Single<NetworkResponseResult<Request.Response>> where Request: NetworkRequest
+    func perform<Request>(request: Request) -> Observable<NetworkResponseResult<Request.Response>> where Request: NetworkRequest
     
     /// Parses response from the server
     ///
@@ -57,8 +57,11 @@ internal class DefaultNetworkService: NetworkService {
     }
     
     /// - SeeAlso: NetworkService.perform(request:)
-    func perform<Request>(request: Request) -> Single<NetworkResponseResult<Request.Response>> where Request: NetworkRequest {
-        return send(request: URLRequest(request: request, authenticationService: authenticationService))
+    func perform<Request>(request: Request) -> Observable<NetworkResponseResult<Request.Response>> where Request: NetworkRequest {
+        return authenticationService
+            .token
+            .asObservable()
+            .flatMap { [unowned self] in self.send(request: URLRequest(request: request, token: $0)) }
             .flatMap { [unowned self] in self.parse(dataTaskResponse: $0, for: request) }
     }
 

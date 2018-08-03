@@ -8,16 +8,6 @@ import UIKit
 
 internal final class ManageFlowController: FlowController {
     typealias Dependencies = HasViewControllerFactory
-    internal typealias EventCallback = (Event) -> ()
-    
-    /// Enum describing events that can be triggered
-    ///
-    /// - userLoggedOut: Send when user logged out
-    internal enum Event {
-        case userLoggedOut
-    }
-    
-    var eventTriggered: EventCallback?
     
     private let dependencies: Dependencies
     
@@ -50,8 +40,6 @@ internal final class ManageFlowController: FlowController {
                 self.navigationController?.pushViewController(self.makeProfileViewController(), animated: true)
             case .didTapSwitchGroup:
                 self.navigationController?.pushViewController(self.makeSwitchGroupViewController(), animated: true)
-            case .didTapLogout:
-                self.eventTriggered?(.userLoggedOut)
             }
         }
         return viewController

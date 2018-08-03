@@ -5,6 +5,7 @@
 
 
 import UIKit
+import RxSwift
 
 /// Main Flow controller of the app, has access to the main window and can change root controller
 internal final class ApplicationFlowController {
@@ -14,6 +15,8 @@ internal final class ApplicationFlowController {
     private let dependencies: ApplicationDependencies
     
     private var rootFlowController: FlowController?
+
+    private let disposeBag = DisposeBag()
     
     /// Initializes Main Flow Controllers
     ///
@@ -32,7 +35,14 @@ internal final class ApplicationFlowController {
     internal func startApp() {
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
-        changeRootFlowController(to: dependencies.authenticationService.token == nil ? makeLoginFlowController() : makeHomeFlowController())
+        dependencies.authenticationService
+            .token
+            .asDriver()
+            .drive(onNext: { [unowned self] token in
+                self.changeRootFlowController(to: token == nil ? self.makeLoginFlowController() : self.makeHomeFlowController())
+            })
+            .disposed(by: disposeBag)
+
     }
     
     private func makeLoginFlowController() -> FlowController {

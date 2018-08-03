@@ -46,8 +46,6 @@ internal final class LoginFlowController: FlowController {
         let viewController = dependencies.viewControllerFactory.loginViewController()
         viewController.viewModel.eventTriggered = { [unowned self] event in
             switch event {
-            case .userLoggedIn:
-                self.eventTriggered?(.userLoggedIn)
             case .didTapRegister:
                 self.navigationController?.pushViewController(self.makeRegisterViewController(), animated: true)
             }
@@ -56,13 +54,6 @@ internal final class LoginFlowController: FlowController {
     }
     
     private func makeRegisterViewController() -> RegisterViewController {
-        let viewController = dependencies.viewControllerFactory.registerViewController()
-        viewController.viewModel.eventTriggered = { [unowned self] event in
-            switch event {
-            case .userRegistered:
-                self.eventTriggered?(.userLoggedIn)
-            }
-        }
-        return viewController
+        return dependencies.viewControllerFactory.registerViewController()
     }
 }

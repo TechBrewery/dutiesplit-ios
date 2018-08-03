@@ -7,18 +7,7 @@
 import RxSwift
 
 internal final class RegisterViewModel: ViewModel {
-    internal typealias Dependencies = HasNetworkService & HasAuthenticationService
-    internal typealias EventCallback = (Event) -> ()
-    
-    /// Enum describing events that can be triggered
-    ///
-    /// - userRegistered: send when user sucessfully created new account
-    internal enum Event {
-        case userRegistered
-    }
-    
-    /// Callback with triggered event
-    var eventTriggered: EventCallback?
+    internal typealias Dependencies = HasUserController
     
     /// Indicates when register button was tapped
     let registerButtonTap = PublishSubject<Void>()
@@ -60,18 +49,12 @@ internal final class RegisterViewModel: ViewModel {
                 emailText.asObservable(),
                 passwordText.asObservable()
             ))
-            .map { RegisterRequest(name: $0, email: $1, password: $2) }
-            .flatMapLatest { [unowned self] in self.dependencies.networkService.perform(request: $0) }
+            .flatMapLatest { [unowned self] in self.dependencies.userController.register(name: $0, email: $1, password: $2) }
             .do(onNext: { [unowned self] _ in self.isLoading.value = false })
             .observeOn(MainScheduler.instance)
-            .subscribe( onNext: { [unowned self] response in
-                switch response {
-                case .success(let response):
-                    self.dependencies.authenticationService.save(token: response.token)
-                    self.eventTriggered?(.userRegistered)
-                case .failure(let error):
-                    self.errorOccurred.onNext(error.description)
-                }
+            .subscribe( onNext: { [unowned self] error in
+                guard let error = error else { return }
+                self.errorOccurred.onNext(error.description)
             })
             .disposed(by: disposeBag)
     }

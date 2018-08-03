@@ -16,21 +16,11 @@ internal final class RegisterViewModelSpec: QuickSpec {
     var dependencies: MockApplicationDependencies!
     var viewModel: RegisterViewModel!
     
-    var userRegisterdCalled: Bool!
-    
     override func spec() {
         
         beforeEach {
-            self.userRegisterdCalled = false
-            
             self.dependencies = MockApplicationDependencies()
             self.viewModel = RegisterViewModel(dependencies: self.dependencies)
-            self.viewModel.eventTriggered = { [unowned self] event in
-                switch event {
-                case .userRegistered:
-                    self.userRegisterdCalled = true
-                }
-            }
             
             MockNetworkService.mockedResponse = (
                 json: MockNetworkService.jsonFrom(filename: "LoginSuccess"),
@@ -85,11 +75,7 @@ internal final class RegisterViewModelSpec: QuickSpec {
                     }
                     
                     it("should save passed token") {
-                        expect(self.dependencies.authenticationService.token).toEventually(equal("fixture_token"))
-                    }
-                    
-                    it("should tell flow controller that user has registered") {
-                        expect(self.userRegisterdCalled).toEventually(equal(true))
+                        expect(self.dependencies.authenticationService.token.value).toEventually(equal("fixture_token"))
                     }
                 }
                 
@@ -105,7 +91,7 @@ internal final class RegisterViewModelSpec: QuickSpec {
                     }
                     
                     it("should not have token saved") {
-                        expect(self.dependencies.authenticationService.token).toEventually(beNil())
+                        expect(self.dependencies.authenticationService.token.value).toEventually(beNil())
                     }
                     
                     it("should show error message") {

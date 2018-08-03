@@ -4,13 +4,13 @@
 //
 
 
-import Foundation
+import RxSwift
 
 /// Authentiator service for stroring and providing access token
 internal protocol AuthenticationService {
-    
+
     /// Token for requests authorization
-    var token: String? { get }
+    var token: Variable<String?> { get }
     
     /// Saves the token to the secure storage
     ///
@@ -22,6 +22,9 @@ internal protocol AuthenticationService {
 }
 
 internal class DefaultAuthenticationService: AuthenticationService {
+
+    /// - SeeAlso: AuthenticationService.token
+    let token: Variable<String?>
     
     private let secureStorageService: SecureStorageService
     
@@ -30,20 +33,19 @@ internal class DefaultAuthenticationService: AuthenticationService {
     /// - Parameter secureStorageService: Secure storage service to use
     init(secureStorageService: SecureStorageService) {
         self.secureStorageService = secureStorageService
+        token = .init(secureStorageService.retrieveToken())
     }
-    
-    /// - SeeAlso: AuthenticationService.token
-    var token: String? {
-        return secureStorageService.retrieveToken()
-    }
+
     
     /// - SeeAlso: AuthenticationService.save()
     func save(token: String) {
         secureStorageService.save(token: token)
+        self.token.value = token
     }
     
     /// - SeeAlso: AuthenticationService.removeToken()
     func removeToken() {
         secureStorageService.removeToken()
+        token.value = nil
     }
 }

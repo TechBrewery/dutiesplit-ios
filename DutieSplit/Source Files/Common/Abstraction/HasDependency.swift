@@ -26,3 +26,7 @@ internal protocol HasSecureStorageService {
 internal protocol HasNetworkService {
     var networkService: NetworkService { get }
 }
+
+internal protocol HasUserController {
+    var userController: UserController { get }
+}

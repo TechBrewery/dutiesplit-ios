@@ -17,7 +17,11 @@ internal class MockApplicationDependencies: ApplicationDependencies {
     
     lazy var secureStorageService: SecureStorageService = MockSecureStorageService()
     
-    lazy var authenticationService: AuthenticationService = MockAuthenticationService()
+    lazy var authenticationService: AuthenticationService = DefaultAuthenticationService(secureStorageService: secureStorageService)
     
     lazy var networkService: NetworkService = MockNetworkService(authenticationService: authenticationService)
+
+    lazy var userController: UserController = DefaultUserController(networkService: networkService, authenticationService: authenticationService)
+
+
 }

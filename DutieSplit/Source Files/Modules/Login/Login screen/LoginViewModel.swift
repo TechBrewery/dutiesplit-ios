@@ -7,15 +7,13 @@
 import RxSwift
 
 internal final class LoginViewModel: ViewModel {
-    internal typealias Dependencies = HasNetworkService & HasAuthenticationService
+    internal typealias Dependencies = HasUserController
     internal typealias EventCallback = (Event) -> ()
     
     /// Enum describing events that can be triggered
     ///
-    /// - userLoggedIn: send when user sucessfully logged in
     /// - didTapRegister: send when user tapped register button
     internal enum Event {
-        case userLoggedIn
         case didTapRegister
     }
     
@@ -54,18 +52,12 @@ internal final class LoginViewModel: ViewModel {
         loginButtonTap
             .do(onNext: { [unowned self] in self.isLoading.value = true })
             .withLatestFrom(Observable.combineLatest(emailText.asObservable(), passwordText.asObservable()))
-            .map { LoginRequest(email: $0, password: $1) }
-            .flatMapLatest { [unowned self] in self.dependencies.networkService.perform(request: $0) }
+            .flatMapLatest { [unowned self] in self.dependencies.userController.login(email: $0, password: $1) }
             .do(onNext: { [unowned self] _ in self.isLoading.value = false })
             .observeOn(MainScheduler.instance)
-            .subscribe( onNext: { [unowned self] response in
-                switch response {
-                case .success(let response):
-                    self.dependencies.authenticationService.save(token: response.token)
-                    self.eventTriggered?(.userLoggedIn)
-                case .failure(let error):
-                    self.errorOccurred.onNext(error.description)
-                }
+            .subscribe( onNext: { [unowned self] error in
+                guard let error = error else { return }
+                self.errorOccurred.onNext(error.description)
             })
             .disposed(by: disposeBag)
 
