@@ -10,11 +10,6 @@ import RxSwift
 /// Service for performing network requests
 internal protocol NetworkService {
     
-    /// Method for registering callback when 401 error occurred
-    ///
-    /// - Parameter callback: Callback to call when 401 unauthorized error occurred
-    func setUnauthorizedErrorCallback(_ callback: @escaping () -> ())
-    
     /// Performs network request and returns Single of its reponse
     ///
     /// - Parameter request: Request to be performed
@@ -104,7 +99,6 @@ internal class DefaultNetworkService: NetworkService {
             // Call unauthorized callback in case of unauthorized status code
             guard response.statusCode != authorizationErrorStatusCode || request is LoginRequest else {
                 authenticationService.removeToken()
-                onUnauthorizedError()
                 return .just(.failure(.unauthorized))
             }
             
