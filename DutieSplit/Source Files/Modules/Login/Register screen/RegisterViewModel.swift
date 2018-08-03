@@ -6,7 +6,7 @@
 
 import RxSwift
 
-internal final class RegisterViewModel: ViewModel, BindingsSetupable {
+internal final class RegisterViewModel: ViewModel {
     internal typealias Dependencies = HasNetworkService & HasAuthenticationService
     internal typealias EventCallback = (Event) -> ()
     
@@ -19,16 +19,6 @@ internal final class RegisterViewModel: ViewModel, BindingsSetupable {
     
     /// Callback with triggered event
     var eventTriggered: EventCallback?
-    
-    private let dependencies: Dependencies
-    
-    /// Initialize View model with needed dependencies
-    ///
-    /// - Parameters:
-    ///   - depndencies: Dependencies to use in the class
-    init(dependencies: Dependencies) {
-        self.dependencies = dependencies
-    }
     
     /// Indicates when register button was tapped
     let registerButtonTap = PublishSubject<Void>()
@@ -46,15 +36,23 @@ internal final class RegisterViewModel: ViewModel, BindingsSetupable {
     lazy var registerButtonEnabled = Observable
         .combineLatest(isNameValid, isEmailValid, isPasswordValid)
         .map { $0.0 && $0.1 && $0.2 }
-    
+
+    private let dependencies: Dependencies
+
     private lazy var isNameValid = nameText.asObservable().map { !$0.isEmpty }
-    
+
     private lazy var isEmailValid = emailText.asObservable().map { EmailValidator.validate($0) }
-    
+
     private lazy var isPasswordValid = passwordText.asObservable().map { PasswordValidator.validate($0) }
-    
-    /// - SeeAlso: BindingsSetupable
-    func setupBindings() {
+
+    /// Initialize View model with needed dependencies
+    ///
+    /// - Parameters:
+    ///   - depndencies: Dependencies to use in the class
+    init(dependencies: Dependencies) {
+        self.dependencies = dependencies
+        super.init()
+
         registerButtonTap
             .do(onNext: { [unowned self] in self.isLoading.value = true })
             .withLatestFrom(Observable.combineLatest(

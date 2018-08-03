@@ -28,4 +28,3 @@ internal final class GroupSettingsView: View, ViewSetupable {
         tableView.constraintToSuperviewEdges()
     }
 }
-

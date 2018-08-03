@@ -26,4 +26,3 @@ internal protocol HasSecureStorageService {
 internal protocol HasNetworkService {
     var networkService: NetworkService { get }
 }
-

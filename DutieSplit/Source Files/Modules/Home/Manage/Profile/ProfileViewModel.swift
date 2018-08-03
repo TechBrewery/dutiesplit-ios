@@ -6,7 +6,7 @@
 
 import RxSwift
 
-internal final class ProfileViewModel: ViewModel, BindingsSetupable {
+internal final class ProfileViewModel: ViewModel {
     internal typealias Dependencies = HasNetworkService
     
     private let dependencies: Dependencies
@@ -17,10 +17,5 @@ internal final class ProfileViewModel: ViewModel, BindingsSetupable {
     ///   - depndencies: Dependencies to use in the class
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
-    }
-    
-    /// - SeeAlso: BindingsSetupable
-    func setupBindings() {
-        
     }
 }

@@ -6,7 +6,7 @@
 
 import RxSwift
 
-internal final class DashboardViewModel: ViewModel, BindingsSetupable {
+internal final class DashboardViewModel: ViewModel {
     internal typealias Dependencies = HasNetworkService
     internal typealias EventCallback = (Event) -> ()
     
@@ -30,11 +30,6 @@ internal final class DashboardViewModel: ViewModel, BindingsSetupable {
     ///   - depndencies: Dependencies to use in the class
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
-    }
-    
-    /// - SeeAlso: BindingsSetupable
-    func setupBindings() {
-        
     }
 }
 

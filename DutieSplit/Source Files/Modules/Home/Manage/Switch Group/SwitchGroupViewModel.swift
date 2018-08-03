@@ -6,7 +6,7 @@
 
 import RxSwift
 
-internal final class SwitchGroupViewModel: ViewModel, BindingsSetupable {
+internal final class SwitchGroupViewModel: ViewModel {
     internal typealias Dependencies = HasNetworkService
     internal typealias EventCallback = (Event) -> ()
     
@@ -28,10 +28,5 @@ internal final class SwitchGroupViewModel: ViewModel, BindingsSetupable {
     ///   - depndencies: Dependencies to use in the class
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
-    }
-    
-    /// - SeeAlso: BindingsSetupable
-    func setupBindings() {
-        
     }
 }

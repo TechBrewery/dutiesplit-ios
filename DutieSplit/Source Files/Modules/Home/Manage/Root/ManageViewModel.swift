@@ -7,7 +7,7 @@
 import RxSwift
 import UIKit.UIImage
 
-internal final class ManageViewModel: ViewModel, BindingsSetupable {
+internal final class ManageViewModel: ViewModel {
     internal typealias Dependencies = HasNetworkService & HasAuthenticationService
     internal typealias EventCallback = (Event) -> ()
     
@@ -69,10 +69,4 @@ internal final class ManageViewModel: ViewModel, BindingsSetupable {
             eventTriggered?(.didTapLogout)
         }
     }
-    
-    /// - SeeAlso: BindingsSetupable
-    func setupBindings() {
-        
-    }
 }
-

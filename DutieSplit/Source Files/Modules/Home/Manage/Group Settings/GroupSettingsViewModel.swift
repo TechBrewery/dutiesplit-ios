@@ -6,7 +6,7 @@
 
 import RxSwift
 
-internal final class GroupSettingsViewModel: ViewModel, BindingsSetupable {
+internal final class GroupSettingsViewModel: ViewModel  {
     internal typealias Dependencies = HasNetworkService
     
     private let dependencies: Dependencies
@@ -23,10 +23,8 @@ internal final class GroupSettingsViewModel: ViewModel, BindingsSetupable {
     ///   - depndencies: Dependencies to use in the class
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
-    }
-    
-    /// - SeeAlso: BindingsSetupable
-    func setupBindings() {
+        super.init()
+
         groupName.value = "White House"
         editNameTapped
             .subscribe(onNext: {
