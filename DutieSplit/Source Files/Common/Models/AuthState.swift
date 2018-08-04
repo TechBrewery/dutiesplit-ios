@@ -5,7 +5,7 @@
 
 
 /// Describe available authentication states.
-internal enum AuthState {
+internal enum AuthState: Equatable {
     case authenticated(token: String)
     case unauthenticated
 

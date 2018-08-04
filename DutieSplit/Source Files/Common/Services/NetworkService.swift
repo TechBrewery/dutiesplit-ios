@@ -61,7 +61,7 @@ internal class DefaultNetworkService: NetworkService {
                 DispatchQueue.main.async { UIApplication.shared.isNetworkActivityIndicatorVisible = false }
                 single(.success(response))
             }
-            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            DispatchQueue.main.async { UIApplication.shared.isNetworkActivityIndicatorVisible = true }
             task.resume()
             return Disposables.create() {
                 task.cancel()

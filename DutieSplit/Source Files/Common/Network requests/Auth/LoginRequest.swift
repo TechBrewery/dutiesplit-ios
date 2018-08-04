@@ -39,3 +39,9 @@ internal struct LoginRequest: NetworkRequest {
         return false
     }
 }
+
+internal struct LoginResponse: NetworkResponse {
+    let name: String
+    let email: String
+    let token: String
+}

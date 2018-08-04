@@ -11,6 +11,9 @@ internal protocol UserController {
     /// User authentication state
     var authState: Observable<AuthState> { get }
 
+    /// Currently logged in user Variable
+    var user: Variable<User?> { get }
+
     /// Makes login request with given arguments
     func login(email: String, password: String) -> Single<NetworkError?>
 
@@ -25,6 +28,11 @@ internal final class DefaultUserController: UserController {
     
     /// - SeeAlso: UserController.authState
     let authState: Observable<AuthState>
+
+    /// - SeeAlso: UserController.authState
+    let user = Variable<User?>(nil)
+
+    private let disposeBag = DisposeBag()
 
     private let networkService: NetworkService
 
@@ -42,8 +50,28 @@ internal final class DefaultUserController: UserController {
         authState = authenticationService
             .token
             .asObservable()
+            .distinctUntilChanged()
             .map(AuthState.init)
             .share(replay: 1, scope: .forever)
+
+        authState
+            .filter { $0 != .unauthenticated }
+            .map { _ in CurrentUserRequest() }
+            .flatMap { [unowned self] in self.networkService.perform(request: $0) }
+            .map { response -> User? in
+                switch response {
+                case .success(let response): return response
+                case .failure(_): return nil
+                }
+            }
+            .bind(to: user)
+            .disposed(by: disposeBag)
+
+        authState
+            .filter { $0 == .unauthenticated }
+            .map { _ in nil }
+            .bind(to: user)
+            .disposed(by: disposeBag)
     }
 
     /// - SeeAlso: UserController.login(email:password:)

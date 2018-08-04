@@ -15,6 +15,8 @@
 		7C19904A20B9FBEF00DF098E /* LoginViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C19904920B9FBEF00DF098E /* LoginViewModelSpec.swift */; };
 		7C25A39B2114DFA80037358E /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25A39A2114DFA80037358E /* UserController.swift */; };
 		7C25A39D2114E1F80037358E /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25A39C2114E1F80037358E /* AuthState.swift */; };
+		7C25A39F2115C2CC0037358E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25A39E2115C2CC0037358E /* User.swift */; };
+		7C25A3A12115C33B0037358E /* CurrentUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25A3A02115C33B0037358E /* CurrentUserRequest.swift */; };
 		7C33DFBE20BC7F0C00784D63 /* RegisterViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C33DFBD20BC7F0C00784D63 /* RegisterViewModelSpec.swift */; };
 		7C33DFC020BC84E400784D63 /* AuthenticationServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C33DFBF20BC84E400784D63 /* AuthenticationServiceSpec.swift */; };
 		7C4F2C6920A5C70000E19EB0 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4F2C6820A5C70000E19EB0 /* HomeTabBarController.swift */; };
@@ -119,7 +121,6 @@
 		7CF7D566209DC3A6003A3FC1 /* SecureStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7D564209DC3A6003A3FC1 /* SecureStorageService.swift */; };
 		7CF7D567209DC3A6003A3FC1 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7D565209DC3A6003A3FC1 /* AuthenticationService.swift */; };
 		7CF7D56D209DF68D003A3FC1 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7D56C209DF68D003A3FC1 /* LoginRequest.swift */; };
-		7CF7D56F209DF697003A3FC1 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7D56E209DF697003A3FC1 /* LoginResponse.swift */; };
 		7CF7D571209E03B7003A3FC1 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7D570209E03B7003A3FC1 /* NetworkStatus.swift */; };
 		7CF7D573209E1D50003A3FC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF7D572209E1D50003A3FC1 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -143,6 +144,8 @@
 		7C19904920B9FBEF00DF098E /* LoginViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelSpec.swift; sourceTree = "<group>"; };
 		7C25A39A2114DFA80037358E /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		7C25A39C2114E1F80037358E /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
+		7C25A39E2115C2CC0037358E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7C25A3A02115C33B0037358E /* CurrentUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserRequest.swift; sourceTree = "<group>"; };
 		7C33DFBD20BC7F0C00784D63 /* RegisterViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelSpec.swift; sourceTree = "<group>"; };
 		7C33DFBF20BC84E400784D63 /* AuthenticationServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceSpec.swift; sourceTree = "<group>"; };
 		7C4F2C6820A5C70000E19EB0 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
@@ -259,7 +262,6 @@
 		7CF7D564209DC3A6003A3FC1 /* SecureStorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStorageService.swift; sourceTree = "<group>"; };
 		7CF7D565209DC3A6003A3FC1 /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		7CF7D56C209DF68D003A3FC1 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
-		7CF7D56E209DF697003A3FC1 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		7CF7D570209E03B7003A3FC1 /* NetworkStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
 		7CF7D572209E1D50003A3FC1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -577,6 +579,7 @@
 			children = (
 				7CCCC35A20CBC384006D886A /* ManageMenuCell.swift */,
 				7C25A39C2114E1F80037358E /* AuthState.swift */,
+				7C25A39E2115C2CC0037358E /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -765,7 +768,6 @@
 			children = (
 				7CF7D56C209DF68D003A3FC1 /* LoginRequest.swift */,
 				7CC4567E20A5BDDD0037463B /* RegisterRequest.swift */,
-				7CF7D56E209DF697003A3FC1 /* LoginResponse.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -773,6 +775,7 @@
 		7CF7D56A209DF65A003A3FC1 /* Users */ = {
 			isa = PBXGroup;
 			children = (
+				7C25A3A02115C33B0037358E /* CurrentUserRequest.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -1009,7 +1012,6 @@
 				7CCB039620891033009E2680 /* LoginView.swift in Sources */,
 				7CE656DD20A5D84A00BA8FCA /* DashboardView.swift in Sources */,
 				7CF7D566209DC3A6003A3FC1 /* SecureStorageService.swift in Sources */,
-				7CF7D56F209DF697003A3FC1 /* LoginResponse.swift in Sources */,
 				7CCCC37520CBDB9B006D886A /* ProfileViewModel.swift in Sources */,
 				7C9BF5A42088F719002BF7B2 /* FlowController.swift in Sources */,
 				7C9BF59C2088F6DC002BF7B2 /* ApplicationFlowController.swift in Sources */,
@@ -1020,6 +1022,7 @@
 				7C9BF5C52088FCA0002BF7B2 /* UIColorExtension.swift in Sources */,
 				7C9BF5DB2089059D002BF7B2 /* ViewSetupable.swift in Sources */,
 				7CCCC35D20CBC4A2006D886A /* StaticSection.swift in Sources */,
+				7C25A3A12115C33B0037358E /* CurrentUserRequest.swift in Sources */,
 				7CB54DA2209EDD04007EC75D /* DefaultLoader.swift in Sources */,
 				7C9BF59A2088F6DC002BF7B2 /* ApplicationKeys.swift in Sources */,
 				7CB54DAF209F613D007EC75D /* HomeFlowController.swift in Sources */,
@@ -1031,6 +1034,7 @@
 				7CF7D560209DC2C2003A3FC1 /* NetworkService.swift in Sources */,
 				7C9B8F732083946200661EFE /* ApplicationDelegate.swift in Sources */,
 				7C7E9E6E20AE1D5F0034D448 /* ManageTableViewCell.swift in Sources */,
+				7C25A39F2115C2CC0037358E /* User.swift in Sources */,
 				7CC4567B20A5BB7F0037463B /* PasswordValidator.swift in Sources */,
 				7CF7D562209DC2C2003A3FC1 /* URLRequestExtension+Networking.swift in Sources */,
 				7C9BF5B02088FB64002BF7B2 /* DutieSplitKeys.m in Sources */,
