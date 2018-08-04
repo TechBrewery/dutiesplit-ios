@@ -27,4 +27,3 @@ internal final class ManageView: View, ViewSetupable {
         tableView.constraintToSuperviewEdges()
     }
 }
-

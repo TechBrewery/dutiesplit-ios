@@ -28,4 +28,3 @@ internal final class GroupDutiesView: View, ViewSetupable {
         tableView.constraintToSuperviewEdges()
     }
 }
-

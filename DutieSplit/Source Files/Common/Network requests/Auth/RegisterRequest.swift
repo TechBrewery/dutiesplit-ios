@@ -5,7 +5,7 @@
 
 
 internal struct RegisterRequest: NetworkRequest {
-    typealias Response = LoginResponse
+    typealias Response = RegisterResponse
     
     /// Body content
     let name: String
@@ -41,4 +41,10 @@ internal struct RegisterRequest: NetworkRequest {
     var requiresAuthorization: Bool {
         return false
     }
+}
+
+internal struct RegisterResponse: NetworkResponse {
+    let name: String
+    let email: String
+    let token: String
 }

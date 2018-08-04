@@ -13,7 +13,8 @@ internal protocol ApplicationDependencies: class,
     HasCrashLogger,
     HasSecureStorageService,
     HasAuthenticationService,
-    HasNetworkService { }
+    HasNetworkService,
+    HasUserController { }
 
 /// - SeeAlso: ApplicationDependencies
 internal class DefaultApplicationDependencies: ApplicationDependencies {
@@ -40,4 +41,6 @@ internal class DefaultApplicationDependencies: ApplicationDependencies {
             return DefaultNetworkService(authenticationService: authenticationService)
         #endif
     }()
+
+    lazy var userController: UserController = DefaultUserController(networkService: networkService, authenticationService: authenticationService)
 }

@@ -77,13 +77,6 @@ internal final class HomeFlowController: FlowController {
     }
     
     private func makeManageFlowController() -> ManageFlowController {
-        let flowController = ManageFlowController(dependencies: dependencies)
-        flowController.eventTriggered = { [unowned self] event in
-            switch event {
-            case .userLoggedOut:
-                self.eventTriggered?(.userLoggedOut)
-            }
-        }
-        return flowController
+        return ManageFlowController(dependencies: dependencies)
     }
 }

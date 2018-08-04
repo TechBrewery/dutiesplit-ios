@@ -9,7 +9,7 @@ import UIKit
 /// Factory class that creates view controllers with its view and view model
 internal class ViewControllerFactory {
     
-    private weak var applicationDependencies: ApplicationDependencies!
+    private unowned let applicationDependencies: ApplicationDependencies
     
     init(applicationDependencies: ApplicationDependencies) {
         self.applicationDependencies = applicationDependencies

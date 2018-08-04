@@ -21,7 +21,7 @@ internal final class AuthenticationServiceSpec: QuickSpec {
         }
         
         it("should return nil when there's no token set") {
-            expect(self.sut.token).to(beNil())
+            expect(self.sut.token.value).to(beNil())
         }
         
         context("when token was saved before") {
@@ -36,7 +36,7 @@ internal final class AuthenticationServiceSpec: QuickSpec {
             
             it("should retrieve the token") {
                 expect(self.secureStorageMock.savedToken).to(equal("fixture.token"))
-                expect(self.sut.token).to(equal("fixture.token"))
+                expect(self.sut.token.value).to(equal("fixture.token"))
             }
             
             context("and removed later") {
@@ -51,7 +51,7 @@ internal final class AuthenticationServiceSpec: QuickSpec {
                 
                 it("should return nil when trying to get the token") {
                     expect(self.secureStorageMock.savedToken).to(beNil())
-                    expect(self.sut.token).to(beNil())
+                    expect(self.sut.token.value).to(beNil())
                 }
             }
         }

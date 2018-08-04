@@ -15,22 +15,18 @@ internal final class LoginViewModelSpec: QuickSpec {
     let disposeBag = DisposeBag()
     var dependencies: MockApplicationDependencies!
     var viewModel: LoginViewModel!
-    
-    var userLoggedInCalled: Bool!
+
     var didTapRegisterCalled: Bool!
 
     override func spec() {
         
         beforeEach {
-            self.userLoggedInCalled = false
             self.didTapRegisterCalled = false
             
             self.dependencies = MockApplicationDependencies()
             self.viewModel = LoginViewModel(dependencies: self.dependencies)
             self.viewModel.eventTriggered = { [unowned self] event in
                 switch event {
-                case .userLoggedIn:
-                    self.userLoggedInCalled = true
                 case .didTapRegister:
                     self.didTapRegisterCalled = true
                 }
@@ -96,12 +92,9 @@ internal final class LoginViewModelSpec: QuickSpec {
                     }
                     
                     it("should save passed token") {
-                        expect(self.dependencies.authenticationService.token).toEventually(equal("fixture_token"))
+                        expect(self.dependencies.authenticationService.token.value).toEventually(equal("fixture_token"))
                     }
-                    
-                    it("should tell flow controller that user logged in") {
-                        expect(self.userLoggedInCalled).toEventually(equal(true))
-                    }
+
                 }
                 
                 context("with wrong credentials") {
@@ -116,7 +109,7 @@ internal final class LoginViewModelSpec: QuickSpec {
                     }
                     
                     it("should not have token saved") {
-                        expect(self.dependencies.authenticationService.token).toEventually(beNil())
+                        expect(self.dependencies.authenticationService.token.value).toEventually(beNil())
                     }
                     
                     it("should show error message") {

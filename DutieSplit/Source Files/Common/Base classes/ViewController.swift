@@ -61,13 +61,13 @@ internal class ViewController<View: UIView, ControllerViewModel: ViewModel>: Typ
     internal func setupBaseBindings() {
         viewModel
             .isLoading
-            .asDriver()
+            .asObservable()
+            .distinctUntilChanged()
             .skip(1)
+            .takeWhile { [unowned self] _ in return self.isShowingDefaultLoader }
+            .asDriver(onErrorJustReturn: false)
             .drive(onNext: { [unowned self] isLoading in
-                UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading
-                if self.isShowingDefaultLoader {
-                    self.defaultLoader.toggle(isLoading)
-                }
+                self.defaultLoader.toggle(isLoading)
             })
             .disposed(by: disposeBag)
         

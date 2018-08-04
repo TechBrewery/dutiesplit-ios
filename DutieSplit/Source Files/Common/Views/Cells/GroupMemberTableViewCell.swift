@@ -26,7 +26,7 @@ internal final class GroupMemberTableViewCell: TableViewCell, ViewSetupable {
         axis: .horizontal,
         with: [titleLabel, subtitleLabel],
         spacing: 2
-        ).layoutable()
+    ).layoutable()
 
     /// - SeeAlso: ViewSetupable
     func setupViewHierarchy() {

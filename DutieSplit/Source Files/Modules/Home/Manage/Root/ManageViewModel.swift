@@ -7,8 +7,8 @@
 import RxSwift
 import UIKit.UIImage
 
-internal final class ManageViewModel: ViewModel, BindingsSetupable {
-    internal typealias Dependencies = HasNetworkService & HasAuthenticationService
+internal final class ManageViewModel: ViewModel {
+    internal typealias Dependencies = HasUserController
     internal typealias EventCallback = (Event) -> ()
     
     /// Enum describing events that can be triggered
@@ -17,7 +17,6 @@ internal final class ManageViewModel: ViewModel, BindingsSetupable {
         case didTapGroupSettings
         case didTapProfile
         case didTapSwitchGroup
-        case didTapLogout
     }
     
     /// Callback with triggered event
@@ -65,14 +64,7 @@ internal final class ManageViewModel: ViewModel, BindingsSetupable {
         case .switchGroup:
             eventTriggered?(.didTapSwitchGroup)
         case .logout:
-            dependencies.authenticationService.removeToken()
-            eventTriggered?(.didTapLogout)
+            dependencies.userController.logout()
         }
     }
-    
-    /// - SeeAlso: BindingsSetupable
-    func setupBindings() {
-        
-    }
 }
-

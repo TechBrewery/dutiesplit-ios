@@ -6,7 +6,7 @@
 
 import RxSwift
 
-internal final class AddActivityViewModel: ViewModel, BindingsSetupable {
+internal final class AddActivityViewModel: ViewModel {
     internal typealias Dependencies = HasNetworkService
     internal typealias EventCallback = (Event) -> ()
     
@@ -19,6 +19,9 @@ internal final class AddActivityViewModel: ViewModel, BindingsSetupable {
     
     /// Callback with triggered event
     var eventTriggered: EventCallback?
+
+    /// Indicates when cancel button was tapped
+    let cancelButtonTap = PublishSubject<Void>()
     
     private let dependencies: Dependencies
     
@@ -28,13 +31,8 @@ internal final class AddActivityViewModel: ViewModel, BindingsSetupable {
     ///   - depndencies: Dependencies to use in the class
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
-    }
-    
-    /// Indicates when cancel button was tapped
-    let cancelButtonTap = PublishSubject<Void>()
-    
-    /// - SeeAlso: BindingsSetupable
-    func setupBindings() {
+        super.init()
+
         cancelButtonTap
             .subscribe(onNext: { [unowned self] _ in
                 self.eventTriggered?(.didTapCancel)
