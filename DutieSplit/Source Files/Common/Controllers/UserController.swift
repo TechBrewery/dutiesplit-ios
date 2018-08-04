@@ -29,7 +29,7 @@ internal final class DefaultUserController: UserController {
     /// - SeeAlso: UserController.authState
     let authState: Observable<AuthState>
 
-    /// - SeeAlso: UserController.authState
+    /// - SeeAlso: UserController.user
     let user = Variable<User?>(nil)
 
     private let disposeBag = DisposeBag()
