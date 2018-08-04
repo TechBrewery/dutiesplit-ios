@@ -6,6 +6,7 @@
 
 import Foundation
 import RxSwift
+import UIKit.UIApplication
 
 /// Service for performing network requests
 internal protocol NetworkService {
@@ -13,8 +14,8 @@ internal protocol NetworkService {
     /// Performs network request and returns Single of its reponse
     ///
     /// - Parameter request: Request to be performed
-    /// - Returns: Observable of type Request.Response
-    func perform<Request>(request: Request) -> Observable<NetworkResponseResult<Request.Response>> where Request: NetworkRequest
+    /// - Returns: Single of type Request.Response
+    func perform<Request>(request: Request) -> Single<NetworkResponseResult<Request.Response>> where Request: NetworkRequest
     
     /// Parses response from the server
     ///
@@ -36,8 +37,6 @@ internal class DefaultNetworkService: NetworkService {
     
     private let authorizationErrorStatusCode = 401
     
-    private var onUnauthorizedError: () -> () = { }
-    
     /// Initialize network service with given session (leave empty for shared session)
     ///
     /// - Parameter session: Session to be used for requests
@@ -46,16 +45,10 @@ internal class DefaultNetworkService: NetworkService {
         self.session = session
     }
     
-    /// - SeeAlso: NetworkService.setUnauthorizedErrorCallback()
-    func setUnauthorizedErrorCallback(_ callback: @escaping () -> ()) {
-        onUnauthorizedError = callback
-    }
-    
     /// - SeeAlso: NetworkService.perform(request:)
-    func perform<Request>(request: Request) -> Observable<NetworkResponseResult<Request.Response>> where Request: NetworkRequest {
-        return authenticationService
-            .token
-            .asObservable()
+    func perform<Request>(request: Request) -> Single<NetworkResponseResult<Request.Response>> where Request: NetworkRequest {
+        return Single
+            .just(authenticationService.token.value)
             .flatMap { [unowned self] in self.send(request: URLRequest(request: request, token: $0)) }
             .flatMap { [unowned self] in self.parse(dataTaskResponse: $0, for: request) }
     }
@@ -65,8 +58,10 @@ internal class DefaultNetworkService: NetworkService {
             let task = self.session.dataTask(with: request) { data, response, error in
                 let wrappedResponse = HTTPURLResponseWrapper(response: response)
                 let response = URLSessionDataTaskResponse(data: data, response: wrappedResponse, error: error)
+                DispatchQueue.main.async { UIApplication.shared.isNetworkActivityIndicatorVisible = false }
                 single(.success(response))
             }
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
             task.resume()
             return Disposables.create() {
                 task.cancel()

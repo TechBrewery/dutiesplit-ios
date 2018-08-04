@@ -12,10 +12,10 @@ internal protocol UserController {
     var authState: Observable<AuthState> { get }
 
     /// Makes login request with given arguments
-    func login(email: String, password: String) -> Observable<NetworkError?>
+    func login(email: String, password: String) -> Single<NetworkError?>
 
     /// Makes register request with given arguments
-    func register(name: String, email: String, password: String) -> Observable<NetworkError?>
+    func register(name: String, email: String, password: String) -> Single<NetworkError?>
 
     /// Loggs out currect user
     func logout()
@@ -47,31 +47,33 @@ internal final class DefaultUserController: UserController {
     }
 
     /// - SeeAlso: UserController.login(email:password:)
-    func login(email: String, password: String) -> Observable<NetworkError?> {
-        return networkService
-            .perform(request: LoginRequest(email: email, password: password))
-            .map { [unowned self] response in
+    func login(email: String, password: String) -> Single<NetworkError?> {
+        return Single
+            .just(LoginRequest(email: email, password: password))
+            .flatMap { [unowned self] in self.networkService.perform(request: $0) }
+            .flatMap { [unowned self] response in
                 switch response {
                     case .success(let response):
                         self.authenticationService.save(token: response.token)
-                        return nil
+                        return .just(nil)
                     case .failure(let error):
-                        return error
+                        return .just(error)
                 }
             }
     }
 
     /// - SeeAlso: UserController.register(name:email:password:)
-    func register(name: String, email: String, password: String) -> Observable<NetworkError?> {
-        return networkService
-            .perform(request: RegisterRequest(name: name, email: email, password: password))
-            .map { [unowned self] response in
+    func register(name: String, email: String, password: String) -> Single<NetworkError?> {
+        return Single
+            .just(RegisterRequest(name: name, email: email, password: password))
+            .flatMap { [unowned self] in self.networkService.perform(request: $0) }
+            .flatMap { [unowned self] response in
                 switch response {
                 case .success(let response):
                     self.authenticationService.save(token: response.token)
-                    return nil
+                    return .just(nil)
                 case .failure(let error):
-                    return error
+                    return .just(error)
                 }
             }
     }

@@ -35,12 +35,17 @@ internal final class ApplicationFlowController {
     internal func startApp() {
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
-        dependencies.authenticationService
-            .token
-            .asDriver()
-            .drive(onNext: { [unowned self] token in
-                self.changeRootFlowController(to: token == nil ? self.makeLoginFlowController() : self.makeHomeFlowController())
-            })
+
+        dependencies.userController
+            .authState
+            .asDriver(onErrorJustReturn: .unauthenticated)
+            .map { [unowned self] state -> FlowController in
+                switch state {
+                case .authenticated(_): return self.makeHomeFlowController()
+                case .unauthenticated: return self.makeLoginFlowController()
+                }
+            }
+            .drive(onNext: { [unowned self] flowController in self.changeRootFlowController(to: flowController) })
             .disposed(by: disposeBag)
 
     }

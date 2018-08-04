@@ -39,7 +39,7 @@ internal final class LoginViewModel: ViewModel {
 
     private lazy var isEmailValid = emailText.asObservable().map { EmailValidator.validate($0) }
 
-    private lazy var isPasswordValid = passwordText.asObservable().map { PasswordValidator.validate($0) }
+    private lazy var isPasswordValid = passwordText.asObservable().map { PasswordValidator.validate($0) }    
     
     /// Initialize View model with needed dependencies
     ///
@@ -52,7 +52,7 @@ internal final class LoginViewModel: ViewModel {
         loginButtonTap
             .do(onNext: { [unowned self] in self.isLoading.value = true })
             .withLatestFrom(Observable.combineLatest(emailText.asObservable(), passwordText.asObservable()))
-            .flatMapLatest { [unowned self] in self.dependencies.userController.login(email: $0, password: $1) }
+            .flatMap { [unowned self] in self.dependencies.userController.login(email: $0, password: $1) }
             .do(onNext: { [unowned self] _ in self.isLoading.value = false })
             .observeOn(MainScheduler.instance)
             .subscribe( onNext: { [unowned self] error in
