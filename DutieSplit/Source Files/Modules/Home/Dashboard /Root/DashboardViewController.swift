@@ -6,7 +6,7 @@
 
 import UIKit
 
-internal final class DashboardViewController: ViewController<DashboardView, DashboardViewModel>, BindingsSetupable, NavigationBarSetupable, UITableViewDataSource, UITableViewDelegate {
+internal final class DashboardViewController: MVVMViewController<DashboardView, DashboardViewModel>, BindingsSetupable, NavigationBarSetupable, UITableViewDataSource, UITableViewDelegate {
     
     /// - SeeAlso: UIViewController
     override func viewDidLoad() {

@@ -1,5 +1,5 @@
 //
-//  TypedViewController.swift
+//  CustomViewController.swift
 //  DutieSplit
 //
 
@@ -7,7 +7,7 @@
 import UIKit
 
 /// Base class for view controllers with programatically created `View`
-internal class TypedViewController<View: UIView>: FlowAwareViewController {
+internal class CustomViewController<View: UIView>: ViewController {
     
     /// Custom View
     let customView: View

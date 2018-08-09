@@ -6,7 +6,7 @@
 
 import UIKit
 
-internal final class ManageViewController: ViewController<ManageView, ManageViewModel>, BindingsSetupable, NavigationBarSetupable, UITableViewDelegate, UITableViewDataSource {
+internal final class ManageViewController: MVVMViewController<ManageView, ManageViewModel>, BindingsSetupable, NavigationBarSetupable, UITableViewDelegate, UITableViewDataSource {
     
     /// - SeeAlso: UIViewController
     override func viewDidLoad() {

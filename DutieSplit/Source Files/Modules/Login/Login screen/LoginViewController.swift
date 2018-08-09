@@ -6,7 +6,7 @@
 
 import UIKit
 
-internal final class LoginViewController: ViewController<LoginView, LoginViewModel>, BindingsSetupable, NavigationBarSetupable {
+internal final class LoginViewController: MVVMViewController<LoginView, LoginViewModel>, BindingsSetupable, NavigationBarSetupable {
     
     /// - SeeAlso: NavigationBarSetupable
     func setup(navigationBar: UINavigationBar) {

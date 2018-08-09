@@ -6,7 +6,7 @@
 
 import UIKit
 
-internal final class ProfileViewController: ViewController<ProfileView, ProfileViewModel>, BindingsSetupable, NavigationBarSetupable {
+internal final class ProfileViewController: MVVMViewController<ProfileView, ProfileViewModel>, BindingsSetupable, NavigationBarSetupable {
     
     /// - SeeAlso: UIViewController
     override func viewDidLoad() {

@@ -33,7 +33,7 @@
 		7C9BF5A52088F719002BF7B2 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5A22088F719002BF7B2 /* AlertPresentable.swift */; };
 		7C9BF5A62088F719002BF7B2 /* CrashLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5A32088F719002BF7B2 /* CrashLogger.swift */; };
 		7C9BF5A82088F7B2002BF7B2 /* LoginFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5A72088F7B2002BF7B2 /* LoginFlowController.swift */; };
-		7C9BF5AA2088F844002BF7B2 /* TypedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5A92088F844002BF7B2 /* TypedViewController.swift */; };
+		7C9BF5AA2088F844002BF7B2 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5A92088F844002BF7B2 /* CustomViewController.swift */; };
 		7C9BF5B02088FB64002BF7B2 /* DutieSplitKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5AE2088FB63002BF7B2 /* DutieSplitKeys.m */; };
 		7C9BF5B12088FB64002BF7B2 /* Keys.podspec.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C9BF5AF2088FB63002BF7B2 /* Keys.podspec.json */; };
 		7C9BF5B32088FBEF002BF7B2 /* bitrise.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7C9BF5B22088FBEF002BF7B2 /* bitrise.yml */; };
@@ -48,14 +48,14 @@
 		7C9BF5C82088FCA0002BF7B2 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5C12088FCA0002BF7B2 /* UIDeviceExtension.swift */; };
 		7C9BF5C92088FCA0002BF7B2 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5C22088FCA0002BF7B2 /* UITableViewExtension.swift */; };
 		7C9BF5CB2088FCCB002BF7B2 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5CA2088FCCB002BF7B2 /* UIViewExtension.swift */; };
-		7C9BF5CD2088FD53002BF7B2 /* FlowAwareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5CC2088FD53002BF7B2 /* FlowAwareViewController.swift */; };
+		7C9BF5CD2088FD53002BF7B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5CC2088FD53002BF7B2 /* ViewController.swift */; };
 		7C9BF5CF2088FD95002BF7B2 /* NavigationBarSetupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5CE2088FD95002BF7B2 /* NavigationBarSetupable.swift */; };
 		7C9BF5D12088FFC2002BF7B2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5D02088FFC2002BF7B2 /* ViewModel.swift */; };
 		7C9BF5D320890069002BF7B2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7C9BF5D220890069002BF7B2 /* README.md */; };
 		7C9BF5D6208902BE002BF7B2 /* BindingsSetupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5D5208902BE002BF7B2 /* BindingsSetupable.swift */; };
 		7C9BF5DB2089059D002BF7B2 /* ViewSetupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5DA2089059D002BF7B2 /* ViewSetupable.swift */; };
 		7C9BF5DD20890654002BF7B2 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5DC20890654002BF7B2 /* View.swift */; };
-		7C9BF5E1208908D1002BF7B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5E0208908D1002BF7B2 /* ViewController.swift */; };
+		7C9BF5E1208908D1002BF7B2 /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5E0208908D1002BF7B2 /* MVVMViewController.swift */; };
 		7C9BF5E320890E14002BF7B2 /* KeyboardAwareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5E220890E14002BF7B2 /* KeyboardAwareViewController.swift */; };
 		7C9E1AC420AC92890027CF6E /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E1AC320AC92890027CF6E /* SectionHeader.swift */; };
 		7C9E1AC620AC9C340027CF6E /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E1AC520AC9C340027CF6E /* PersonTableViewCell.swift */; };
@@ -166,7 +166,7 @@
 		7C9BF5A22088F719002BF7B2 /* AlertPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		7C9BF5A32088F719002BF7B2 /* CrashLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrashLogger.swift; sourceTree = "<group>"; };
 		7C9BF5A72088F7B2002BF7B2 /* LoginFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFlowController.swift; sourceTree = "<group>"; };
-		7C9BF5A92088F844002BF7B2 /* TypedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypedViewController.swift; sourceTree = "<group>"; };
+		7C9BF5A92088F844002BF7B2 /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		7C9BF5AD2088FB63002BF7B2 /* DutieSplitKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DutieSplitKeys.h; sourceTree = "<group>"; };
 		7C9BF5AE2088FB63002BF7B2 /* DutieSplitKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DutieSplitKeys.m; sourceTree = "<group>"; };
 		7C9BF5AF2088FB63002BF7B2 /* Keys.podspec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Keys.podspec.json; sourceTree = "<group>"; };
@@ -182,14 +182,14 @@
 		7C9BF5C12088FCA0002BF7B2 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 		7C9BF5C22088FCA0002BF7B2 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		7C9BF5CA2088FCCB002BF7B2 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		7C9BF5CC2088FD53002BF7B2 /* FlowAwareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowAwareViewController.swift; sourceTree = "<group>"; };
+		7C9BF5CC2088FD53002BF7B2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7C9BF5CE2088FD95002BF7B2 /* NavigationBarSetupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarSetupable.swift; sourceTree = "<group>"; };
 		7C9BF5D02088FFC2002BF7B2 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		7C9BF5D220890069002BF7B2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		7C9BF5D5208902BE002BF7B2 /* BindingsSetupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingsSetupable.swift; sourceTree = "<group>"; };
 		7C9BF5DA2089059D002BF7B2 /* ViewSetupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSetupable.swift; sourceTree = "<group>"; };
 		7C9BF5DC20890654002BF7B2 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		7C9BF5E0208908D1002BF7B2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7C9BF5E0208908D1002BF7B2 /* MVVMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMViewController.swift; sourceTree = "<group>"; };
 		7C9BF5E220890E14002BF7B2 /* KeyboardAwareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAwareViewController.swift; sourceTree = "<group>"; };
 		7C9E1AC320AC92890027CF6E /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		7C9E1AC520AC9C340027CF6E /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
@@ -508,6 +508,7 @@
 			isa = PBXGroup;
 			children = (
 				7CB54DAE209F613D007EC75D /* HomeFlowController.swift */,
+				7C4F2C6820A5C70000E19EB0 /* HomeTabBarController.swift */,
 				7CE656D820A5D81800BA8FCA /* Dashboard  */,
 				7CCCC35020CBB3BB006D886A /* Add Activity */,
 				7CE656D920A5D82A00BA8FCA /* Manage */,
@@ -528,13 +529,12 @@
 		7C9FA3B620839E1D0095E647 /* Base classes */ = {
 			isa = PBXGroup;
 			children = (
-				7C9BF5E0208908D1002BF7B2 /* ViewController.swift */,
+				7C9BF5CC2088FD53002BF7B2 /* ViewController.swift */,
+				7C9BF5A92088F844002BF7B2 /* CustomViewController.swift */,
+				7C9BF5E0208908D1002BF7B2 /* MVVMViewController.swift */,
 				7C9BF5D02088FFC2002BF7B2 /* ViewModel.swift */,
 				7C9BF5DC20890654002BF7B2 /* View.swift */,
-				7C9BF5A92088F844002BF7B2 /* TypedViewController.swift */,
-				7C9BF5CC2088FD53002BF7B2 /* FlowAwareViewController.swift */,
 				7C9BF5E220890E14002BF7B2 /* KeyboardAwareViewController.swift */,
-				7C4F2C6820A5C70000E19EB0 /* HomeTabBarController.swift */,
 				7CE656E920A5F53A00BA8FCA /* TableViewCell.swift */,
 			);
 			path = "Base classes";
@@ -954,7 +954,7 @@
 				7CE656E120A5D86400BA8FCA /* ManageViewController.swift in Sources */,
 				7CCCC36B20CBDA59006D886A /* GroupDutiesView.swift in Sources */,
 				7CC4567F20A5BDDD0037463B /* RegisterRequest.swift in Sources */,
-				7C9BF5AA2088F844002BF7B2 /* TypedViewController.swift in Sources */,
+				7C9BF5AA2088F844002BF7B2 /* CustomViewController.swift in Sources */,
 				7CE656DB20A5D84000BA8FCA /* DashboardViewController.swift in Sources */,
 				7C9BF5C32088FCA0002BF7B2 /* UICollectionViewExtension.swift in Sources */,
 				7CCCC35720CBB7BE006D886A /* AddActivityViewModel.swift in Sources */,
@@ -962,7 +962,7 @@
 				7C9BF5A02088F712002BF7B2 /* HasDependency.swift in Sources */,
 				7CF7D55F209DC2C2003A3FC1 /* NetworkRequest.swift in Sources */,
 				7CCCC37B20CBDC17006D886A /* SwitchGroupViewModel.swift in Sources */,
-				7C9BF5E1208908D1002BF7B2 /* ViewController.swift in Sources */,
+				7C9BF5E1208908D1002BF7B2 /* MVVMViewController.swift in Sources */,
 				7CDE5C0720FB59B500F25F58 /* DutieTableViewCell.swift in Sources */,
 				7CB54DAD209F59CB007EC75D /* RegisterView.swift in Sources */,
 				7CE656DF20A5D85400BA8FCA /* DashboardViewModel.swift in Sources */,
@@ -1026,7 +1026,7 @@
 				7CB54DA2209EDD04007EC75D /* DefaultLoader.swift in Sources */,
 				7C9BF59A2088F6DC002BF7B2 /* ApplicationKeys.swift in Sources */,
 				7CB54DAF209F613D007EC75D /* HomeFlowController.swift in Sources */,
-				7C9BF5CD2088FD53002BF7B2 /* FlowAwareViewController.swift in Sources */,
+				7C9BF5CD2088FD53002BF7B2 /* ViewController.swift in Sources */,
 				7CCCC35520CBB7AF006D886A /* AddActivityViewController.swift in Sources */,
 				7C9BF59E2088F6F7002BF7B2 /* HockeyAppService.swift in Sources */,
 				7C9BF5CB2088FCCB002BF7B2 /* UIViewExtension.swift in Sources */,

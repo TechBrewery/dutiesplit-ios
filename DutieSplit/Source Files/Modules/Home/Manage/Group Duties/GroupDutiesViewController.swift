@@ -6,7 +6,7 @@
 
 import UIKit
 
-internal final class GroupDutiesViewController: ViewController<GroupDutiesView, GroupDutiesViewModel>, BindingsSetupable, NavigationBarSetupable, UITableViewDataSource, UITableViewDelegate {
+internal final class GroupDutiesViewController: MVVMViewController<GroupDutiesView, GroupDutiesViewModel>, BindingsSetupable, NavigationBarSetupable, UITableViewDataSource, UITableViewDelegate {
     
     /// - SeeAlso: UIViewController
     override func viewDidLoad() {

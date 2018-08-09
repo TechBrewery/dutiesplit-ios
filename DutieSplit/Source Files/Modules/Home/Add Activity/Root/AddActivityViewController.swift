@@ -6,7 +6,7 @@
 
 import UIKit
 
-internal final class AddActivityViewController: ViewController<AddActivityView, AddActivityViewModel>, BindingsSetupable, NavigationBarSetupable {
+internal final class AddActivityViewController: MVVMViewController<AddActivityView, AddActivityViewModel>, BindingsSetupable, NavigationBarSetupable {
     
     private lazy var cancelButton = UIBarButtonItem(title: Localizable.Common.cancel, style: .plain, target: nil, action: nil)
     

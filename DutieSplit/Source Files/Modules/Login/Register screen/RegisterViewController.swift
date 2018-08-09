@@ -6,7 +6,7 @@
 
 import UIKit
 
-internal final class RegisterViewController: ViewController<RegisterView, RegisterViewModel>, BindingsSetupable, NavigationBarSetupable {
+internal final class RegisterViewController: MVVMViewController<RegisterView, RegisterViewModel>, BindingsSetupable, NavigationBarSetupable {
     
     /// - SeeAlso: NavigationBarSetupable
     func setup(navigationBar: UINavigationBar) {

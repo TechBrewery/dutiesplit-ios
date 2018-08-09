@@ -6,7 +6,7 @@
 
 import UIKit
 
-internal final class SwitchGroupViewController: ViewController<SwitchGroupView, SwitchGroupViewModel>, BindingsSetupable, NavigationBarSetupable {
+internal final class SwitchGroupViewController: MVVMViewController<SwitchGroupView, SwitchGroupViewModel>, BindingsSetupable, NavigationBarSetupable {
     
     /// - SeeAlso: UIViewController
     override func viewDidLoad() {

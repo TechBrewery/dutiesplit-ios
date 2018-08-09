@@ -6,7 +6,7 @@
 
 import UIKit
 
-internal final class GroupSettingsViewController: ViewController<GroupSettingsView, GroupSettingsViewModel>, BindingsSetupable, NavigationBarSetupable, UITableViewDataSource, UITableViewDelegate {
+internal final class GroupSettingsViewController: MVVMViewController<GroupSettingsView, GroupSettingsViewModel>, BindingsSetupable, NavigationBarSetupable, UITableViewDataSource, UITableViewDelegate {
 
     private let editNameButton = UIBarButtonItem(title: Localizable.GroupSettingsScreen.editName, style: .plain, target: nil, action: nil)
     
