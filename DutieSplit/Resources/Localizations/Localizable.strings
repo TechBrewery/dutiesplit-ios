@@ -40,6 +40,11 @@
 "group.settings.group.members" = "GROUP MEMBERS";
 "group.settings.add.member" = "ADD MEMBER >";
 "group.settings.edit.name" = "Edit name";
+"group.settings.group.name" = "Group name";
+"group.settings.add.member.alert.message" = "Type the email of the person";
+"group.settings.email.placeholder" = "Email";
+"group.settings.error.group.name.empty" = "Group name cannot be empty";
+"group.settings.error.email.empty" = "Email of the person cannot be empty";
 
 // Profile screen
 "profile.title" = "Profile";

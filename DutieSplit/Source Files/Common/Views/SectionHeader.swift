@@ -61,7 +61,7 @@ internal final class SectionHeader: View, ViewSetupable {
             addSubview(blurEffectView)
         }
         
-        if shouldHaveRightButton{
+        if shouldHaveRightButton {
             addSubview(rightButton)
         }
         

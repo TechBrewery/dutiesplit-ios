@@ -30,6 +30,18 @@ internal final class GroupSettingsViewController: MVVMViewController<GroupSettin
     func setupBindings() {
         viewModel.groupName.asDriver().drive(rx.title).disposed(by: disposeBag)
         editNameButton.rx.tap.bind(to: viewModel.editNameTapped).disposed(by: disposeBag)
+
+        viewModel.showEditNameAlert = { [unowned self] prefilledText in
+            self.showTextFieldAlert(
+                withMessage: Localizable.GroupSettingsScreen.editName,
+                title: nil,
+                prefilledText: prefilledText,
+                placeholder: Localizable.GroupSettingsScreen.groupName,
+                onConfirmTap: { groupName in
+                    self.viewModel.changeGroupName(to: groupName)
+                }
+            )
+        }
     }
 
     /// - SeeAlso: UITableViewDataSource
@@ -46,9 +58,18 @@ internal final class GroupSettingsViewController: MVVMViewController<GroupSettin
                 leftLabelTitle: Localizable.GroupSettingsScreen.groupMembers,
                 height: .large,
                 rightButtonTitle: Localizable.GroupSettingsScreen.addMember,
-                onRightButtonTap: {
-                    print("section ADD MEMBER tap")
-                })
+                onRightButtonTap: { [unowned self] in
+                    self.showTextFieldAlert(
+                        withMessage: Localizable.GroupSettingsScreen.addMemberAlertMessage,
+                        title: nil,
+                        prefilledText: nil,
+                        placeholder: Localizable.GroupSettingsScreen.emailPlaceholder,
+                        onConfirmTap: { personEmail in
+                            self.viewModel.addToGroup(email: personEmail)
+                        }
+                    )
+                }
+            )
         default:
             view = nil
         }
