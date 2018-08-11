@@ -34,6 +34,7 @@ internal final class ApplicationFlowController {
     /// Call after application was loaded, it will set proper view controller as window root
     internal func startApp() {
         window?.backgroundColor = .white
+        window?.tintColor = .dsRed
         window?.makeKeyAndVisible()
 
         dependencies.userController
