@@ -6,17 +6,17 @@
 
 import UIKit.UIAlertController
 
-/// Protocol adding convenience methods for showing alerts inside view controller
+/// Protocol adding convenience methods for showing alerts inside view controller.
 internal protocol AlertPresentable { }
 
 internal extension AlertPresentable where Self: UIViewController {
     
-    /// Shows default Alert with single OK button
+    /// Shows default Alert with single OK button.
     ///
     /// - Parameters:
-    ///   - message: Message to display on the alert
-    ///   - title: Title to display on the alert, nil means no title to display
-    ///   - onTap: Callback invoked after OK button was tapped
+    ///   - message: Message to display on the alert.
+    ///   - title: Title to display on the alert, nil means no title to display.
+    ///   - onTap: Callback invoked after OK button was tapped.
     func showAlert(withMessage message: String, title: String? = nil, onTap: ((UIAlertAction) -> ())? = nil) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: Localizable.Common.ok, style: .default, handler: onTap)
@@ -24,13 +24,13 @@ internal extension AlertPresentable where Self: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    /// Shows confirmation alert with destructive styled confirmation button
+    /// Shows confirmation alert with destructive styled confirmation button.
     ///
     /// - Parameters:
-    ///   - title: Title of the alert
-    ///   - message: Message to display on the alert
-    ///   - confirmButtonText: Text of the confirmation button
-    ///   - onConfirmTap: Callback called after tapping confirmation button
+    ///   - title: Title of the alert.
+    ///   - message: Message to display on the alert.
+    ///   - confirmButtonText: Text of the confirmation button.
+    ///   - onConfirmTap: Callback called after tapping confirmation button.
     func showDestructiveConfirmationAlert(withTitle title: String, message: String, confirmButtonText: String, onConfirmTap: @escaping (UIAlertAction) -> ()) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let confirmAction = UIAlertAction(title: confirmButtonText, style: .destructive, handler: onConfirmTap)
@@ -39,7 +39,15 @@ internal extension AlertPresentable where Self: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
 
-    /// Shows default Alert with TextField and two buttons (cancel and confirm)
+    /// Shows default Alert with TextField and two buttons (cancel and confirm).
+    ///
+    /// - Parameters:
+    ///   - message: Message to display on the alert.
+    ///   - title: Title of the alert.
+    ///   - prefilledText: Text that will be used for the textfield.
+    ///   - placeholder: Placeholder that will be used for tht textfield.
+    ///   - onConfirmTap: Callback called after tapping confiration button.
+    ///   - onCancelTap: Callback called after tapping cancel button.
     func showTextFieldAlert(withMessage message: String, title: String?, prefilledText: String?, placeholder: String?, onConfirmTap: ((String) -> ())?, onCancelTap: ((UIAlertAction) -> ())? = nil) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addTextField { textField in
