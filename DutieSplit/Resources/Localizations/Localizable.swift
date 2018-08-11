@@ -55,6 +55,14 @@ internal struct Localizable {
         static let groupMembers = localized("group.settings.group.members")
         static let addMember = localized("group.settings.add.member")
         static let editName = localized("group.settings.edit.name")
+        static let groupName = localized("group.settings.group.name")
+        static let addMemberAlertMessage = localized("group.settings.add.member.alert.message")
+        static let emailPlaceholder = localized("group.settings.email.placeholder")
+
+        struct Error {
+            static let emptyGroupName = localized("group.settings.error.group.name.empty")
+            static let emptyEmail = localized("group.settings.error.email.empty")
+        }
     }
     
     struct ProfileScreen {
