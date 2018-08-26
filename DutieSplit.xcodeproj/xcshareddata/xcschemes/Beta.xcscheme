@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7C9B8F6E2083946200661EFE"
-               BuildableName = "DutieSplit.app"
+               BuildableName = "DutieSplit DEV.app"
                BlueprintName = "DutieSplit"
                ReferencedContainer = "container:DutieSplit.xcodeproj">
             </BuildableReference>
@@ -34,7 +34,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7C9B8F822083946400661EFE"
-               BuildableName = "DutieSplitTests.xctest"
+               BuildableName = "DutieSplit Tests.xctest"
                BlueprintName = "DutieSplitTests"
                ReferencedContainer = "container:DutieSplit.xcodeproj">
             </BuildableReference>
@@ -44,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7C9B8F6E2083946200661EFE"
-            BuildableName = "DutieSplit.app"
+            BuildableName = "DutieSplit DEV.app"
             BlueprintName = "DutieSplit"
             ReferencedContainer = "container:DutieSplit.xcodeproj">
          </BuildableReference>
@@ -67,7 +67,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7C9B8F6E2083946200661EFE"
-            BuildableName = "DutieSplit.app"
+            BuildableName = "DutieSplit DEV.app"
             BlueprintName = "DutieSplit"
             ReferencedContainer = "container:DutieSplit.xcodeproj">
          </BuildableReference>
@@ -86,7 +86,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7C9B8F6E2083946200661EFE"
-            BuildableName = "DutieSplit.app"
+            BuildableName = "DutieSplit DEV.app"
             BlueprintName = "DutieSplit"
             ReferencedContainer = "container:DutieSplit.xcodeproj">
          </BuildableReference>
