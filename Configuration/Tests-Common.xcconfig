@@ -1,0 +1,16 @@
+PRODUCT_MODULE_NAME = DutieSplitTests
+PRODUCT_NAME = DutieSplit Tests
+PRODUCT_BUNDLE_IDENTIFIER = co.techbrewery.dutiesplit.tests
+
+INFOPLIST_FILE = DutieSplitTests/Supporting Files/Info.plist
+
+TEST_HOST = $(BUILT_PRODUCTS_DIR)/$(_HOST_APP_NAME).app/$(_HOST_APP_NAME)
+BUNDLE_LOADER = $(TEST_HOST)
+
+SWIFT_VERSION = 4.1
+SDKROOT = iphoneos
+
+FRAMEWORK_SEARCH_PATHS = $(inherited) $(PROJECT_DIR)/Carthage/Build/iOS
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
+
+COPY_PHASE_STRIP = NO

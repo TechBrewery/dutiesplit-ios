@@ -1,0 +1,3 @@
+#include "Tests-Common.xcconfig"
+
+_HOST_APP_NAME = DutieSplit STG

@@ -63,6 +63,8 @@
 		7C9E1ACA20ACA86D0027CF6E /* DashboardFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E1AC920ACA86D0027CF6E /* DashboardFlowController.swift */; };
 		7C9FA3BE20839E500095E647 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C9FA3BC20839E500095E647 /* Localizable.strings */; };
 		7C9FA3BF20839E500095E647 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9FA3BD20839E500095E647 /* Localizable.swift */; };
+		7CA045DE21330C58000E08DC /* TestsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA045DD21330C58000E08DC /* TestsHelper.swift */; };
+		7CA045E021330CFF000E08DC /* TestsHelperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA045DF21330CFF000E08DC /* TestsHelperSpec.swift */; };
 		7CB54D9E209E219C007EC75D /* UITextFieldFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54D9D209E219C007EC75D /* UITextFieldFactory.swift */; };
 		7CB54DA0209EDC1D007EC75D /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54D9F209EDC1D007EC75D /* Loader.swift */; };
 		7CB54DA2209EDD04007EC75D /* DefaultLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54DA1209EDD04007EC75D /* DefaultLoader.swift */; };
@@ -151,11 +153,11 @@
 		7C4F2C6820A5C70000E19EB0 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		7C7E9E6A20AE185D0034D448 /* ManageFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageFlowController.swift; sourceTree = "<group>"; };
 		7C7E9E6D20AE1D5F0034D448 /* ManageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTableViewCell.swift; sourceTree = "<group>"; };
-		7C9B8F6F2083946200661EFE /* DutieSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DutieSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C9B8F6F2083946200661EFE /* DutieSplit DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DutieSplit DEV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9B8F722083946200661EFE /* ApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDelegate.swift; sourceTree = "<group>"; };
 		7C9B8F792083946400661EFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C9B8F7E2083946400661EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C9B8F832083946400661EFE /* DutieSplitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DutieSplitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C9B8F832083946400661EFE /* DutieSplit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DutieSplit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9B8F892083946400661EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C9BF5972088F6DB002BF7B2 /* ApplicationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationKeys.swift; sourceTree = "<group>"; };
 		7C9BF5982088F6DB002BF7B2 /* ApplicationDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationDependencies.swift; sourceTree = "<group>"; };
@@ -198,12 +200,16 @@
 		7C9FA396208399000095E647 /* App-AppStore.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "App-AppStore.xcconfig"; sourceTree = "<group>"; };
 		7C9FA397208399000095E647 /* App-Beta.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "App-Beta.xcconfig"; sourceTree = "<group>"; };
 		7C9FA398208399000095E647 /* App-Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "App-Development.xcconfig"; sourceTree = "<group>"; };
-		7C9FA399208399000095E647 /* Test-Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Test-Common.xcconfig"; sourceTree = "<group>"; };
+		7C9FA399208399000095E647 /* Tests-Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Tests-Common.xcconfig"; sourceTree = "<group>"; };
 		7C9FA39A208399000095E647 /* App-Staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "App-Staging.xcconfig"; sourceTree = "<group>"; };
 		7C9FA39B208399000095E647 /* App-Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "App-Common.xcconfig"; sourceTree = "<group>"; };
 		7C9FA3AF20839AE00095E647 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		7C9FA3BC20839E500095E647 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7C9FA3BD20839E500095E647 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		7CA045DA21330945000E08DC /* Tests-Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Tests-Development.xcconfig"; sourceTree = "<group>"; };
+		7CA045DB213309BE000E08DC /* Tests-Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Tests-Staging.xcconfig"; sourceTree = "<group>"; };
+		7CA045DD21330C58000E08DC /* TestsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsHelper.swift; sourceTree = "<group>"; };
+		7CA045DF21330CFF000E08DC /* TestsHelperSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsHelperSpec.swift; sourceTree = "<group>"; };
 		7CB54D9D209E219C007EC75D /* UITextFieldFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldFactory.swift; sourceTree = "<group>"; };
 		7CB54D9F209EDC1D007EC75D /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		7CB54DA1209EDD04007EC75D /* DefaultLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoader.swift; sourceTree = "<group>"; };
@@ -290,6 +296,7 @@
 				7C19904920B9FBEF00DF098E /* LoginViewModelSpec.swift */,
 				7C33DFBD20BC7F0C00784D63 /* RegisterViewModelSpec.swift */,
 				7C33DFBF20BC84E400784D63 /* AuthenticationServiceSpec.swift */,
+				7CA045DF21330CFF000E08DC /* TestsHelperSpec.swift */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -337,8 +344,8 @@
 		7C9B8F702083946200661EFE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7C9B8F6F2083946200661EFE /* DutieSplit.app */,
-				7C9B8F832083946400661EFE /* DutieSplitTests.xctest */,
+				7C9B8F6F2083946200661EFE /* DutieSplit DEV.app */,
+				7C9B8F832083946400661EFE /* DutieSplit Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -416,7 +423,9 @@
 				7C9FA39A208399000095E647 /* App-Staging.xcconfig */,
 				7C9FA397208399000095E647 /* App-Beta.xcconfig */,
 				7C9FA396208399000095E647 /* App-AppStore.xcconfig */,
-				7C9FA399208399000095E647 /* Test-Common.xcconfig */,
+				7C9FA399208399000095E647 /* Tests-Common.xcconfig */,
+				7CA045DA21330945000E08DC /* Tests-Development.xcconfig */,
+				7CA045DB213309BE000E08DC /* Tests-Staging.xcconfig */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -489,6 +498,7 @@
 				7CCB039D2089142A009E2680 /* Factories */,
 				7CC4567720A5BB5A0037463B /* Validators */,
 				7C9FA3B620839E1D0095E647 /* Base classes */,
+				7CA045DC21330C39000E08DC /* Helpers */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -605,6 +615,14 @@
 				7CF7D564209DC3A6003A3FC1 /* SecureStorageService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		7CA045DC21330C39000E08DC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7CA045DD21330C58000E08DC /* TestsHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		7CB54DA7209F599C007EC75D /* Register screen */ = {
@@ -805,7 +823,7 @@
 			);
 			name = DutieSplit;
 			productName = DutieSplit;
-			productReference = 7C9B8F6F2083946200661EFE /* DutieSplit.app */;
+			productReference = 7C9B8F6F2083946200661EFE /* DutieSplit DEV.app */;
 			productType = "com.apple.product-type.application";
 		};
 		7C9B8F822083946400661EFE /* DutieSplitTests */ = {
@@ -815,7 +833,7 @@
 				7C9B8F7F2083946400661EFE /* Sources */,
 				7C9B8F802083946400661EFE /* Frameworks */,
 				7C9B8F812083946400661EFE /* Resources */,
-				7C19903220B98B7400DF098E /* ShellScript */,
+				7C19903220B98B7400DF098E /* Carthage script */,
 			);
 			buildRules = (
 			);
@@ -824,7 +842,7 @@
 			);
 			name = DutieSplitTests;
 			productName = DutieSplitTests;
-			productReference = 7C9B8F832083946400661EFE /* DutieSplitTests.xctest */;
+			productReference = 7C9B8F832083946400661EFE /* DutieSplit Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -842,7 +860,6 @@
 					};
 					7C9B8F822083946400661EFE = {
 						CreatedOnToolsVersion = 9.3;
-						TestTargetID = 7C9B8F6E2083946200661EFE;
 					};
 				};
 			};
@@ -894,23 +911,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7C19903220B98B7400DF098E /* ShellScript */ = {
+		7C19903220B98B7400DF098E /* Carthage script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(_CARTHAGE_BUILD_PATH)/HockeySDK.framework",
-				"$(_CARTHAGE_BUILD_PATH)/KeychainAccess.framework",
-				"$(_CARTHAGE_BUILD_PATH)/RxSwift.framework",
-				"$(_CARTHAGE_BUILD_PATH)/RxCocoa.framework",
-				"$(_CARTHAGE_BUILD_PATH)/RxOptional.framework",
-				"$(_CARTHAGE_BUILD_PATH)/ResponseDetective.framework",
-				"$(_CARTHAGE_BUILD_PATH)/Quick.framework",
-				"$(_CARTHAGE_BUILD_PATH)/Nimble.framework",
-				"$(_CARTHAGE_BUILD_PATH)/RxTest.framework",
-				"$(_CARTHAGE_BUILD_PATH)/RxBlocking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 			);
+			name = "Carthage script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -923,12 +936,12 @@
 			files = (
 			);
 			inputPaths = (
-				"$(_CARTHAGE_BUILD_PATH)/HockeySDK.framework",
-				"$(_CARTHAGE_BUILD_PATH)/KeychainAccess.framework",
-				"$(_CARTHAGE_BUILD_PATH)/RxSwift.framework",
-				"$(_CARTHAGE_BUILD_PATH)/RxCocoa.framework",
-				"$(_CARTHAGE_BUILD_PATH)/RxOptional.framework",
-				"$(_CARTHAGE_BUILD_PATH)/ResponseDetective.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/HockeySDK.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxOptional.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ResponseDetective.framework",
 			);
 			name = "Carthage script";
 			outputPaths = (
@@ -983,6 +996,7 @@
 				7CCB03A120891A3B009E2680 /* UIStackViewExtension.swift in Sources */,
 				7C9BF5A52088F719002BF7B2 /* AlertPresentable.swift in Sources */,
 				7C9FA3BF20839E500095E647 /* Localizable.swift in Sources */,
+				7CA045DE21330C58000E08DC /* TestsHelper.swift in Sources */,
 				7CE656EA20A5F53A00BA8FCA /* TableViewCell.swift in Sources */,
 				7C9BF5C62088FCA0002BF7B2 /* BoolExtension.swift in Sources */,
 				7CF7D571209E03B7003A3FC1 /* NetworkStatus.swift in Sources */,
@@ -1055,6 +1069,7 @@
 				7C19904220B9EB7900DF098E /* MockCrashLogger.swift in Sources */,
 				7C19904A20B9FBEF00DF098E /* LoginViewModelSpec.swift in Sources */,
 				7C33DFC020BC84E400784D63 /* AuthenticationServiceSpec.swift in Sources */,
+				7CA045E021330CFF000E08DC /* TestsHelperSpec.swift in Sources */,
 				7C19903E20B9EAEB00DF098E /* MockApplicationDependencies.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1085,7 +1100,7 @@
 		};
 		7C9B8F902083946400661EFE /* Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C9FA399208399000095E647 /* Test-Common.xcconfig */;
+			baseConfigurationReference = 7CA045DA21330945000E08DC /* Tests-Development.xcconfig */;
 			buildSettings = {
 			};
 			name = Development;
@@ -1105,7 +1120,7 @@
 		};
 		7C9FA3A420839A170095E647 /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C9FA399208399000095E647 /* Test-Common.xcconfig */;
+			baseConfigurationReference = 7CA045DB213309BE000E08DC /* Tests-Staging.xcconfig */;
 			buildSettings = {
 			};
 			name = Staging;
@@ -1125,8 +1140,8 @@
 		};
 		7C9FA3A720839A1E0095E647 /* Beta */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C9FA399208399000095E647 /* Test-Common.xcconfig */;
 			buildSettings = {
+				INSTALL_PATH = "";
 			};
 			name = Beta;
 		};
@@ -1145,7 +1160,6 @@
 		};
 		7C9FA3AA20839A270095E647 /* AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C9FA399208399000095E647 /* Test-Common.xcconfig */;
 			buildSettings = {
 			};
 			name = AppStore;

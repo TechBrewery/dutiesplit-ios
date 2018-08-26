@@ -18,11 +18,13 @@ private final class ApplicationDelegate: UIResponder, UIApplicationDelegate {
     fileprivate lazy var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
     
     fileprivate func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        guard !TestsHelper.isRunningUnitTests else { return false }
         applicationDependencies.crashLogger.start()
         return true
     }
     
     fileprivate func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        guard !TestsHelper.isRunningUnitTests else { return false }
         flowController.startApp()
         return true
     }
