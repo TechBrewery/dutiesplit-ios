@@ -22,6 +22,7 @@
 		7C4F2C6920A5C70000E19EB0 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4F2C6820A5C70000E19EB0 /* HomeTabBarController.swift */; };
 		7C7E9E6B20AE185D0034D448 /* ManageFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7E9E6A20AE185D0034D448 /* ManageFlowController.swift */; };
 		7C7E9E6E20AE1D5F0034D448 /* ManageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7E9E6D20AE1D5F0034D448 /* ManageTableViewCell.swift */; };
+		7C84A19A213A806A000CBEB7 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84A199213A806A000CBEB7 /* NetworkSession.swift */; };
 		7C9B8F732083946200661EFE /* ApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9B8F722083946200661EFE /* ApplicationDelegate.swift */; };
 		7C9B8F7A2083946400661EFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C9B8F792083946400661EFE /* Assets.xcassets */; };
 		7C9BF59A2088F6DC002BF7B2 /* ApplicationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5972088F6DB002BF7B2 /* ApplicationKeys.swift */; };
@@ -153,6 +154,7 @@
 		7C4F2C6820A5C70000E19EB0 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		7C7E9E6A20AE185D0034D448 /* ManageFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageFlowController.swift; sourceTree = "<group>"; };
 		7C7E9E6D20AE1D5F0034D448 /* ManageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTableViewCell.swift; sourceTree = "<group>"; };
+		7C84A199213A806A000CBEB7 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
 		7C9B8F6F2083946200661EFE /* DutieSplit DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DutieSplit DEV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9B8F722083946200661EFE /* ApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDelegate.swift; sourceTree = "<group>"; };
 		7C9B8F792083946400661EFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -765,6 +767,7 @@
 				7CF7D557209DC2C1003A3FC1 /* NetworkApplication.swift */,
 				7CF7D55C209DC2C2003A3FC1 /* NetworkError.swift */,
 				7CF7D570209E03B7003A3FC1 /* NetworkStatus.swift */,
+				7C84A199213A806A000CBEB7 /* NetworkSession.swift */,
 				7CF7D55B209DC2C1003A3FC1 /* URLRequestExtension+Networking.swift */,
 				7CCCC38220CD9E2C006D886A /* URLSessionDataTaskResponse.swift */,
 			);
@@ -958,6 +961,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CB54DA4209EE89B007EC75D /* UIButtonFactory.swift in Sources */,
+				7C84A19A213A806A000CBEB7 /* NetworkSession.swift in Sources */,
 				7CCB039C2089112E009E2680 /* SeparatorView.swift in Sources */,
 				7C4F2C6920A5C70000E19EB0 /* HomeTabBarController.swift in Sources */,
 				7C9BF5A82088F7B2002BF7B2 /* LoginFlowController.swift in Sources */,
