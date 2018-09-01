@@ -23,7 +23,6 @@ internal protocol NetworkApplication {
     
     /// The root subcomponent.
     var root: String { get }
-    
 }
 
 /// Staging Service

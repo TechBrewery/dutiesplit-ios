@@ -13,11 +13,12 @@ internal protocol ApplicationDependencies: class,
     HasCrashLogger,
     HasSecureStorageService,
     HasAuthenticationService,
+    HasNetworkSession,
     HasNetworkService,
     HasUserController { }
 
 /// - SeeAlso: ApplicationDependencies
-internal class DefaultApplicationDependencies: ApplicationDependencies {
+internal final class DefaultApplicationDependencies: ApplicationDependencies {
     
     lazy var viewControllerFactory = ViewControllerFactory(applicationDependencies: self)
     
@@ -31,16 +32,24 @@ internal class DefaultApplicationDependencies: ApplicationDependencies {
     }()
     
     lazy var authenticationService: AuthenticationService = DefaultAuthenticationService(secureStorageService: secureStorageService)
-    
-    lazy var networkService: NetworkService = {
+
+    lazy var networkSession: NetworkSession = {
         #if ENV_DEVELOPMENT
             let configuration = URLSessionConfiguration.default
             ResponseDetective.enable(inConfiguration: configuration)
-            return DefaultNetworkService(authenticationService: authenticationService, session: URLSession(configuration: configuration))
+            return DefaultNetworkSession(session: URLSession(configuration: configuration))
         #else
-            return DefaultNetworkService(authenticationService: authenticationService)
+            return DefaultNetworkSession(session: .shared)
         #endif
     }()
 
-    lazy var userController: UserController = DefaultUserController(networkService: networkService, authenticationService: authenticationService)
+    lazy var networkService: NetworkService = DefaultNetworkService(
+        authenticationService: authenticationService,
+        session: networkSession
+    )
+
+    lazy var userController: UserController = DefaultUserController(
+        networkService: networkService,
+        authenticationService: authenticationService
+    )
 }

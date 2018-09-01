@@ -22,8 +22,8 @@ internal final class RegisterViewModelSpec: QuickSpec {
             self.dependencies = MockApplicationDependencies()
             self.viewModel = RegisterViewModel(dependencies: self.dependencies)
             
-            MockNetworkService.mockedResponse = (
-                json: MockNetworkService.jsonFrom(filename: "LoginSuccess"),
+            MockNetworSession.mockedResponse = (
+                json: MockNetworSession.jsonFrom(filename: "LoginSuccess"),
                 statusCode: 200,
                 error: nil
             )
@@ -82,8 +82,8 @@ internal final class RegisterViewModelSpec: QuickSpec {
                 context("with wrong credentials") {
                     
                     beforeEach {
-                        MockNetworkService.mockedResponse = (
-                            json: MockNetworkService.jsonFrom(filename: "LoginFailure"),
+                        MockNetworSession.mockedResponse = (
+                            json: MockNetworSession.jsonFrom(filename: "LoginFailure"),
                             statusCode: 400,
                             error: nil
                         )

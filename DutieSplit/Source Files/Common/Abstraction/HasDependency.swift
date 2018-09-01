@@ -23,6 +23,10 @@ internal protocol HasSecureStorageService {
     var secureStorageService: SecureStorageService { get }
 }
 
+internal protocol HasNetworkSession {
+    var networkSession: NetworkSession { get }
+}
+
 internal protocol HasNetworkService {
     var networkService: NetworkService { get }
 }
