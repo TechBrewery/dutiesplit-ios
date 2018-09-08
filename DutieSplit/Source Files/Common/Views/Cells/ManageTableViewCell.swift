@@ -43,7 +43,7 @@ internal final class ManageTableViewCell: TableViewCell, ViewSetupable {
     
     /// - SeeAlso: ViewSetupable
     func setupConstraints() {
-        iconImageView.constraintToConstant(.init(width: 30, height: 30))
+        iconImageView.constrainToConstant(size: .init(width: 30, height: 30))
         NSLayoutConstraint.activate([
             contentView.heightAnchor.constraint(equalToConstant: 50),
             leftStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),

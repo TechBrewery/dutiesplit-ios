@@ -71,9 +71,9 @@ internal final class SectionHeader: View, ViewSetupable {
     /// - SeeAlso: ViewSetupable
     func setupConstraints() {
         if blurEffectView.superview != nil {
-            blurEffectView.constraintToSuperviewEdges()
+            blurEffectView.constrainToSuperviewEdges()
         }
-        bottomBorder.constraintToSuperviewEdges(excludingAnchors: [.top])
+        bottomBorder.constrainToSuperviewEdges(excluding: [.top])
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: height.rawValue),
             leftLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -6),

@@ -53,7 +53,7 @@ internal final class HomeTabBarController: UITabBarController, UITabBarControlle
     
     /// - SeeAlso: ViewSetupable
     func setupConstraints() {
-        centerButton.constraintToConstant(.init(width: 58, height: 58))
+        centerButton.constrainToConstant(size: .init(width: 58, height: 58))
         NSLayoutConstraint.activate([
             centerButton.centerXAnchor.constraint(equalTo: tabBar.centerXAnchor),
             centerButton.centerYAnchor.constraint(equalTo: tabBar.centerYAnchor, constant: -8)

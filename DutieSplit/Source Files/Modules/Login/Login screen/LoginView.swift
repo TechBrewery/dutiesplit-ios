@@ -75,9 +75,9 @@ internal final class LoginView: View, ViewSetupable {
     
     /// - SeeAlso: ViewSetupable
     func setupConstraints() {
-        backgroundImageView.constraintToSuperviewEdges()
-        stackView.constraintCenterToSuperview()
-        logoImageView.constraintToSuperviewEdges(excludingAnchors: [.bottom], withInsets: .init(top: 20, left: 40, bottom: 0, right: 40))
+        backgroundImageView.constrainToSuperviewEdges()
+        stackView.constrainCenterToSuperview()
+        logoImageView.constrainToSuperviewEdges(excluding: [.bottom], insets: .init(top: 20, left: 40, bottom: 0, right: 40))
         NSLayoutConstraint.activate([
             logoImageView.heightAnchor.constraint(equalToConstant: 170),
             stackView.widthAnchor.constraint(equalToConstant: 260),

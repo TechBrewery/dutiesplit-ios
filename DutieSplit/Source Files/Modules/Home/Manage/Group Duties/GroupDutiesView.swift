@@ -25,6 +25,6 @@ internal final class GroupDutiesView: View, ViewSetupable {
     
     /// - SeeAlso: ViewSetupable
     func setupConstraints() {
-        tableView.constraintToSuperviewEdges()
+        tableView.constrainToSuperviewEdges()
     }
 }

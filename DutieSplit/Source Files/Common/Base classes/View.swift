@@ -5,6 +5,7 @@
 
 
 import UIKit
+import Layoutable
 
 /// Base class for UIView sublclasses to remove boilerplate from custom views
 internal class View: UIView {

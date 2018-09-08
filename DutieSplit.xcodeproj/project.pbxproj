@@ -45,7 +45,6 @@
 		7C9BF5C42088FCA0002BF7B2 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5BD2088FCA0002BF7B2 /* NSObjectExtension.swift */; };
 		7C9BF5C52088FCA0002BF7B2 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5BE2088FCA0002BF7B2 /* UIColorExtension.swift */; };
 		7C9BF5C62088FCA0002BF7B2 /* BoolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5BF2088FCA0002BF7B2 /* BoolExtension.swift */; };
-		7C9BF5C72088FCA0002BF7B2 /* UIViewExtension+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5C02088FCA0002BF7B2 /* UIViewExtension+Constraint.swift */; };
 		7C9BF5C82088FCA0002BF7B2 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5C12088FCA0002BF7B2 /* UIDeviceExtension.swift */; };
 		7C9BF5C92088FCA0002BF7B2 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5C22088FCA0002BF7B2 /* UITableViewExtension.swift */; };
 		7C9BF5CB2088FCCB002BF7B2 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5CA2088FCCB002BF7B2 /* UIViewExtension.swift */; };
@@ -182,7 +181,6 @@
 		7C9BF5BD2088FCA0002BF7B2 /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		7C9BF5BE2088FCA0002BF7B2 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		7C9BF5BF2088FCA0002BF7B2 /* BoolExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoolExtension.swift; sourceTree = "<group>"; };
-		7C9BF5C02088FCA0002BF7B2 /* UIViewExtension+Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewExtension+Constraint.swift"; sourceTree = "<group>"; };
 		7C9BF5C12088FCA0002BF7B2 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 		7C9BF5C22088FCA0002BF7B2 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		7C9BF5CA2088FCCB002BF7B2 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -578,7 +576,6 @@
 				7C9BF5BE2088FCA0002BF7B2 /* UIColorExtension.swift */,
 				7C9BF5C12088FCA0002BF7B2 /* UIDeviceExtension.swift */,
 				7C9BF5C22088FCA0002BF7B2 /* UITableViewExtension.swift */,
-				7C9BF5C02088FCA0002BF7B2 /* UIViewExtension+Constraint.swift */,
 				7C9BF5CA2088FCCB002BF7B2 /* UIViewExtension.swift */,
 				7CCB03A020891A3B009E2680 /* UIStackViewExtension.swift */,
 				7CB54DA5209EF30B007EC75D /* UINavigationBarExtension.swift */,
@@ -945,6 +942,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxOptional.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ResponseDetective.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Layoutable.framework",
 			);
 			name = "Carthage script";
 			outputPaths = (
@@ -989,7 +987,6 @@
 				7CCCC37720CBDBA2006D886A /* ProfileView.swift in Sources */,
 				7C9BF5A62088F719002BF7B2 /* CrashLogger.swift in Sources */,
 				7CCCC36D20CBDB19006D886A /* GroupSettingsViewController.swift in Sources */,
-				7C9BF5C72088FCA0002BF7B2 /* UIViewExtension+Constraint.swift in Sources */,
 				7CCCC36F20CBDB39006D886A /* GroupSettingsViewModel.swift in Sources */,
 				7CF7D55E209DC2C2003A3FC1 /* NetworkApplication.swift in Sources */,
 				7CF7D567209DC3A6003A3FC1 /* AuthenticationService.swift in Sources */,

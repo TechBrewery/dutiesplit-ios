@@ -52,7 +52,7 @@ internal final class ActivityTableViewCell: SubtitledTableViewCell {
     /// - SeeAlso: ViewSetupable
     override func setupConstraints() {
         super.setupConstraints()
-        emojiView.constraintToConstant(.init(width: 28, height: 28))
+        emojiView.constrainToConstant(size: .init(width: 28, height: 28))
         NSLayoutConstraint.activate([
             emojiView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
             emojiView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
