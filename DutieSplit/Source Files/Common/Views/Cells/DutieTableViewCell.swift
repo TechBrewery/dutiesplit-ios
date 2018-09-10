@@ -44,8 +44,8 @@ internal final class DutieTableViewCell: TableViewCell, ViewSetupable {
     
     /// - SeeAlso: ViewSetupable
     func setupConstraints() {
-        stackView.constraintToSuperviewEdges(excludingAnchors: [.top, .bottom], withInsets: .init(top: 8, left: 16, bottom: 8, right: 8))
-        emojiView.constraintToConstant(.init(width: 28, height: 28))
+        stackView.constrainToSuperviewEdges(excluding: [.top, .bottom], insets: .init(top: 8, left: 16, bottom: 8, right: 8))
+        emojiView.constrainToConstant(size: .init(width: 28, height: 28))
         NSLayoutConstraint.activate([
             contentView.heightAnchor.constraint(equalToConstant: 40),
             stackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),

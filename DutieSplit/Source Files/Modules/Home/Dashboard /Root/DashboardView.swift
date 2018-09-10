@@ -26,6 +26,6 @@ internal final class DashboardView: View, ViewSetupable {
     
     /// - SeeAlso: ViewSetupable
     func setupConstraints() {
-        tableView.constraintToSuperviewEdges()
+        tableView.constrainToSuperviewEdges()
     }
 }

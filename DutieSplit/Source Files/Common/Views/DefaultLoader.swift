@@ -56,8 +56,8 @@ internal class DefaultLoader: Loader {
         background.addSubview(loader)
         baseView.addSubview(background)
         
-        background.constraintCenterToSuperview()
-        loader.constraintCenterToSuperview()
+        background.constrainCenterToSuperview()
+        loader.constrainCenterToSuperview()
         NSLayoutConstraint.activate([
             background.widthAnchor.constraint(equalTo: baseView.widthAnchor, multiplier: 0.4),
             background.heightAnchor.constraint(equalTo: background.widthAnchor)

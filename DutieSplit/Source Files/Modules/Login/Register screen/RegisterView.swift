@@ -72,8 +72,8 @@ internal final class RegisterView: View, ViewSetupable {
     
     /// - SeeAlso: ViewSetupable
     func setupConstraints() {
-        backgroundImageView.constraintToSuperviewEdges()
-        stackView.constraintCenterToSuperview()
+        backgroundImageView.constrainToSuperviewEdges()
+        stackView.constrainCenterToSuperview()
         NSLayoutConstraint.activate([
             stackView.widthAnchor.constraint(equalToConstant: 260),
         ])
