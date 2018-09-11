@@ -36,11 +36,6 @@
 		7C9BF5A82088F7B2002BF7B2 /* LoginFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5A72088F7B2002BF7B2 /* LoginFlowController.swift */; };
 		7C9BF5AA2088F844002BF7B2 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5A92088F844002BF7B2 /* CustomViewController.swift */; };
 		7C9BF5B02088FB64002BF7B2 /* DutieSplitKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5AE2088FB63002BF7B2 /* DutieSplitKeys.m */; };
-		7C9BF5B12088FB64002BF7B2 /* Keys.podspec.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C9BF5AF2088FB63002BF7B2 /* Keys.podspec.json */; };
-		7C9BF5B32088FBEF002BF7B2 /* bitrise.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7C9BF5B22088FBEF002BF7B2 /* bitrise.yml */; };
-		7C9BF5B52088FC03002BF7B2 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 7C9BF5B42088FC03002BF7B2 /* Cartfile */; };
-		7C9BF5B72088FC08002BF7B2 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 7C9BF5B62088FC08002BF7B2 /* Gemfile */; };
-		7C9BF5BB2088FC31002BF7B2 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7C9BF5BA2088FC31002BF7B2 /* Podfile */; };
 		7C9BF5C32088FCA0002BF7B2 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5BC2088FCA0002BF7B2 /* UICollectionViewExtension.swift */; };
 		7C9BF5C42088FCA0002BF7B2 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5BD2088FCA0002BF7B2 /* NSObjectExtension.swift */; };
 		7C9BF5C52088FCA0002BF7B2 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5BE2088FCA0002BF7B2 /* UIColorExtension.swift */; };
@@ -51,7 +46,6 @@
 		7C9BF5CD2088FD53002BF7B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5CC2088FD53002BF7B2 /* ViewController.swift */; };
 		7C9BF5CF2088FD95002BF7B2 /* NavigationBarSetupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5CE2088FD95002BF7B2 /* NavigationBarSetupable.swift */; };
 		7C9BF5D12088FFC2002BF7B2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5D02088FFC2002BF7B2 /* ViewModel.swift */; };
-		7C9BF5D320890069002BF7B2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7C9BF5D220890069002BF7B2 /* README.md */; };
 		7C9BF5D6208902BE002BF7B2 /* BindingsSetupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5D5208902BE002BF7B2 /* BindingsSetupable.swift */; };
 		7C9BF5DB2089059D002BF7B2 /* ViewSetupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5DA2089059D002BF7B2 /* ViewSetupable.swift */; };
 		7C9BF5DD20890654002BF7B2 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BF5DC20890654002BF7B2 /* View.swift */; };
@@ -172,8 +166,7 @@
 		7C9BF5A92088F844002BF7B2 /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		7C9BF5AD2088FB63002BF7B2 /* DutieSplitKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DutieSplitKeys.h; sourceTree = "<group>"; };
 		7C9BF5AE2088FB63002BF7B2 /* DutieSplitKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DutieSplitKeys.m; sourceTree = "<group>"; };
-		7C9BF5AF2088FB63002BF7B2 /* Keys.podspec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Keys.podspec.json; sourceTree = "<group>"; };
-		7C9BF5B22088FBEF002BF7B2 /* bitrise.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bitrise.yml; path = "Supporting files/bitrise.yml"; sourceTree = SOURCE_ROOT; };
+		7C9BF5B22088FBEF002BF7B2 /* bitrise.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bitrise.yml; sourceTree = SOURCE_ROOT; };
 		7C9BF5B42088FC03002BF7B2 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		7C9BF5B62088FC08002BF7B2 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = SOURCE_ROOT; };
 		7C9BF5BA2088FC31002BF7B2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
@@ -389,7 +382,6 @@
 			children = (
 				7C9BF5AD2088FB63002BF7B2 /* DutieSplitKeys.h */,
 				7C9BF5AE2088FB63002BF7B2 /* DutieSplitKeys.m */,
-				7C9BF5AF2088FB63002BF7B2 /* Keys.podspec.json */,
 			);
 			name = CocoaPodsKeys;
 			path = Pods/CocoaPodsKeys;
@@ -887,14 +879,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C9BF5B12088FB64002BF7B2 /* Keys.podspec.json in Resources */,
 				7CF7D573209E1D50003A3FC1 /* LaunchScreen.storyboard in Resources */,
-				7C9BF5B72088FC08002BF7B2 /* Gemfile in Resources */,
-				7C9BF5B32088FBEF002BF7B2 /* bitrise.yml in Resources */,
-				7C9BF5B52088FC03002BF7B2 /* Cartfile in Resources */,
 				7C9FA3BE20839E500095E647 /* Localizable.strings in Resources */,
-				7C9BF5D320890069002BF7B2 /* README.md in Resources */,
-				7C9BF5BB2088FC31002BF7B2 /* Podfile in Resources */,
 				7C9B8F7A2083946400661EFE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
