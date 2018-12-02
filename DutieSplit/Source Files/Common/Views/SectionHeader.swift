@@ -57,7 +57,7 @@ internal final class SectionHeader: View, ViewSetupable {
     /// - SeeAlso: ViewSetupable
     func setupViewHierarchy() {
         // Add blur effect if it's not disabled in the settings
-        if !UIAccessibilityIsReduceTransparencyEnabled() {
+        if !UIAccessibility.isReduceTransparencyEnabled {
             addSubview(blurEffectView)
         }
         

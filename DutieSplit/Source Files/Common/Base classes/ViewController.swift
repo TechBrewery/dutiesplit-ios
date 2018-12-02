@@ -18,8 +18,8 @@ internal class ViewController: KeyboardAwareViewController {
     }
     
     /// - SeeAlso: UIViewController.willMove()
-    override func willMove(toParentViewController parent: UIViewController?) {
-        super.willMove(toParentViewController: parent)
+    override func willMove(toParent parent: UIViewController?) {
+        super.willMove(toParent: parent)
 
         // Fix for the glitch when NavigationBar not changed it's style to the end of the pop animation
         guard

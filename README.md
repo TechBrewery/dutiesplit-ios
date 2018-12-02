@@ -3,8 +3,8 @@
 ## Tools & Services
 
 ### Tools:
-* Xcode 9.3
-* [Carthage](https://github.com/Carthage/Carthage) 0.29 or higher
+* Xcode 10.1
+* [Carthage](https://github.com/Carthage/Carthage) 0.31 or higher
 * [CocoaPods](https://github.com/CocoaPods/CocoaPods) 1.3 or higher
 
 ### Services:
@@ -26,13 +26,6 @@
 
 1. Clone repository:
 
-```bash
-# over https:
-https://github.com/TechBrewery/dutiesplit-ios.git
-# or over SSH:
-git@github.com:TechBrewery/dutiesplit-ios.git
-```
-
 2. Install required Gems:
 
 ```bash
@@ -45,7 +38,7 @@ bundle install
 carthage bootstrap --platform iOS --cache-builds
 ```
 
-4. Download or create project `.env` file and paste it into the root project's directory.
+4. Download or create  `.env` file and paste it into the root project's directory.
 
 5. Install pods through Bundler:
 
