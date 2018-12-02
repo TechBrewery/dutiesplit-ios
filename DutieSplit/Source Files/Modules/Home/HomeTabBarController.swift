@@ -43,7 +43,7 @@ internal final class HomeTabBarController: UITabBarController, UITabBarControlle
         
         // View by default is covered by UITabBarItem and not accepting touches.
         // Bringing it to the front fixes the problem.
-        tabBar.bringSubview(toFront: centerButton)
+        tabBar.bringSubviewToFront(centerButton)
     }
 
     /// - SeeAlso: ViewSetupable
