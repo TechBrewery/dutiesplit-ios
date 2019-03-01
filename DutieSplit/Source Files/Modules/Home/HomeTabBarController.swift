@@ -75,7 +75,7 @@ internal final class HomeTabBarController: UITabBarController, UITabBarControlle
     
     /// - SeeAlso: UITabBarControllerDelegate
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-//        guard let viewControllers = viewControllers, viewController != viewControllers[1] else { return false }
+        guard let viewControllers = viewControllers, viewController != viewControllers[1] else { return false }
         return true
     }
 }
