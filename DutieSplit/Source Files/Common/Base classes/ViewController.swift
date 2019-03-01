@@ -7,7 +7,7 @@
 import UIKit
 
 /// Simplest View controller subclass with to be used in the application
-internal class ViewController: KeyboardAwareViewController {
+internal class ViewController: UIViewController {
     
     /// - SeeAlso: UIViewController.viewWillAppear()
     override func viewWillAppear(_ animated: Bool) {
