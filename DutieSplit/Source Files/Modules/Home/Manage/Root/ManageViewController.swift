@@ -49,8 +49,8 @@ internal final class ManageViewController: MVVMViewController<ManageView, Manage
     /// - SeeAlso: UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell: ManageTableViewCell = tableView.dequeueReusableCell(for: indexPath) else { return UITableViewCell() }
-        cell.cellData = viewModel.cellsData.sections[indexPath.section].cells[indexPath.row]
-        return cell
+
+        return viewModel.cellsData[indexPath].configured(in: cell)
     }
     
     /// - SeeAlso: UITableViewDataSource
@@ -61,8 +61,7 @@ internal final class ManageViewController: MVVMViewController<ManageView, Manage
     
     /// - SeeAlso: UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cellData = viewModel.cellsData.sections[indexPath.section].cells[indexPath.row]
-        viewModel.didTapCell(cellData.option)
+        viewModel.didTapCell(viewModel.cellsData[indexPath].option)
     }
 }
 

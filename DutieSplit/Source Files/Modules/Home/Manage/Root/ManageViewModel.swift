@@ -35,25 +35,25 @@ internal final class ManageViewModel: ViewModel {
     /// Data for feeding the cells on the view
     let cellsData: StaticSectionedMenu = StaticSectionedMenu(
         sections: [
-            StaticSection<ManageMenuCellType>(
+            StaticSection<ManageMenu>(
                 title: Localizable.ManageScreen.groupSection.uppercased(),
                 cells: [
-                    ManageMenuCell(icon: #imageLiteral(resourceName: "duties-icon"), title: Localizable.GroupDutiesScreen.title, option: .duties),
-                    ManageMenuCell(icon: #imageLiteral(resourceName: "settings-icon"), title: Localizable.GroupSettingsScreen.title, option: .groupSettings)
+                    ManageMenu(icon: #imageLiteral(resourceName: "duties-icon"), title: Localizable.GroupDutiesScreen.title, option: .duties),
+                    ManageMenu(icon: #imageLiteral(resourceName: "settings-icon"), title: Localizable.GroupSettingsScreen.title, option: .groupSettings)
                 ]
             ),
-            StaticSection<ManageMenuCellType>(
+            StaticSection<ManageMenu>(
                 title: Localizable.ManageScreen.settingsSection.uppercased(),
                 cells: [
-                    ManageMenuCell(icon: #imageLiteral(resourceName: "profile-icon"), title: Localizable.ProfileScreen.title, option: .profile),
-                    ManageMenuCell(icon: #imageLiteral(resourceName: "switch-group-icon"), title: Localizable.SwitchGroupScreen.title, option: .switchGroup),
-                    ManageMenuCell(icon: #imageLiteral(resourceName: "logout-icon"), title: Localizable.ManageScreen.logout, option: .logout)
+                    ManageMenu(icon: #imageLiteral(resourceName: "profile-icon"), title: Localizable.ProfileScreen.title, option: .profile),
+                    ManageMenu(icon: #imageLiteral(resourceName: "switch-group-icon"), title: Localizable.SwitchGroupScreen.title, option: .switchGroup),
+                    ManageMenu(icon: #imageLiteral(resourceName: "logout-icon"), title: Localizable.ManageScreen.logout, option: .logout)
                 ]
             )
         ]
     )
     
-    func didTapCell(_ option: ManageMenuOption) {
+    func didTapCell(_ option: ManageMenu.Option) {
         switch option {
         case .duties:
             eventTriggered?(.didTapDuties)

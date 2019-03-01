@@ -7,15 +7,7 @@
 import UIKit
 
 internal final class ManageTableViewCell: TableViewCell, ViewSetupable {
-    
-    /// Data displayed on the cell. Automatically updates the view after settings the value.
-    var cellData: ManageMenuCellType! {
-        didSet {
-            iconImageView.image = cellData.icon
-            titleLabel.text = cellData.title
-        }
-    }
-    
+
     private lazy var titleLabel: UILabel = {
         let view = UILabel()
         view.font = .systemFont(ofSize: 17)
@@ -35,6 +27,12 @@ internal final class ManageTableViewCell: TableViewCell, ViewSetupable {
         with: [iconImageView, titleLabel],
         spacing: 12
     ).layoutable()
+
+    /// Updates the cell with given data.
+    func update(with icon: UIImage, title: String?) {
+        iconImageView.image = icon
+        titleLabel.text = title
+    }
     
     /// - SeeAlso: ViewSetupable
     func setupViewHierarchy() {
